@@ -1,0 +1,105 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>Grilling a Better Steak</title>
+  
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>ae4da060-6805-4189-8193-9b5d0c259665</md:uuid>
+</metadata>
+    
+  <content>
+    <para id="intro">
+      I have eaten many steaks in my life and none have been more
+      satisfying than the backyard-grill cooked steak.  Maybe this is
+      because of the relaxing nature of drinking a beer, being
+      outside, and lounging that accompanies the grilling procedure.
+      Maybe it is because of the aroma of the grill and the beef
+      perfectly seasoned to your taste.  Either way, this module shows
+      how a good steak can be prepared.
+    </para>
+  
+    <section id="ingredsec">
+      <title>Ingredients</title>
+      <para id="ingredients">
+	Before we begin to cook I have compiled a list of
+	ingredients.
+	<list id="ingredlist">
+	  <title>Ingredients</title>
+	  <item>Salt</item>
+	  <item>Fresh ground pepper</item>
+	  <item>Lime</item>
+	  <item>Beer</item>
+	  <item>Chili powder</item>
+	  <item>T-Bone steak</item>
+	</list>
+      </para>
+    </section>
+    
+    <section id="marinadesec">
+      <title>Marinade</title>
+      <para id="marinate">
+	To ensure the best flavor possible, it is necessary to
+	marinate the beef.  A steak <term>marinates</term> when left
+	to sit in <term>marinade</term>, or prepared sauce, where it
+	will absorb the flavor of the ingredients.  Marinating may
+	take as little as 15 minutes or as long as 6 hours and should
+	<emphasis>always</emphasis> be done in the refrigerator and
+	<emphasis>not</emphasis> at room temperature.
+      </para>
+      
+      <list id="marinade" list-type="enumerated">
+	<title>Marinade</title>
+	<item>pour beer into large bowl</item>
+	<item>add chili powder to tase</item>
+	<item>squeeze half lime into beer marinade</item>
+	<item>place steak in beer, let soak for 30 minutes</item>
+      </list>
+    </section>
+
+    <figure id="tbonefig">
+      <title>T-Bone Steak</title>
+      <media id="idm168560" alt=""><image src="../../media/tbone.jpg" mime-type="image/jpeg"/></media>
+      <caption>
+	Upon successful completion of these modules, you
+	should be able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+
+    <figure orient="horizontal" id="horfig">
+      <title>Steaks</title>
+      <subfigure id="subfigtbone1">
+	<title>T-Bone</title>
+	<media id="idp45728" alt=""><image src="../../media/tbone.jpg" mime-type="image/jpeg"/></media>
+      </subfigure>
+      <subfigure id="subfingnystrip1">
+	<title>New York Strip</title>
+	<media id="idm459520" alt=""><image src="../../media/ny_strip.png" mime-type="image/png"/></media>
+      </subfigure>
+      <caption>
+	Upon successful completion of these modules, you should be
+	able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+    
+    <figure orient="vertical" id="verfig">
+      <title>Steaks</title>
+      <subfigure id="subfigtbone2">
+	<title>T-Bone</title>
+	<media id="idp284928" alt=""><image src="../../media/tbone.jpg" mime-type="image/jpeg"/></media>
+      </subfigure>
+      <subfigure id="subfig2">
+	<title>New York Strip</title>
+	<media id="idm161744" alt=""><image src="../../media/ny_strip.png" mime-type="image/png"/></media>
+      </subfigure>
+      <caption>
+	Upon successful completion of these modules, you should be
+	able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+  
+    <para id="tobecontinued">
+      How to grill the steak will be covered in <link document="m9007" strength="3">The Advanced CNXML</link>.  For more marinades see
+      the <link url="http://www.2eatcab.com">Angus Beef
+      website</link>.  Finally, a good resource is the <cite><cite-title>Steak
+      Lover's Cookbook -- William Rice; Paperback</cite-title></cite>.
+    </para>
+  </content>
+</document>

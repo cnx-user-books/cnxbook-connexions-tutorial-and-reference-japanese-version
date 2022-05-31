@@ -1,0 +1,440 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Content MathML</title>
+
+  <metadata>
+  <md:content-id>m13009</md:content-id><md:title>Content MathML</md:title>
+  <md:abstract>A short introduction to writing Content MathML by hand.  It covers
+    tokens, prefix notation, and applying functions and operators.  In
+    addition it introduces writing derivatives, integrals, vectors, and
+    matrices.</md:abstract>
+  <md:uuid>0e8d8137-c09a-4093-a875-368d8dc4c54e</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://www.w3.org/TR/MathML/" strength="3">MathML Specification</link>
+      <link url="http://cnx.rice.edu/content/m9011/latest/" strength="1">Mozilla for LInux</link>
+      <link url="http://cnx.rice.edu/content/m9012/latest/" strength="1">Mozilla for Windows</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m9008">http://cnx.org/content/m9008/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+
+    <para id="parintro">　Content MathMLの正式なリファレンスは<link url="http://www.w3.org/TR/MathML2/chapter4.html">Section 4
+	of the MathML 2.0 Specification</link>です。World Wide Web Consortium(W3C)はMathMLのための使用を書きました。テキストは読み込み可能で、検索も簡単です。詳しいことや分からないことのために、このチュートリアルを見てください。このチュートリアルはMathML 2.0に基づいています。
+    </para>
+    <para id="parintro2">　このドキュメントでは、MathMLネームスペース内でタグを定義するのに、プリフィックス<code>m</code>が使用されています。そのため、<code>&lt;apply&gt;</code>タグは<code>&lt;m:apply&gt;</code>として参照されます。MathMLネームスペース内でのすべてのマークアップは、<code>&lt;m:math&gt;</code>タグに囲まれなければならないことを覚えていてください。
+
+      
+    </para>
+    <section id="secapply">
+      <title>
+	Content MathMLの原理：関数と演算子の適用
+      </title>
+      <para id="parapply">　Content MathMLについて理解するための基本概念は、一連の機能と演算子を、他の要素に適用することから成っています。これを行うためにContent MathMLは、プリフィックスnatationを使用します。<term>Prefix notation</term>では、演算子が最初になり、その後に演算対象が続きます。2+3は以下のように書きます。
+
+	<code id="id1164818904202" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:plus/&gt;
+	　　&lt;m:cn&gt;2&lt;/m:cn&gt;
+	　　&lt;m:cn&gt;3&lt;/m:cn&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	This would display as 
+	<m:math>
+		<m:apply>
+			<m:plus/>
+			<m:cn>2</m:cn>
+			<m:cn>3</m:cn>
+		</m:apply>
+	</m:math>.
+      </para>
+      <para id="parapply2">　上記のContent MathMLの例には3つの種類の要素があります。最初は<code>apply</code>タグですこれは演算子（または関数）が演算対象に適用されようとしていることを示します。次は適用される関数もしくは演算子がきます。この例の場合、演算子<code>plus</code>が適用されています。最後は、演算子の後にくる演算対象です。この例の場合、演算対象は加えられる数です。要約すると、applyタグは、関数（sinや<m:math><m:ci>f</m:ci></m:math>など）か演算子（+や-など）を、それに続く要素に適用します。
+
+      </para>
+      <section id="sectoken">
+	<title>トークン</title>
+	<para id="parcicn">　Content MathMLには、<code>ci</code>、<code>cn</code>、<code>csymbol</code>の3つのトークンがあります。<term>トークン</term>は基本的に最も低い要素です。トークンは作用している要素の種類を意味します。<term>cn</term>タグは、タグの中身が数字であることを示します。<term>ci</term>タグは、タグの中身が識別子であることを示します。<term>識別子</term>とは変数や関数のことです。例えば<m:math><m:ci>x</m:ci></m:math>、<m:math><m:ci>y</m:ci></m:math>そして<m:math><m:ci>f</m:ci></m:math>などです。さらに<code>ci</code>要素は、Presentation MathMLを含めることができます。トークン（特に<code>ci</code>と<code>cn</code>）は、Content MathMLで多く使用されます。あらゆる数、変数、または関数がトークンによってマークされます。</para>
+	<para id="parcsym">　<term>csymbol</term>は、<code>ci</code>と<code>cn</code>とは異なったタイプのトークンです。それは、新しいオブジェクトを作成するために使用されます。それはplainテキストかPresentation MathMLを含むことができます。Content MathMLで定義されている演算子か関数を必要とするとき、それの作成にcsymbolを使用することができます。
+	</para>
+	<para id="parpres">　<code>ci</code>と<code>csymbol</code>の両方は、識別子か新しいシンボルがどように表示されるかを決めるPresentation MathMLを使用することができます。Presentation MathMLについてより詳しく学びたいなら、<link url="http://www.w3.org/TR/MathML2/chapter3.html">Section 3
+	  of the MathML 2.0 Specification</link>を見てください。例えば、添字2がある<m:math><m:ci>x</m:ci></m:math>を表示するためには以下のコードを使用すると良いでしょう。
+
+	  <code id="id1164816950566" display="block">
+	&lt;m:math&gt;
+	　&lt;m:ci&gt;
+	　　&lt;m:msub&gt;
+	　　　&lt;m:mi&gt;x&lt;/m:mi&gt;
+	　　　&lt;m:mn&gt;2&lt;/m:mn&gt;
+	　　&lt;/m:msub&gt;
+	　&lt;/m:ci&gt;
+	&lt;/m:math&gt;
+</code>
+	  This would display as 
+	  <m:math>
+		<m:ci>
+			<m:msub>
+				<m:mi>x</m:mi>
+				<m:mn>2</m:mn>
+			</m:msub>
+		</m:ci>
+	</m:math>.
+	</para>
+	<para id="partype">　<code>ci</code>要素には、要素の内容に関する詳しい情報を提供するために使用するtype属性があります。例えば、<code>ci</code>タグの内容が関数（<code>type='fn'</code>）、ベクトル（<code>type='vector'</code>）、複素数（<code>type='complex'</code>）、そして他のいろいろなもの同様に、宣言することができます。type属性の使用は、あなたが書いている数字の意味をエンコードするのを助けてくれます。
+	</para>
+      </section>
+      <section id="secfunc">
+	<title>関数と演算子</title>
+	<para id="parfcn">　関数を変数に適用するため、関数の最初の引数を適用してください。2番目の引数は変数になるでしょう。例えば、以下のコードを使って意味をエンコードします。引数<m:math><m:ci>x</m:ci></m:math>をもつ<m:math><m:ci>f</m:ci></m:math>という関数（<m:math><m:ci>f</m:ci></m:math>を意味している<code>ci</code>タグのtype属性に<code>type='fn'</code>と入力してください）。
+
+	  <code id="id1164823462890" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:ci type='fn'&gt;f&lt;/m:ci&gt;
+	　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	  This will display as 
+	  <m:math>
+		<m:apply>
+			<m:ci type="fn">f</m:ci>
+			<m:ci>x</m:ci>
+		</m:apply>
+	</m:math>.
+	</para>
+	<para id="parsin">　また事前に定義された関数と演算子がContent MathMLにはあります。例えばサインとコサインは事前に定義されています。事前に定義されたこれらの関数と演算子は、applyタグに直接続く<term>空のタグ</term>です。<m:math><m:ci>x</m:ci></m:math>を引数とするサイン関数は上記の例と同様に定義することができます。
+
+	  <code id="id1164817625719" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:sin/&gt;
+	　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	  This will display as 
+	  <m:math>
+		<m:apply>
+			<m:sin/>
+			<m:ci>x</m:ci>
+		</m:apply>
+	</m:math>.
+	</para>
+	<para id="parsin2">　MathML specificationのチャプター4で、事前に定義された関数の違いについてのより詳しい記述を見ることができます。
+	</para>
+	<para id="paroper">　また、事前に定義された関数に加えて、多くの事前に定義された演算子があります。それらのいくつかは、<code>plus</code>（和）、<code>minus</code>（差）、<code>times</code>（乗）、<code>divide</code>（商）、<code>power</code>（べき乗）、<code>root</code>（ルート）などです。</para>
+	<para id="parchild">　ほとんどの演算子が、特定の数の子要素タグを持っています。例えば、power演算子は2つの子要素を持っています。最初の子要素はbaseで、2番目がexponentのvalueです。しかし、多くの子要素を含むことができる他のタグがあります。例えば、plus演算子は1つ以上の子要素を持つことができます。これは<term>n-ary operator</term>と呼ばれます。
+	  
+	</para>
+	<para id="parpm">　負の変数を表すことは、正の変数を表すことと少し異なる構文があります。この場合、あなたは問題の変数や数へ、plusやminus演算子を適用します。以下のコードは負の<m:math><m:ci>x</m:ci></m:math>を表すためのものです。
+	  
+	  <code id="id1164822055888" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:minus/&gt;
+	　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	  This will display as 
+	  <m:math>
+		<m:apply>
+			<m:minus/>
+			<m:ci>x</m:ci>
+		</m:apply>
+	</m:math>.
+	</para>
+	<para id="parnegnum">　負の変数を表すこととは対象的に、負の数を表すには以下のようなコードを使います。
+
+	  <code id="id1164821094303" display="block">
+		&lt;m:math&gt;&lt;m:cn&gt;-1&lt;/m:cn&gt;&lt;/m:math&gt;
+	</code>
+	  This will display as <m:math><m:cn>-1</m:cn></m:math>.
+	</para>
+	<para id="complexmath">　より複雑な式を作成するためには、これらの要素を互いに入れ子にしてください。複雑な式はこのように作成することができます。<m:math><m:ci>b</m:ci></m:math>と<m:math><m:ci>c</m:ci></m:math>の和の<m:math><m:ci>a</m:ci></m:math>倍は、以下のように記述されます。
+
+	  <code id="id1164820929676" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:times/&gt;
+	　　&lt;m:ci&gt;a&lt;/m:ci&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:plus/&gt;
+	　　　&lt;m:ci&gt;b&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;c&lt;/m:ci&gt;
+	　　&lt;/m:apply&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	  This will display as 
+	  <m:math>
+		<m:apply>
+			<m:times/>
+			<m:ci>a</m:ci>
+			<m:apply>
+				<m:plus/>
+				<m:ci>b</m:ci>
+				<m:ci>c</m:ci>
+			</m:apply>
+		</m:apply>
+	</m:math>.
+	</para>
+	<para id="pareq">　<code>eq</code>演算子は方程式を書くのに使用されます。それは他の演算子と同じように使用されます。これはapplyの最初の子要素です。それは2つ（以上）の子要素を持ちます。それらは等しい量になります（例えば右辺＝左辺）。例えば、<m:math><m:ci>b</m:ci></m:math>の<m:math><m:ci>a</m:ci></m:math>倍と<m:math><m:ci>c</m:ci></m:math>の<m:math><m:ci>a</m:ci></m:math>倍の和は<m:math><m:ci>b</m:ci></m:math>と<m:math><m:ci>c</m:ci></m:math>の和の<m:math><m:ci>a</m:ci></m:math>倍と等しいことを表すなら、以下のように記述されます。
+
+	  <code id="id1164822152214" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:eq/&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:plus/&gt;
+	　　　&lt;m:apply&gt;
+	　　　　&lt;m:times/&gt;
+	　　　　&lt;m:ci&gt;a&lt;/m:ci&gt;
+	　　　　&lt;m:ci&gt;b&lt;/m:ci&gt;
+	　　　&lt;/m:apply&gt;
+	　　　&lt;m:apply&gt;
+	　　　　&lt;m:times/&gt;
+	　　　　&lt;m:ci&gt;a&lt;/m:ci&gt;
+	　　　　&lt;m:ci&gt;c&lt;/m:ci&gt;
+	　　　&lt;/m:apply&gt;
+	　　&lt;/m:apply&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:times/&gt;
+	　　　&lt;m:ci&gt;a&lt;/m:ci&gt;
+	　　　&lt;m:apply&gt;
+	　　　　&lt;m:plus/&gt;
+	　　　　&lt;m:ci&gt;b&lt;/m:ci&gt;
+	　　　　&lt;m:ci&gt;c&lt;/m:ci&gt;
+	　　　&lt;/m:apply&gt;
+	　　&lt;/m:apply&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	  This will display as 
+	  <m:math>
+		<m:apply>
+			<m:eq/>
+			<m:apply>
+				<m:plus/>
+				<m:apply>
+					<m:times/>
+					<m:ci>a</m:ci>
+					<m:ci>b</m:ci>
+				</m:apply>
+				<m:apply>
+					<m:times/>
+					<m:ci>a</m:ci>
+					<m:ci>c</m:ci>
+				</m:apply>
+			</m:apply>
+			<m:apply>
+				<m:times/>
+				<m:ci>a</m:ci>
+				<m:apply>
+					<m:plus/>
+					<m:ci>b</m:ci>
+					<m:ci>c</m:ci>
+				</m:apply>
+			</m:apply>
+		</m:apply>
+	</m:math>.
+	</para>
+      </section>
+    </section>
+    <section id="secint">
+      <title>積分</title>
+      <para id="parint">　積分のための演算子は<code>int</code>です。しかし、演算子や上記の関数とは異なり、それは子要素を持っています。積分対象を表す<code>bvar</code>、積分範囲を表す<code>lowlimit</code>と<code>uplimit</code>（もしくは<code>interval</code>と<code>condition</code>）です。<code>lowlimit</code>、<code>uplimit</code>（この2つはセット）、<code>interval</code>、および<code>condition</code>は3つの異なった方法です。bvar、<code>lowlimit</code>、<code>uplimit</code>、<code>interval</code>、および<code>condition</code>の各子要素は、トークン要素を取ることを忘れないでください。以下は、「0から<m:math><m:ci>b</m:ci></m:math>までの<m:math><m:ci>x</m:ci></m:math>の積分」を表しています。
+	
+	<code id="id1164822401438" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:int/&gt;
+	　　&lt;m:bvar&gt;&lt;m:ci&gt;x&lt;/m:ci&gt;&lt;/m:bvar&gt;
+	　　&lt;m:lowlimit&gt;&lt;m:cn&gt;0&lt;/m:cn&gt;&lt;/m:lowlimit&gt;
+	　　&lt;m:uplimit&gt;&lt;m:ci&gt;b&lt;/m:ci&gt;&lt;/m:uplimit&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:ci type='fn'&gt;f&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　&lt;/m:apply&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	This will display as 
+	<m:math>
+		<m:apply>
+			<m:int/>
+			<m:bvar><m:ci>x</m:ci></m:bvar>
+			<m:lowlimit><m:cn>0</m:cn></m:lowlimit>
+			<m:uplimit><m:ci>b</m:ci></m:uplimit>
+			<m:apply>
+				<m:ci type="fn">f</m:ci>
+				<m:ci>x</m:ci>
+			</m:apply>
+		</m:apply>
+	</m:math>.
+      </para>
+    </section>
+    <section id="secder">
+      <title>微分</title> 
+      <para id="pardiff2">　微分の演算子は<code>diff</code>です。積分と同じような方法で行えます。まず<code>bvar</code>を使用して、微分対象を定義する必要があります。以下は、「<m:math><m:ci>f</m:ci></m:math>(<m:math><m:ci>x</m:ci></m:math>)に対する<m:math><m:ci>x</m:ci></m:math>についての微分」を表しています。
+	
+	<code id="id1164817580711" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:diff/&gt;
+	　　&lt;m:bvar&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　&lt;/m:bvar&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:ci type="fn"&gt;f&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　&lt;/m:apply&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	This will display as 
+	<m:math>
+		<m:apply>
+			<m:diff/>
+			<m:bvar>
+				<m:ci>x</m:ci>
+			</m:bvar>
+			<m:apply>
+				<m:ci type="fn">f</m:ci>
+				<m:ci>x</m:ci>
+			</m:apply>
+		</m:apply>
+	</m:math>.
+      </para>
+      <para id="pardeg">　より高次の微分を関数に適用するには、<code>bvar</code>タグの<code>degree</code>タグを追加して行ってください。degreeタグは微分の回数を含みます。以下は、「<m:math><m:ci>f</m:ci></m:math>(<m:math><m:ci>x</m:ci></m:math>)の<m:math><m:ci>x</m:ci></m:math>に対する2回微分」を表しています。
+	
+	<code id="id1164822053092" display="block">
+	&lt;m:math&gt;
+	　&lt;m:apply&gt;
+	　　&lt;m:diff/&gt;
+	　　&lt;m:bvar&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　　&lt;m:degree&gt;&lt;m:cn&gt;2&lt;/m:cn&gt;&lt;/m:degree&gt;
+	　　&lt;/m:bvar&gt;
+	　　&lt;m:apply&gt;&lt;m:ci type="fn"&gt;f&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　&lt;/m:apply&gt;
+	　&lt;/m:apply&gt;
+	&lt;/m:math&gt;
+</code>
+	This will display as 
+	<m:math>
+		<m:apply>
+			<m:diff/>
+			<m:bvar>
+				<m:ci>x</m:ci>
+				<m:degree><m:cn>2</m:cn></m:degree>
+			</m:bvar>
+			<m:apply><m:ci type="fn">f</m:ci>
+				<m:ci>x</m:ci>
+			</m:apply>
+		</m:apply>
+	</m:math>.
+      </para>
+    </section>
+    <section id="secvm">
+      <title>ベクトルと行列</title>
+      <para id="parv1">　ベクトルは<code>vector</code>タグを使用し、他の要素の組み合わせで作成されます。
+
+	<code id="id1164822135336" display="block">
+	&lt;m:math&gt;
+	　&lt;m:vector&gt;
+	　　&lt;m:apply&gt;
+	　　　&lt;m:plus/&gt;
+	　　　&lt;m:ci&gt;x&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;y&lt;/m:ci&gt;
+	　　&lt;/m:apply&gt;
+	　　&lt;m:ci&gt;z&lt;/m:ci&gt;
+	　　&lt;m:cn&gt;0&lt;/m:cn&gt;
+	　&lt;/m:vector&gt;
+	&lt;/m:math&gt;
+</code>
+	This will display as 
+	<m:math>
+		<m:vector>
+			<m:apply>
+				<m:plus/>
+				<m:ci>x</m:ci>
+				<m:ci>y</m:ci>
+			</m:apply>
+			<m:ci>z</m:ci>
+			<m:cn>0</m:cn>
+		</m:vector>
+	</m:math>.
+      </para>
+      
+      <para id="parm1">　行列は同じように行えます。<code>matrix</code>要素はいくつかの<code>matrixrow</code>要素を含み、<code>matrixrow</code>要素は行列の値を含みます。
+
+	<code id="id7192574" display="block">
+	&lt;m:math&gt;
+	　&lt;m:matrix&gt;
+	　　&lt;m:matrixrow&gt;
+	　　　&lt;m:ci&gt;a&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;b&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;c&lt;/m:ci&gt;
+	　　&lt;/m:matrixrow&gt;
+	　　&lt;m:matrixrow&gt;
+	　　　&lt;m:ci&gt;d&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;e&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;f&lt;/m:ci&gt;
+	　　&lt;/m:matrixrow&gt;
+	　　&lt;m:matrixrow&gt;
+	　　　&lt;m:ci&gt;g&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;h&lt;/m:ci&gt;
+	　　　&lt;m:ci&gt;j&lt;/m:ci&gt;
+	　　&lt;/m:matrixrow&gt;
+	　&lt;/m:matrix&gt;
+	&lt;/m:math&gt;
+</code>
+	This will display as 
+	<m:math>
+		<m:matrix>
+			<m:matrixrow>
+				<m:ci>a</m:ci>
+				<m:ci>b</m:ci>
+				<m:ci>c</m:ci>
+			</m:matrixrow>
+			<m:matrixrow>
+				<m:ci>d</m:ci>
+				<m:ci>e</m:ci>
+				<m:ci>f</m:ci>
+			</m:matrixrow>
+			<m:matrixrow>
+				<m:ci>g</m:ci>
+				<m:ci>h</m:ci>
+				<m:ci>j</m:ci>
+			</m:matrixrow>
+		</m:matrix>
+	</m:math>.
+      </para>
+      <para id="parmv1">　また、行列式を得るため、行列内の要素を選択して、行列を移項するための演算子があります。
+      </para>
+    </section>
+    <section id="entities">
+      <title>エンティティ</title>
+      <para id="entp1">　使用する必要があると思われる文字（例えば、Greek、letters）のために、MathMLはエンティティを定義しています。Content MathML内で、Presentation MathMLを埋め込む必要があるときに、それらは非常に役に立ちます。<link url="http://www.w3.org/TR/MathML2/bycodes.html">エンティティのリスト</link>はMathML 2.0の仕様の中で見つけられます。これらのエンティティを使用することは、ユニコードの文字で表すよりもいい方法です。なぜなら、これらエンティティは必要ならば再定義することができるからです。
+      </para>
+    </section>
+    <section id="resources">
+      <title>最後に</title>
+      <para id="last">　Content MathMLでは、さらにいろいろなことができます。Content MathMLを多く書く計画があるなら、<link url="http://www.w3.org/TR/MathML2/">MathML
+	specification</link>を見ることをお勧めします。</para>
+    </section>
+  </content>
+</document>

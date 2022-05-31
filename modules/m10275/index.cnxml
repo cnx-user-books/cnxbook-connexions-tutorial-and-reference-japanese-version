@@ -1,0 +1,58 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>Grilling a Good Steak</title>
+
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e710c109-1dc3-4b4c-915a-c5ec7c116293</md:uuid>
+</metadata>
+
+  <content>
+    <para id="intro">
+      I have eaten many steaks in my life and none have been more
+      satisfying than the backyard-grill cooked steak.  Maybe this is
+      because of the relaxing nature of drinking a beer, being
+      outside, and lounging that accompanies the grilling procedure.
+      <note type="warning" id="idm1650224">Excessive drinking or fun may result in
+      overcooked or burned steak</note>Maybe it is because of the
+      aroma of the grill and the beef <emphasis>perfectly</emphasis>
+      seasoned to your taste.  Either way, this module shows how a
+      good steak can be prepared.
+    </para>
+    
+    <para id="ingredients">
+      Before we begin to cook I have compiled a list of ingredients.
+      <list id="ingredlist">
+	<title>Ingredients</title>
+	<item>Salt</item>
+	<item>Fresh ground pepper</item>
+	<item>Lime</item>
+	<item>Beer</item>
+	<item>Chili powder</item>
+	<item>T-Bone steak</item>
+      </list>
+    </para>
+  
+    <para id="marinate">To ensure the best flavor possible, it is necessary to marinate
+      the beef first.  A steak <term>marinates</term> when left to sit in
+      <term>marinade</term>, or prepared sauce, where it will absorb
+      the flavor of the ingredients.  Marinating may take as little as
+      15 minutes or as long as 6 hours and should
+      <emphasis>always</emphasis> be done in the refrigerator and
+      <emphasis>not</emphasis> at room temperature.
+    </para>
+    
+    <list id="marinade" list-type="enumerated">
+      <title>Instructions</title>
+      <item>pour beer into large bowl</item>
+      <item>add chili powder to tase</item>
+      <item>squeeze half lime into beer marinade</item>
+      <item>place steak in beer, let soak for 30 minutes</item>
+    </list>
+  
+    <para id="tobecontinued">
+      I'll be adding to this module in <link document="m9006" strength="3">The Intermediate CNXML</link> which focuses on more
+      advanced CNXML tags.  For more marinades see the <link url="http://www.2eatcab.com">Angus Beef website</link>.
+      Finally, a good resource is the <cite><cite-title>Steak Lover's Cookbook --
+      William Rice</cite-title></cite>.
+    </para>
+  </content>
+</document>

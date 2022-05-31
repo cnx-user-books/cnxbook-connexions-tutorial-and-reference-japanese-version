@@ -1,0 +1,49 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Reporting a Connexions Bug (日本語 - Japanese)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>5dbf2a7e-abcd-4cf9-8c41-4e26e81871f9</md:uuid>
+</metadata>
+
+  <content>
+    <section id="bugintro">
+    <title>バグ報告の提出</title> 
+
+    <para id="bug1">
+    　優れたソフトウェアパッケージでも、時には欠陥が存在することがあります。このような欠陥や<term>バグ</term>を、<link url="http://cnx.rice.edu/">Connexionsのトップページ</link>の上と、他のConnexionsのWebページのパーソナルツールバー上にある。<emphasis>バグの報告</emphasis>というリンクからConnexionsチームへ報告してください。
+    </para>
+
+    <para id="bug2">
+      　バグを報告するには、以下の手順を行ってください。
+
+      <list id="buglist" list-type="enumerated">
+	<item><emphasis>Report a Bug</emphasis>のリンクをクリックし、<link url="http://mountainbunker.org/bugReport">Bug Report Submission Form</link>画面を表示します。</item>
+	<item>あなたの名前を入力します。</item>
+	<item>あなたのEメールアドレスを入力します。</item>
+	<item>モジュールへアクセスしている時にエラーが発生したなら、そのモジュールIDを入力してください。たとえばm999999という風に。もしモジュール番号がわからないなら、モジュールを調べるか、AboutかHistoryページを表示してください。モジュールIDはそれらのページに載っています。</item>
+	<item>エラーの特徴を指定してください。Typeというプルダウンメニューから適切なエラーの特徴を選択してください。</item>
+	<item>エラーの影響の大きさを指定してください。Severityというプルダウンメニューから適切な影響の大きさを選択してください。</item>
+	<item>バグの概要をTask Titleという１行のテキストボックスに入力してください。</item>
+	<item>Descriptionというテキストエリアに、エラーの状況に関する説明を入力してください。エラーに至るまでの、あなたの行動、システムの動作などを含めて書いてください。可能ならば、エラーを引き起こすまでの段階的な流れをできるだけ示してください。</item>
+	<item><code>Submit Bug</code>をクリックして、Connexionsトラッキング・システムにバグを報告してください。</item>
+</list><code>Reset</code>を押せば、あなたの入力をリセットできます。	
+    </para>
+    </section>
+
+    <section id="bugtips">
+     <title>バグ報告の提出のヒント</title> 
+
+    <para id="para1">
+      　私たちが迅速にバグを修復するために、以下のようなことに注意してバグの報告を行ってください。 
+
+      <list id="list2">
+	<item>まず最初に、<term>エラーメッセージ</term>が表示されている画面をすぐに閉じないでください。エラーメッセージは重要な情報を含んでいます。もしそのことをやり忘れて、<link url="http://mountainbunker.org/bugReport">Bug Report Submission 
+	Form</link>や<link url="http://cnx.rice.edu/help/">Help</link>ページに行ったなら、ブラウザの戻るボタンでエラーメッセージを再表示してください。</item>
+	<item>エラーページをコピーしておいてください。エラーメッセージが表示される場合、そのメッセージをコピーし、それをバグ報告に添えてください。私たちのシステムはHTMLに重要な情報を含んでいる場合があるので、エラーメッセージのHTMLソースも含んでいただけると助かります。エラーメッセージが表示されている時、右クリックで、ブラウザの<code>View Source</code>や<code>View Page Source</code>などのオプションを選択し、HTMLを表示してください。そうすれば、HTML情報をコピーし、バグ報告に添えることができます。</item>
+	<item>Connexionsのような新しいシステムにとって、エラーの詳しい報告はとても役に立ちます。もしあなたのエラーが特定のモジュールに関するものであるならば、そのモジュール名も含めてください。もしあなたが編集インターフェースにいたなら、あなたが作業していたワークグループ、もしくはモジュールを含めてください。もし、Course Composerを使用していたなら、どのコースで作業していたかなどについて述べてください。エラーが発生した正確なURLを含めてください。できるならば、あなたのしていた作業の説明も含めてください。
+	</item>
+</list>
+</para>
+    </section>
+  
+  </content>
+  
+</document>

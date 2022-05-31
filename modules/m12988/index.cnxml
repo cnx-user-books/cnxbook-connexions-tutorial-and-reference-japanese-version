@@ -1,0 +1,380 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Course Composerの使い方</title>
+
+  <metadata>
+  <md:content-id>m12988</md:content-id><md:title>Course Composerの使い方</md:title>
+  <md:abstract>Instructions on how to use the Connexions Course Composer.</md:abstract>
+  <md:uuid>6b103645-3392-4207-bd4c-7a2a03f94b36</md:uuid>
+</metadata>
+
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m10288">http://cnx.org/content/m10288/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="intro">
+      <title>Course Composer</title>
+    <para id="delete_me">
+      　Connexions Course Composerでは、新しいコースの作成や、既存のコースの編集を行うことができます。Course Composerでは、以下の動作を行うことができます。      <list id="firstlist" list-type="bulleted">
+	<item><link target-id="create">新しいコースの作成</link></item>
+	<item><link target-id="metadata">新しいコースへのメタデータの入力</link></item>
+	<item><link target-id="addsection">新しいセクションの追加</link></item>
+	<item><link target-id="subsection">サブセクションの追加</link></item>
+	<item><link target-id="addmodulesection">モジュールの追加</link></item>
+	<item><link target-id="changetitle">Alternate Module Title（コース内でのモジュールタイトル）の作成</link></item>
+	<item><link target-id="setversion">モジュールバージョンの選択</link></item>
+	<item><link target-id="editaddlinkssection">リンクの追加・編集</link></item>
+	<item><link target-id="rearrange">コンテンツの編成</link></item>
+	<item><link target-id="removesection">コースコンテンツの削除</link></item>
+	<item><link target-id="addroles">共同制作者Rolesの割り当て</link></item>
+	<item><link target-id="notationsection">Notation Parametersの指定</link></item>
+	<item><link target-id="previewsection">コースのプレビュー</link></item>
+	<item><link target-id="publishcoursesec">コースの公開</link></item>
+	<item><link target-id="existintsection">既存コースの編集</link></item>
+</list>
+</para>   
+    </section>
+    
+    <section id="create">
+      <title>新しいコースの作成</title>
+
+      <para id="create1">
+	　新しいコースを作成することは、<link document="m10885" target-id="creatingmodules">新しいモジュール</link>を作成することと同様です。ワークスペースや<link url="http://cnx.rice.edu/help/reference/workgroups">ワークグループ</link>からCourse Composerにアクセスすることができます。
+
+	<list id="createlist" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>ボタンの横にドロップダウンリストからコースを選択して、<code>新規アイテムの作成</code>をクリックしてください。New Content: Licensingが表示されます。
+	  </item>
+	<item><link url="http://creativecommons.org/licenses/by/1.0/">Creative Commons 
+	  Attribution license</link>に同意し、画面下のチェックボックスを選択してください。 
+	 </item>
+	<item><code>Next</code>をクリックしてください。メタデータのタブはコースが作成されましたというメッセージとともに表示されます。Course Statusサイドバーは、スクリーンの右に表示され、コースに対して取られた最後の行動の状態を表示します。それは、作成者の名前と作成日時です。
+	  </item>
+</list>
+</para>   
+       
+      <figure id="coursecomposerfig1">
+	<media id="id7032747" alt=""><image src="../../media/coursecomposerfigj1.png" mime-type="image/png"/></media>
+	<caption>Course Composer編集画面</caption>
+</figure>
+      
+    </section>
+
+    <section id="metadata">
+      <title>新しいコースへのメタデータの入力</title>
+
+      <para id="metadata1">
+	<list id="metadatalist" list-type="enumerated">
+	<item>Course Composerのメタデータのタブを選択してください。</item>
+	<item>適切な情報をメタデータに入力してください。	    <list id="sublist" list-type="bulleted">
+			<item>course title (required)</item>
+			<item>institution name - コースが教えられるであろう団体</item>
+			<item>course code - カタログ番号。例えばBIO 201</item>
+			<item>instructor name - コースを教える人</item>
+			<item>course home page - http://で始まる完全なURL。例えばコースの発表ページかコース摘要など。
+</item>
+			<item>keywords - Connexionsユーザーがコースを探し出すのを助ける用語。</item>
+			<item>abstract - コースの簡単な説明。
+(required)</item>
+		</list>
+	    必要な項目を入力しなと、<code>Save</code>を押して記録しようとしたとき、再入力を促されるでしょう。</item>
+	<item><code>Save</code>をクリックしてください。メタデータは保存され、Contentsタブがコースタイトルとともに表示されます。このタブは実際のアセンブリを行うところです。それは2つの領域があります。タブの左側はコースアウトライン表示があります。タブの右側はコンテンツを追加、編集、削除するところです。	  </item>
+</list>
+      </para>
+    </section>
+
+    <section id="addsection">
+      <title>新しいセクションの追加</title>
+
+      <para id="addsectionpara1">　セクションは、コース内の関連するモジュールの組み分けです。各セクションには、コンテンツを特定する見出しがあります。区分を作成することで、セクションの中にセクションを置くこともできます。
+      </para>
+  
+      <list id="addnewsection" list-type="enumerated">
+	<item>Course Composerのコンテンツタブを選択してください。</item>
+	<item>コースアウトラインのコースタイトルをクリックしてください。</item>
+	<item>コンテンツタブをまだ表示していないなら、表示してください。</item>
+	<item>コンテンツタブで<code>Add New Section</code>をクリックしてください。コースアウトラインに新しいセクションが追加されます。そして新しいセクションの名前を入力する空欄とともに、Editタブが表示されます。 
+	</item>
+	<item>Titleに新しいセクションの名前を入力してください。
+	</item>
+	<item><code>Save</code>をクリックしてください。</item>
+</list>
+
+      <para id="addpara">　入力されたタイトルは、新しいセクションとして、コースアウトラインに表示されます。このセクションにコンテンツを追加することが可能となります。</para>
+
+    </section>
+    
+    <section id="subsection">
+      <title>サブセクションの追加</title>
+
+      <para id="subsectionpara1">　区分はセクションの中の関連するモジュールの組み分けです。各区分には、閲覧者のために、コンテンツを特定する見出しがあります。
+      </para>
+
+      <list id="addsubsectionlist" list-type="enumerated">
+	<item>Course Composerのコンテンツタブを選択してください。</item>
+	<item>コースアウトラインのセクションタイトルをクリックしてください。</item>
+	<item>コンテンツタブをまだ表示されていないなら、表示してください。</item>
+	<item>コンテンツタブで、<code>Add New Section</code>をクリックしてください。新しいサブセクションは、選択しているセクションの下へ追加されます。サブセクションの名前を入力するTitle欄とともに、Editタブが表示されます。</item>
+	<item>Titleに区分の名前を入力してください。</item>
+	<item><code>Save</code>をクリックしてください。</item>
+</list>
+    
+      <para id="subsectionpara">　入力したタイトルは新しいサブセクションとして、コースアウトラインに表示されます。このサブセクションにコンテンツを追加することができます。</para>
+    </section>
+
+    <section id="addmodulesection">
+      <title>モジュールの追加</title>
+
+      <para id="addmodulepara1">
+	　Content Commonsや、自分のワークスペースや<link url="http://cnx.rice.edu/help/reference/workgroups">ワークグループ</link>から公開されているモジュールをコースに追加することができます。モジュールを追加するとき、Connexionsはモジュールのコピーをあなたのコースに追加するわではありません。モジュールはContent Commonsに残っています。そして、Connexionsはリファレンスかポインターをモジュールに挿入します。すべてのモジュールは、以下のルールでコースに加えることができます。
+      
+      <list id="addmodulelist" list-type="bulleted">
+		<item>同じモジュールを2回以上コースに挿入することはできません。</item>
+		<item>モジュールはコースに挿入する前に、Connexionsで公開しなければなりません。</item>
+		<item>Content Commonsでのモジュール検索は、タイトル、名前、著者、キーワード、文字列を使用します。</item>
+	</list>
+	　検索結果が見つからないなら、Connexionsは検索文字列に関して、いくつかの提案を表示します。
+      </para>
+
+ <section id="commonsmodulesection">
+      <title>Content Commonsからのモジュールの追加</title>
+      <para id="addmoudlpara3">
+	　Content Commonsでモジュールを検索し、コースにコンテンツとして追加するには、以下の手順を行ってください。<list id="commonssearch" list-type="enumerated">
+	<item>Course Composerのコンテンツタブをクリックしてください。</item>
+	<item>モジュールを挿入したいコースアウトラインのアイテムタイトルをクリックしてください。このアイテムはコースタイトル、セクションタイトル、サブセクションタイトルなどです。</item>
+<item>検索テキストボックスで、モジュールに関連する単語か文字列を入力してください。</item>
+<item>コースのチェックボックスのチェックをはずし、モジュールのチェックボックスを選択したままにしてください。</item>
+<item><code>Search</code>をクリックしてください。検索結果が表示されます。検索結果が1ページで表示できない場合は次のページへのリンクも表示されます。</item>
+<item>コンテンツとして追加したいすべてのモジュールのチェックボックスを選択してください。</item>
+<item><code>Add selected content</code>をクリックしてください。</item>
+</list>
+選択されたモジュールのタイトルは、選択したセクションの下に表示されます。</para>
+    </section>
+    
+ <section id="workspacemodulesection">
+      <title>ワークスペースやワークグループからのモジュールの追加</title>
+    
+      <para id="addfromrep2">
+	　ワークスペースやワークグループから、モジュールをコースに追加するためには、以下の手順を行ってください。	<list id="copy" list-type="enumerated">
+	<item>コースとモジュールを含むワークスペースか、ワークグループのコンテンツタブを表示してください。</item>
+	<item>必要なモジュールのチェックボックスを選択してください。publishedの状態のモジュールしか追加することはできません。</item>
+	<item><code>Copy</code>をクリックしてください。アイテムがコピーされましたというメッセージが表示されます。</item>
+	<item>Course Composerにアクセスするため、コースタイトルをクリックしてください。<code>Paste</code>ボタンは、<code>Cut</code>、<code>Copy</code>、<code>Remove</code>ボタンとともに、コンテンツタブに表示されます。
+	  </item>
+	<item>モジュールを挿入したいセクションタイトルをクリックしてください。</item>
+	<item>コンテンツタブの<code>Paste</code>をクリックしてください。</item>
+</list>
+        　追加したモジュールタイトルは、選択したセクションの下のコースアウトラインに表示されます。
+      </para>
+      <note id="id7025746">公開されていないモジュールを追加しようとすると、エラーメッセージが表示されます。追加したいモジュールが公開されているかどうか確認するには、作業領域のコンテンツタブで、Stateコラムを見てください。</note> 
+    </section>
+    </section>
+
+    <section id="changetitle">
+      <title>Alternate Module Title（コース内でのモジュールタイトル）の作成</title>
+
+      <para id="changetitlepara">　Content Commonsのモジュールは、著者によってタイトルが与えられています。あなたのコースでは、これらのタイトルは適切ではないかもしれません。印刷バージョンやRoadmap courseviewに表示されるモジュールタイトルを提供することができます。オリジナルの著者のタイトルは、モジュール本文を見るときに表示されます。
+
+	<list id="changetitlelist" list-type="enumerated">
+		<item>コースアウトラインのコースタイトルをクリックしてください。モジュールレベル、Editタブは画面の右側に表示されます。</item>
+		<item>Alternate Titleに新しいモジュールタイトルを入力してください。</item>
+		<item><code>Save</code>クリックしてください。</item>
+	</list>
+　コースアウトラインのモジュールタイトルはこのタイトルに変化します。</para>
+    </section>
+
+    <section id="setversion">
+      <title>モジュールバージョンの選択</title>
+
+      <para id="setversion1para">　モジュールをアップデートするか、編集するとき、Connexionsはモジュールの前バージョンをHistoryに保存し、閲覧には最新のバージョンを使用します。すべての新しいバージョンは、バージョンナンバーを与えられます。コースでどのバージョンのモジュールを使用するか選択することができます。
+
+	<list id="versionlist" list-type="enumerated">
+	<item>コースアウトラインのモジュールタイトルをクリックしてください。モジュールレベル、Editタブは画面の右側に表示されます。</item>
+	<item>コースで使用したいモジュールのバージョンのラジオボタンを選択してください。ディフォルトでは、最新のバージョンを使用することになっています。</item>
+	<item><code>Save</code>をクリックしてください。</item>
+</list>
+</para>
+    </section>
+
+    <section id="editaddlinkssection">
+      <title>リンクの追加・編集</title>
+
+     <para id="linkpara1">　リンクはマウスクリックで閲覧者に、関連情報や、コースの一部ではない例などを表示することを可能にしてくれます。リンクは個々のモジュールレベル、またはコースレベルにおいて定義されるかもしれません。既存のモジュールのリンクに対するどんな変更も、コースのモジュールのインスタンスとともに表示されるだけです。</para>
+
+    <section id="editlinkssection">
+      <title>既存リンクの削除</title>
+
+      <list id="editlinkslist" list-type="enumerated">
+	<item>コースアウトラインのモジュールタイトルをクリックしてください。モジュールのEditタブは画面の右側に表示されます。
+
+</item>
+	<item>Linksタブをクリックしてください。</item>
+	<item>Edit LinksパネルのName、Link Type、Strengthで必要な変更を行ってください。</item>
+	<item>表示したくないすべてのリンクのDeleteコラムのチェックボックスを選択してください。</item>
+	<item><code>Update Links</code>をクリックしてください。</item>
+</list>
+
+<para id="editlinkspara">　変更は、オリジナルの著者のリンクのリストに対して作られ、モジュールを閲覧したとき、Linksサイドバーに表示されるでしょう。
+      </para>
+    </section>
+
+    <section id="addlinkssection">
+      <title>モジュールへのリンクの追加</title>
+
+      <list id="addlinkslist" list-type="enumerated">
+	<item>コースアウトラインのモジュールタイトルをクリックしてください。モジュールのEditタブは画面の右側に表示されます。</item>
+	<item>Linksタブをクリックしてください。</item>
+	<item>新しいリンクに入るには、Add a New LinkパネルのEnter a Nameにリンクの名前を入力してください。</item>
+	<item>Link Typeのドロップダウンリストから、リンクのカテゴリーを選択してください。</item>
+	<item>Link Strengthのドロップダウンリストから、リンクの重要性を選択してください。</item>
+	<item>Module IDかLink URLのリンクに入ってください。</item>
+	<item><code>Add</code>をクリックしてください。</item>
+</list>
+      
+      <para id="addlinkspara">　モジュールが閲覧されたとき、オリジナルへの著者のリンクとともに、そのリンクはLinksサイドバーに表示されるでしょう。
+      </para>
+     </section>
+    </section>   
+
+    <section id="rearrange">
+      <title>コンテンツの編成</title>
+
+     <para id="rearrangepara1">　Course Composerには、コース内のコンテンツアイテムを編成する2つのメソッドがあります。1つ目のメソッドは、アイテムをコンテンツ内、もしくはセクション内で、移動させるために上下の矢印を使用します。2つ目のメソッドは、コースからセクション、またはセクションからセクションへアイテムを移動させるために、<code>Cut</code>と<code>Paste</code>ボタンを使用します。
+      </para>
+
+         <section id="rearrangeupdown">
+           <title>上下矢印を使用しての編成</title>
+
+         <para id="rearrangepara2">
+         　上下の矢印を使って、コース内かセクション内でアイテムを編成するには、以下の手順を行ってください。
+         <list id="rearragelist1" list-type="enumerated">
+		<item>Course Composerのコンテンツタブを選択してください。</item>
+		<item>コース内のコンテンツアイテムを編成するために、コースタイトルをクリックするか、セクション内のコンテンツアイテムを編成するために、セクションタイトルをクリックするかしてください。コースのコンテンツの一覧、もしくは選択されたセクションは、画面の右側に表示されます。</item>
+		<item>コンテンツアイテムをコースもしくはセクション内の、異なった場所へ再配置するため、Moveコラムの上下の矢印をクリックしてください。外側の2つの矢印はコンテンツアイテムを、最初か最後のポジションに移動します。内側の2つの矢印はコンテンツアイテムを、前後のポジションに移動します。</item>
+	</list>
+</para>
+       
+      <figure id="coursecomposerfig2">
+	<media id="id1171120190342" alt=""><image src="../../media/coursecomposerfigj2.png" mime-type="image/png"/></media>
+	<caption>"Title" and "Order" columns</caption>
+</figure>
+          </section>
+
+         <section id="rearrangecutpaste">
+           <title>切り取り・貼り付けボタンを使用した編成</title>
+
+         <para id="rearrangepara3">
+	　<code>Cut</code>と<code>Paste</code>ボタンを使って、コースからセクション、またはセクションからセクションへ、アイテムを編成するには、以下の手順を行ってください。
+
+          <list id="rearragelist2" list-type="enumerated">
+		<item>Course Composerのコンテンツタブを選択してください。</item>
+		<item>コース内のコンテンツアイテムを切り取り・絵をするために、コースアウトラインのコースタイトルをクリックするか、セクション内のコンテンツアイテムを切り取り・貼り付けするために、コースアウトラインのセクションタイトルをクリックするかしてください。選択されたセクションかコースのコンテンツ一覧は、画面の右側に表示されます。</item>
+		<item>移動させたいコンテンツアイテムかアイテムの左にあるチェックボックスを選択してください。</item>
+		<item><code>Cut</code>をクリックしてください。</item>
+		<item>コースアウトライン内で、コンテンツアイテムを貼り付けたいセクションのタイトルをクリックしてください。</item>
+		<item><code>Paste</code>をクリックしてください。コンテンツアイテムまたはアイテムは、選択したセクションタイトルの下の、コースアウトラインに表示され、オリジナルのコースもしくはセクションタイトルの下から消えます。</item>
+	</list>
+</para>
+    </section>
+    </section>
+
+    <section id="removesection">
+      <title>コースコンテンツの削除</title>
+      <para id="removepara1">
+         　コンテンツアイテムをコースかセクションから削除するには、以下の手順を行ってください。
+      <list id="removelist" list-type="enumerated">
+	<item>Course Composerのコンテンツタブを選択してください。</item>
+	<item>コースからコンテンツアイテムを削除するために、コースタイトルをクリックするか、セクションからコンテンツアイテムを削除するために、セクションタイトルをクリックするかしてください。そのコンテンツ一覧は、画面の右側に表示されます。</item>
+	<item>削除したいオブジェクトのチェックボックスを選択してください。</item>
+	<item><code>Remove</code>をクリックしてください。そうすればアイテムはコースもしくはセクションから削除されます
+</item>
+</list>
+</para>
+    </section>
+
+     <section id="addroles">
+      <title>共同制作者Rolesの割り当て</title>
+       <para id="addrolespara">　共同作業を行う著者に<link url="http://cnx.rice.edu/help/reference/roles">roles</link>を割り当てるには、以下の手順を行ってください。
+
+      <list id="addroleslist" list-type="enumerated">
+	<item>Course ComposerのRolesタブを選択してください。</item>
+	<item>著者にしたい人、maintainer、著作権保有者によるロールへのアクセスを、検索のテキストボックスに入力してください。この人はConnexionsアカウントを持っている必要があります。</item>
+	<item><code>Search</code>をクリックしてください。検索条件に合ったアカウント保持者の一覧が表示されます。
+</item>
+	<item>必要な共同制作者のチェックボックスを選択してください。</item>
+	<item><code>Add People</code>をクリックしてください。Roles Pending Approval画面の下にが表示されます。</item>
+	<item>その人のためにappropriate roleのチェックボックスをチェックしたり、チェックをはずしたりしてください。</item>
+	<item>ステップ2～ステップ5までを、共同で作業したいすべての人に対して繰り返してください。</item>
+	<item><code>Update Roles</code>をクリックしてください。</item>
+</list>
+</para>
+      
+      <para id="addpeoplepara">　Connexionsは新しい著者に、彼らが次回ログインしたときに、roleの要求が未定であることを通知します。要求が受け入れられると、rolesが与えられます。そして、適切なアクセスパーミッションは適用されます。</para>
+    </section>   
+    
+    <section id="notationsection">
+      <title>Notation Parametersの指定</title>
+
+      <para id="notationpara1">　異なったコースのモジュールは、ベクトルや虚数などの同じ項目への、異なった提示方法を使用するかもしれません。これらのアイテムのプレゼンテーションを、表示パラメタとコースで選択することができます。これらのパラメタをコースにセットするには、以下の手順を行ってください。
+     
+      <list id="notatlist" list-type="enumerated">
+	<item>Course Composerのプロパティタブをクリックしてください。</item>
+	<item>必要な記述のラジオボタンを選択してください。ディフォルトでは最初のコラムに現れます。</item>
+	<item><code>Update Properties</code>をクリックしてください。</item>
+</list>
+</para>
+
+      <para id="notationpara2">　Connexionsはコース内のすべてのモジュールのパラメタ表示に、指定された記述を適用します。</para>
+    </section>
+
+    <section id="previewsection">
+      <title>コースのプレビュー</title>
+
+      <para id="previewpara">　コース・オンラインを表示するために、Course ComposerのPreviewタブをクリックしてください。このプレビューでは、意図したとおりにコースが表示されるかを確かめることができます。</para>
+
+    </section>
+
+    <section id="publishcoursesec">
+      <title>コースの公開</title>
+
+      <para id="publishpara">　公開されているコースは、インターネット上でそれを閲覧したいすべての人に対して利用可能です。コースが完成したなら、Connexionsで公開してください。
+
+	<list id="publsihlist" list-type="enumerated">
+		<item>コースのメタデータ、roles、オンラインバージョンを確認してください。</item>
+		<item>Course ComposerのPublishタブをクリックしてください。</item>
+		<item>Description of Changesのところに改正に関する短い解説を入力してください。これはコースの改正ヒストリーページに表示されます。</item>
+		<item><code>Publish</code>をクリックしてください。</item>
+	</list>
+		
+　コースはConnexionsで公開されます。あなたはいつでもそのコースを見つけ、Course Composerで改正することができます。
+          <note id="id6986665" type="note">　Connexionsがコースを公開するまえに、コースは任命された著者、Maintainer、著作権保有者を持たなくてはなりません。さらに、コースはいかなる未定のrole requestsも持つことができません。すべてのrole requestsは受理されるか、拒否されるかしなくてはなりません。</note>
+</para>
+    </section>
+    
+    <section id="existintsection">
+      <title>既存コースの編集</title>
+
+      <para id="existpara">　Course Composerで新しいコースを作成するのと同じように、コースを編集することができます。maintainer rolesがあるとコースだけを編集することができます。既存のコースでCourse Composerを使うためには、ワークスペースかワークグループで、以下の手順を行ってください。
+
+	<list id="existlist" list-type="enumerated">
+	<item><code>公開コンテンツの検索</code>をクリックして、Search the Connexions repository画面を表示してください。
+	  </item>
+	<item>コースに関連する単語か文字列を、検索テキストボックスに入力してください。</item>
+	<item>モジュールのチェックボックスのチェックを外し、コースのチェックボックスをチェックしたままにしてください。</item>
+	<item><code>Search</code>をクリックしてください。検索結果が表示されます。</item>
+	<item>必要なコースのチェックボックスをチェックしてください。</item>
+	<item>Add selected content toのドロップダウンリストから、置かれるコースをワークスペースかワークグループを選択してください。
+</item>
+	<item><code>Add</code>をクリックしてください。これでコースは指定されたワークスペースかワークグループに追加されます。</item>
+	<item>Course Composerでコースを開いてください。そして<link target-id="create">新しいコースの作成</link>の見出しの下で述べられているように編集してください。</item>
+</list>
+</para>
+    </section>
+   
+	    
+	  
+  </content>
+  
+</document>

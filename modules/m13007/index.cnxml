@@ -1,0 +1,265 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>CNXML上級</title>
+
+  <metadata>
+  <md:content-id>m13007</md:content-id><md:title>CNXML上級</md:title>
+  <md:abstract>This is the final installment of my three
+  part tutorial on the CNXML language.  It is currently valid for the
+  most recent
+  release of the 0.3 language.  The keywords contain a list of the
+  tags described in this tutorial.  Along with the example code in
+  this module there is also an example module that has been growing
+  throughout the tutorial.</md:abstract>
+  <md:uuid>c3736885-1bf3-47a0-92c5-5e76aa38aedb</md:uuid>
+</metadata>
+
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m9007">http://cnx.org/content/m9007/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="code">
+      <title>Code</title>
+      <para id="codelp1">　<code>code</code>タグは、パラグラフ内にインラインテキストとしてか、ブロックテキストとして使用されます。どんなタグが含まれるかは<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">CNXML
+	Spec</link>に相談してください。<code>code</code>タグには2種類の値が入る<code>type</code>属性があります。
+
+	<list id="code_list">
+	<item>
+		<code>inline</code> (ディフォルト) - インラインテキストの指定</item>
+	<item>
+		<code>block</code> - ブロックテキストの指定</item>
+</list>
+</para>
+
+      <example id="codelexamp">
+	<code id="id4115718" display="block">
+	  
+&lt;para id='copy'&gt;
+  In a unix terminal the command to copy a file is &lt;code
+  type='inline'&gt;cp original copy&lt;/code&gt;.
+&lt;/para&gt;
+	  
+	</code>
+	<para id="copy">
+	  In a unix terminal the command to copy a file is <code display="inline">cp original copy</code>
+	</para>
+      </example>
+    </section>
+
+    <section id="exercise">
+      <title>Exercise</title>
+      <para id="exercisep1">　<code>exercise</code>タグは作者に対して、彼らのドキュメントに練習問題を追加するタグを提供します。<code>exercise</code>タグは<code>id</code>属性（必須）と<code>problem</code>と<code>solution</code>の2つの子要素を持ちます。<code>problem</code>タグと<code>solution</code>タグは属性を持ちません。
+      </para>
+      <para id="qml">　多項選択式などの複雑な答えを作成するため、QML(Questions Markup Language)はproblemタグやsolutionタグのところで使用されるでしょう。詳しくは<link url="http://cnx.rice.edu/qml/intro/qml.xml">QML</link>を見てください。    </para>
+      <example id="exerexam">
+	<code id="id1171121759363" display="block">
+	  
+&lt;exercise id='grilltest'&gt;
+  &lt;problem&gt;
+    &lt;para id='grilltestp1'&gt;
+      For food safety, a steak should be cooked to a minimum
+      temperature of what?
+    &lt;/para&gt;
+  &lt;/problem&gt;
+  &lt;solution&gt;
+    &lt;para id='sol1p1'&gt;
+      160&amp;deg; F or until the juices run clear and the meat is no
+      longer pink.
+    &lt;/para&gt;
+  &lt;/solution&gt;
+&lt;/exercise&gt;
+	  
+	</code>
+	<exercise id="grilltest">
+	  <problem id="id3414782">
+	    <para id="grilltestp1">
+	      For food safety, a steak should be cooked to a minimum
+	      temperature of what?
+	    </para>
+	  </problem>
+	  <solution id="id1171119278619">
+	    <para id="sol1p1">
+	      160° F or until the juices run clear and the meat is
+	      no longer pink
+	    </para>
+	  </solution>
+	</exercise>
+      </example>
+    </section>
+
+    <section id="calstable">
+      <title>CALS Table</title>
+      <para id="calsp1">　CNXMLはCNXMLドキュメントにテーブルを含めるために、Industry Standardの<link url="http://www.oasis-open.org/specs/a502.htm">CALS Table
+	  Model</link>を使用しています。以下に示すのは、CALSタグ、それらの属性、そして子要素の簡単な解説です。より詳しい情報については、<link url="http://www.oasis-open.org/specs/a502.htm">CALS Table
+	  Spec</link>に相談してください。
+      </para>
+
+      <section id="tablesec">
+	<title>table</title>
+	<para id="table">　<code>table</code>タグは表の始まりを示します。任意の子要素<link document="m9000" target-id="name">name</link>を持ち、1つ以上の<link target-id="tgroup">tgroup</link>タグを持っています。tableタグはまた多くの属性を持っています。詳しくは<link url="http://www.oasis-open.org/specs/a502.htm">CALS Table
+	  Spec</link>に相談してください。
+
+	</para>
+      </section>
+
+      <section id="tgroupsec">
+	<title>tgroup</title>
+	<para id="tgroup">　<code>tgroup</code>タグは<link target-id="table">table</link>の始まりを示します。列数を表す必須の属性<code>cols</code>を持ちます。その子属性のタグは、0か1以上の<link target-id="colspec">colspec</link>か<link target-id="spanspec">spanspec</link>と、0か1以上の<link target-id="thead">thead</link>か<link target-id="tfoot">tfoot</link>、そして1つの<link target-id="tbody">tbody</link>タグです。
+</para>
+      </section>
+
+      <section id="colspecsec">
+	<title>colspec</title>
+	<para id="colspec">
+	  The <code>colspec</code> tag is an <term>empty tag</term>
+	  that specificies the column of a <link target-id="table">table</link> or <link target-id="entrytbl">entrytbl</link>.  The names and numbers
+	  specified as attributes are used for referencing by other
+	  tags.
+	</para>
+      </section>
+
+      <section id="spanspecsec">
+	<title>spanspec</title>
+	<para id="spanspec">
+	  The <code>spanspec</code> tag is an empty tag that
+	  identifies a horizontal span of columns and associated
+	  attributes that can subsequently be referenced by its
+	  spanname for repeated use in <link target-id="entry">entry</link> or <link target-id="entrytbl">entrytbl</link> in different <link target-id="row">rows</link>.
+	</para>
+      </section>
+
+      <section id="theadsec">
+	<title>thead</title>
+	<para id="thead">　<code>thead</code>タグは<link target-id="tgroup">tgroup</link>か<link target-id="entrytbl">entrytbl</link>のヘッダーの<link target-id="row">row</link>を特定します。<code>thead</code>タグは0か1以上の<link target-id="colspec">colspec</link>タグ、および1以上の<link target-id="row">row</link>を持つことができます。
+</para>
+      </section>
+
+      <section id="tfootsec">
+	<title>tfoot</title>
+	<para id="tfoot">　<code>tfoot</code>タグは、<link target-id="tbody">tbody</link>タグの後に表示されるフッター情報の<link target-id="row">rows</link>を特定します。<code>tfoot</code>タグは0か1以上の<link target-id="colspec">colspec</link>タグ、および1つ以上の<link target-id="row">row</link>を持つことができます。
+</para>
+      </section>
+
+      <section id="tbodysec">
+	<title>tbody</title>
+	<para id="tbody">　<code>tbody</code>タグは<link target-id="tgroup">tgroup</link>か<link target-id="entrytbl">entrytbl</link>の中身を特定します。<code>tbody</code>タグには、1つ以上の<link target-id="row">row</link>タグがなければなりません。
+	</para>
+      </section>
+
+      <section id="rowsec">
+	<title>row</title>
+	<para id="row">　<code>row</code>タグは、<link target-id="thead">thead</link>、<link target-id="tbody">tbody</link>、もしくは<link target-id="tfoot">tfoot</link>の中の情報の行を特定します。<code>row</code>タグは1つ以上の<link target-id="entry">entry</link>か<link target-id="entrytbl">entrytbl</link>がなければなりません。</para>
+      </section>
+
+      <section id="entrytblsec">
+	<title>entrytbl</title>
+	<para id="entrytbl">　<code>entrytbl</code>タグは<link target-id="entry">entry</link>の代理を行いますが、<link target-id="tgroup">tgroup</link>の<link target-id="tbody">tbody</link>の<link target-id="row">一行</link>に収まります。
+
+	  The content model is the
+	  same as that of a <link target-id="tgroup">tgroup</link> except
+	  that <link target-id="tfoot">tfoot</link> is ommitted and
+	  <code>entrytbl</code> is self-excluding.  Its children tags
+	  are zero, one, or more <link target-id="colspec">colspec</link>
+	  or <link target-id="spanspec">spanspec</link>, zero or one
+	  <link target-id="thead">thead</link> or <link target-id="tfoot">tfoot</link>, and one <link target-id="tbody">tbody</link> tag.
+	</para>
+      </section>
+      
+      <section id="entrysec">
+	<title>entry</title>
+	<para id="entry">　<code>entry</code>タグは<link target-id="row">row</link>内の入力を特定します。<code>entry</code>タグはASCIIを含んでおり、0か1以上の<link document="m9000" target-id="cite">cite</link>、<link document="m9000" target-id="term">term</link>、<link document="m9000" target-id="cnxn">cnxn</link>、<link document="m9000" target-id="link">link</link>、<link document="m9006" target-id="code">code</link>、<link document="m9000" target-id="emphasis">emphasis</link>もしくは<link document="m9006" target-id="media">media</link>を含んでいます。</para>
+      </section>
+
+      <section id="using">
+	<title>Using CALS Tables</title>
+	<para id="tablep3">　少し複雑に聞こえるかもしれませんが、<link target-id="tableexam"/>を見ることで表について理解できると思います。より詳しい情報は<link url="http://www.oasis-open.org/specs/a502.htm">CALS
+	  Table Spec</link>か<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">CNXML
+	  Spec</link>に相談してください。
+</para>
+	<example id="tableexam">
+	  <code id="id8646273" display="block">
+	    
+&lt;table id='grilltemp' frame='all'&gt;
+  &lt;name&gt;Steak Cooking Temperatures&lt;/name&gt;
+  &lt;tgroup cols='2' colsep='1' rowsep='1'&gt;
+    &lt;thead&gt;
+      &lt;row&gt;
+        &lt;entry&gt;Temperature (&amp;deg;F)&lt;/entry&gt;
+        &lt;entry&gt;Description&lt;/entry&gt;
+      &lt;/row&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;row&gt;
+        &lt;entry align='center'&gt;140&lt;/entry&gt;
+        &lt;entry align='center'&gt;Rare&lt;/entry&gt;
+      &lt;/row&gt;
+      &lt;row&gt;
+        &lt;entry align='center'&gt;150&lt;/entry&gt;
+        &lt;entry align='center'&gt;Medium Rare&lt;/entry&gt;
+      &lt;/row&gt; 
+      &lt;row&gt;
+        &lt;entry align='center'&gt;160&lt;/entry&gt;
+        &lt;entry align='center'&gt;Medium&lt;/entry&gt;
+      &lt;/row&gt;
+      &lt;row&gt;
+        &lt;entry align='center'&gt;165&lt;/entry&gt;
+        &lt;entry align='center'&gt;Medium Well&lt;/entry&gt;
+      &lt;/row&gt;
+      &lt;row&gt;
+        &lt;entry align='center'&gt;170&lt;/entry&gt;
+        &lt;entry align='center'&gt;Well&lt;/entry&gt;
+      &lt;/row&gt;
+    &lt;/tbody&gt;
+  &lt;/tgroup&gt;
+&lt;/table&gt;
+	    
+	  </code>
+	  <table id="grilltemp" frame="all" summary="">
+	    <title>Steak Cooking Temperatures</title>
+	    <tgroup cols="2" colsep="1" rowsep="1">
+	      <thead>
+		<row>
+		  <entry>Temperature (°F)</entry>
+		  <entry>Description</entry>
+		</row>
+	      </thead>
+	      <tbody>
+		<row>
+		  <entry align="center">140</entry>
+		  <entry align="center">Rare</entry>
+		</row>
+		<row>
+		  <entry align="center">150</entry>
+		  <entry align="center">Medium Rare</entry>
+		</row> 
+		<row>
+		  <entry align="center">160</entry>
+		  <entry align="center">Medium</entry>
+		</row>
+		<row>
+		  <entry align="center">165</entry>
+		  <entry align="center">Medium Well</entry>
+		</row>
+		<row>
+		  <entry align="center">170</entry>
+		  <entry align="center">Well</entry>
+		</row>
+	      </tbody>
+	    </tgroup>
+	  </table>
+	</example>
+      </section>
+    </section>
+  
+    <section id="fin">
+      <title>まとめ</title>
+      <para id="end">　これでCNXMLチュートリアルは終わりです。2つの役立つリソースは<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">The
+	CNXML Language Spec</link>と<link document="m10281">the
+	example document</link>です。
+      </para>
+    </section>
+  </content>
+</document>

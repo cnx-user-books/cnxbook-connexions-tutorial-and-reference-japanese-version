@@ -1,0 +1,330 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+	<title>ワークスペースの機能</title>
+	<metadata>
+  <md:content-id>m12996</md:content-id><md:title>ワークスペースの機能</md:title>
+  <md:abstract>An explanation of the work areas: My Workspace and Workgroups.</md:abstract>
+  <md:uuid>106f6b86-a7f7-4277-a882-d97988530773</md:uuid>
+</metadata>
+
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m10885">http://cnx.org/content/m10885/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+		<section id="cnxworkareas">
+			<title>Connexionsワークスペース</title>
+			<para id="workareapara1">
+        　コンテンツに対する作業を行うため、Connexionsは2つのタイプのワークスペースを提供します。それはマイワークスペースとワークグループです。この2つのワークスペースでコンテンツの作成、編集、管理ができます。ワークスペースのタイプの違いはユーザーアクセスの違いです。マイワークスペースは個人的なワークスペースです。あなただけがアクセスして、コンテンツを変更できます。Connexionsアカウントを持っているすべての人には、彼ら自身のワークスペースがあります。彼らのConnexionsアカウントがセットアップされたとき、それらは自動的に生成されます。ワークグループは共同プロジェクトのためのものです。ユーザー層からそれらのコンテンツにアクセスでき、グループのメンバーは、コンテンツを見たり変更したりすることができます。あなたはワークグループを作成すべきです。各プロジェクトのため異なったものを持っている、複数のワークグループを作成することができます。両方のタイプのワークスペースは、このモジュールで説明されます。
+      </para>
+			<section id="viewingwg">
+				<title>ワークスペースの閲覧</title>
+				<para id="viewingwgppara">
+	  　Connexionsにログインすると、<link url="http://cnx.rice.edu/">Connexionsのトップページ</link>の左下のログインサイドバーはワークスペースサイドバーに変わります。このサイドバーは、ログインしている限り、トップページと他のConnexionsのWebページに表示され、ワークスペースに迅速に切り替えることができるようになっています。
+	</para>
+				<figure id="workspacebox">
+	<media id="id1171697678507" alt=""><image src="../../media/workspaceboxj.png" mime-type="image/png"/></media>
+	<caption>ワークスペースサイドバー</caption>
+</figure>
+			</section>
+			<section id="managingworkgroupssection">
+				<title>My Workspace</title>
+				<para id="personalworkspacepara">
+	　マイワークスペースは、他人にかかわらず作業できるConnexions内の個人的なワークスペースです。このワークスペースでは、他人が見たり変更したりできない、自分自身のモジュール、ファイル、コースを保管することができます。多くの著者が、共同製作者がコメントしたり、資料を編集できる<link target-id="workgroups">ワークグループ</link>にそれらを移動させる前に、マイワークスペースで作業することを好みます。</para>
+				<para id="personalworkspacepara2">
+	　ConnexionsのWebページで、ワークスペースサイドバーの<emphasis>マイワークスペース</emphasis>のリンクか、パーソナルツールバーの<emphasis>マイワークスペース</emphasis>のリンクをクリックすることで、個人的なワークスペースを表示することができます。
+      </para>
+			</section>
+			<section id="workgroups">
+				<title>Workgroups</title>
+				<para id="workg1">
+ 	　ワークグループは、Connexionsの著者のグループが、一般的なモジュールを共同で使える個人的なscratch areaです。これは、共同で作業している著者に、他の物を見せずに、彼らの進歩に目を向けるようにします。 	
+ 	<note id="id1171706293080" type="Warning"><label>Warning</label>ワークグループは共同制作者のコミュニケーションの代わりではないことを覚えておいてください。ワークグループのメンバーには、すべて同じレベルの特権があるので、ワークグループのメンバーはオープンに連絡しなくてはなりません。ワークグループのすべてのメンバーも、著者を追加したり削除したり、コンテンツを追加したり削除したりするかもしれません。ワークグループのクリエイターには他の特権はありません。
+ 	</note>
+</para>
+				<para id="workg2">
+ 	　各ワークグループは、それに関連しているモジュールかファイルをもつことができます。ワークグループのメンバーは、既存のモジュールをワークグループへ追加することができます。モジュールが作成されるか、Checked outされると、そのモジュールは編集権利を持っているワークグループのメンバーはそれを変更するかもしれません。編集権利を持つためには、モジュールのためのmaintainerの役割がなければなりません。詳しくは<link document="m10887" target-id="editroles">Editing Module
+ 	Roles</link>を参照してください。
+ 	</para><para id="workg3">　メンバーに入っているワークグループの名前は、ワークスペースサイドバーに表示されます。ワークグループの名前をクリックすることで、ワークグループのコンテンツを表示することができます。
+       </para>
+			</section>
+			<section id="createworkgroupsect">
+				<title>新しいワークグループの作成</title>
+				<para id="createworkgpara1">
+ 	　ワークグループを作成するには、以下の手順を行ってください。
+ 	
+         <list id="createworkglist1" list-type="enumerated">
+	<item>ワークスペースサイドバー<code>ワークグループの作成</code>のをクリックして、Create Workgroup画面を表示してください</item>
+	<item>名前の欄にワークグループの名前を入力してください。</item>
+	<item>任意で、メールの欄にEメールアドレスを入力してください。これは、ワークグループのすべてのメンバーによって共有されるアドレスか、メーリングリストであるべきです。         </item>
+	<item>任意で、Descriptionの欄に説明を入力してください。</item>
+	<item><code>Create</code>をクリックして、new workgroupの画面を表示してください。</item>
+</list>
+</para>
+				<para id="createworkgpara2">
+         　新しいワークグループなので、中身がなく、あなたが唯一のメンバーです。どのようにContentを新しいワークグループに追加するかは、<link target-id="managewapara1">Managing Work Area Contents</link>を見てください。新しいメンバーの追加方法は、<link target-id="wgmemberssect">Managing Workgroup Members</link>を見てください。 
+</para>
+			</section>
+		</section>
+		<section id="managewapara1">
+			<title>ワークスペースコンテンツの管理</title>
+			<para id="wacontentpara1">
+	　マイワークスペースを表示するには、ワークスペースサイドバーで<emphasis>マイワークスペース</emphasis>のリンクをクリックしてください。ワークグループを表示するには、ワークスペースサイドバーでその名前をクリックしてください。初めてマイワークスペースを表示する場合や、ワークグループを作成したばかりなら、ワークスペースの中身は空です。
+	</para>
+			<para id="wacontentpara2">
+        　マイワークスペースにはコンテンツとプロパティタブがあります。ワークグループにはコンテンツ、プロパティ、Membersタブがあります。トップにあるページタイトルを除けば、コンテンツタブは両ワークスペースとも同じです。コースと3つのモジュールを含むマイワークスペースのコンテンツタブをあらわす図です。
+      </para>
+			<figure id="workspacefig">
+	<media id="id1171711415223" alt=""><image src="../../media/personalj.png" mime-type="image/png"/></media>
+	<caption>"Contents" tab for "My Workspace".</caption>
+</figure>
+			<para id="workg6">
+	　Contentタブから以下の動作を行うことができます。
+	<list id="workgrouplist">
+	<item><link target-id="creatingmodules" strength="3">新規アイテムの作成</link></item>
+	<item><link target-id="addingexistingmodules">既存コンテンツの追加</link></item>
+	<item><link target-id="viewcontentssect" strength="3">ワークスペースコンテンツの閲覧</link></item>
+	<item><link target-id="removingfiles" strength="3">ワークスペース内のアイテムの削除</link></item>
+	<item><link target-id="renamingfilesec" strength="3">ワークスペース内のアイテムの名前変更</link></item>
+	<item><link target-id="cuttingcoying" strength="3">ワークスペース内のアイテムの切り取り・コピー</link></item>
+</list>
+</para>
+			<section id="creatingmodules">
+				<title>新規アイテムの作成</title>
+				<para id="createmodulepara">
+	  　ワークスペースで新しいモジュールかコースを作成するには、以下の手順を行ってください。	  
+	<list id="createitemlist2" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>の横の下矢印をクリックして、有効な項目タイプのドロップダウンメニューを表示してください。
+	  </item>
+	<item>コースかモジュールの項目タイプを選択してください。そして<code>新規アイテムの作成</code>をクリックしてください。New content: Licensing画面が表示されます。</item>
+	<item>チェックボックスを選択して、ライセンスに同意し、<code>Next</code>をクリックしてください。コースを選択したなら、Edit Course画面にMetadataタブが表示されます。コースの編集方法は<link document="m12988">Course Composerの使い方</link>を見てください。モジュールを選択したなら、Edit Module画面にメタデータタブが表示されます。モジュールの編集方法は<link document="m12998">モジュールの編集</link>を見てください。</item>
+</list>
+</para>
+				<para id="createfilepara">
+	  　ワークスペースで新しいファイルや画像を作成するには、ファイルやソースをアップロードするため、以下の手順を行ってください。
+
+         <list id="createitemlist3" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>の横の下矢印をクリックして、有効な項目タイプのドロップダウンリストを表示してください。
+	  </item>
+	<item>画像かファイルの項目タイプを選択してください。そして<code>新規アイテムの作成</code>をクリックしてください。ファイルを選択したなら、Edit File画面が表示されます。あなたが画像を選択したなら、Edit Image画面が表示されます。</item>
+	<item><code>参照</code>をクリックして、ファイルか画像を選択し、加えてください。	  </item>
+	<item>項目を選択し、<code>OK</code>をクリックしてください。ソース、ファイル、画像などがアップロードされます。</item>
+	<item><code>Save</code>をクリックして、ワークスペースにファイルか画像を加えてください。</item>
+</list>
+</para>
+				<para id="createfilepara2">  
+	  　ファイルや画像の項目タイプは、コンテンツで使用したい材料を自由にアップロードすることを可能にしてくれます。これらの材料はConnexionsで使用する前に、あなたの手元に存在しなくてはなりません。ワークスペースでファイルか画像を作成するとき、実際はConnexions項目のインスタンスを作成しています。
+	  </para>
+				<para id="createfilepara3">  
+	  　新しい画像項目を作成するとき、<code>Save</code>をクリックすると画像のプレビューが表示されます。さらに保存された画像のメッセージが表示されます。新しいファイルを作成し、<code>Save</code>をクリックするとき、ファイルについての情報が表示され、<emphasis>Click here to 
+	  get the file</emphasis>のリンクが表示されます。</para>
+			</section>
+			<section id="addingexistingmodules">
+				<title>既存コンテンツの追加</title>
+				<para id="addingmodules">
+	  　Content Commonsでモジュールかコースを、自分のワークスペースに追加することができます。このように、Connexionsのあらゆる場所にある情報を再使用することができます。既存の項目を追加するには、以下の手順を行ってください。	  
+	  <list id="addmodulelist" list-type="enumerated">
+	<item><code>公開コンテンツの検索</code>をクリックして、Search the 
+	    Connexions repository画面を表示してください。</item>
+	<item>オブジェクトID、タイトル、キーワード、著者名、文字列などを入力して、<code>検索</code>ボタンをクリックしてください。</item>
+	<item>望むなら、モジュールかコースのチェックボックスのチェックをはずし、<code>検索</code>をクリックしてください。検索に合ったモジュールとコースの一覧が画面に表示されます。</item>
+	<item>ワークスペースに加えたい項目の横のチェックボックスをクリックするか、すべての検索結果をチェックするチェックボックスを使ってください。</item>
+	<item>Add selected content toの下矢印をクリックしてください。所属しているすべてのワークスペースのドロップダウンリストが表示されます。リストからワークスペースを選択してください。</item>
+	<item><code>新規追加</code>をクリックしてください。選択した項目は選択したワークスペースに追加されます。そして、コンテンツタブがワークスペースに表示されます。</item>
+</list>
+</para>
+				<figure id="addmodules">
+	<media id="id1171704526982" alt=""><image src="../../media/addmodulesj.png" mime-type="image/png"/></media>
+	<caption>Results of a search for existing content.</caption>
+</figure>
+			</section>
+			<section id="viewcontentssect">
+				<title>ワークスペースコンテンツの閲覧</title>
+				<para id="viewwgcontentspara">
+	  　ワークスペースはモジュール、コース、ファイル、画像を含むことができます。ワークスペースの現在のコンテンツは、Contentsタブで見ることができます。ワークスペースの各項目の情報を以下に示します。	  
+	  <list id="filemoduleinfo">
+		<item>Title - このコラムは、ワークスペースに作成・追加したアイテムのID・ファイル名、タイトルなどを表示します。</item>
+		<item>Type - このコラムは、記載されたアイテムのタイプを表示します。タイプは、画像、ファイル、モジュール、コースです。</item>
+		<item>Size - このコラムは、アイテムのサイズをキロバイトで表示します。モジュールやコースのサイズは表示されません。</item>
+		<item>Modified - このコラムは、アイテムが最後に変更された日付を表示します。新しいアイテムなら、作成した日付と時間を表示します。</item>
+		<item>Status - このコラムは、アイテムの現在の状態を表示します。状態には4つの種類があります。	    <list id="contentstatuslist">
+				<item>Published - Content Commonsで公開されており、アクセス可能な状態。</item>
+				<item>Checked Out - Content Commonsからコピーされ、編集目的のために、ワークスペースに置かれた状態。</item>
+				<item>Created - ワークスペースに置かれ、作成されたが、Content Commonsには存在していない状態。</item>
+				<item>Modified - 編集目的のためワークスペースに持ってこられ、アップデートされ、変更が保存された状態。新しいアイテムを作成し、それを変更するとき、そのアイテムの状態はCreatedからModifiedに変わります。</item>
+			</list>
+		</item>
+	</list>
+</para>
+			</section>
+			<section id="removingfiles">
+				<title>ワークスペース内のアイテムの削除</title>
+				<para id="removepara">　ワークスペースからアイテムを削除するには、削除したいアイテムの隣のチェックボックスを選択し、<code>削除</code>をクリックしてください。１回の操作で複数のアイテムを削除することもできます。
+	    </para>
+			</section>
+			<section id="renamingfilesec">
+				<title>ワークスペース内のアイテムの名前変更</title>
+				<para id="renamefilepara">
+	      　ワークスペースからアイテムを改名するには、以下の手順を行ってください。	      
+	      <list id="renamelist" list-type="enumerated">
+	<item>改名したいアイテムのタイトルの横のチェックボックスを選択して、<code>名前を変更</code>をクリックしてください。アイテムの名前を変更という画面が表示されます。</item>
+	<item>新しいショートネームを入力してください。</item>
+	<item>新しいタイトルを入力してください</item>
+	<item><code>Rename All</code>をクリックしてください。ワークスペースのコンテンツ画面で１つ以上のアイテムを選択することで、１度に複数のファイルを削除することができます。</item>
+</list>
+	      
+	      　変更を反映するために、コンテンツタブにあるアイテムはアップデートされます。      
+	    </para>
+			</section>
+			<section id="cuttingcoying">
+				<title>ワークスペース内のアイテムの切り取り・コピー</title>
+				<para id="movingmodulespara1">
+	      　ワークスペースでアイテムをコピーしたり貼り付けたりするには、以下の手順を行ってください。	      
+	    <list id="copylist" list-type="enumerated">
+	<item>切り取りかコピーがしたいアイテムのタイトルの隣のチェックボックスを選択して、<code>切り取り</code>か<code>コピー</code>をクリックしてください。切り取りは、オリジナルのアイテムを、このプロセスの終わりまで削除します。コピーは、オリジナルのアイテムは現在の位置に残します。</item>
+	<item>別のワークスペースなど、対象を貼り付けしたい場所を表示して、<code>ペースト</code>をクリックしてください。オリジナルのアイテムがあるワークグループに貼り付けすると、コピーができます。</item>
+</list>
+</para>
+			</section>
+		</section>
+		<section id="wapropertysect">
+			<title>ワークスペースのプロパティ</title>
+			<para id="wapropertypara1">　ワークグループの名前や個人ワークスペースであるマイワークスペースの説明など、ワークスペースのプロパティを編集することができます。これらの変更は、ワークスペースのプロパティのタブからアクセスできます。</para>
+			<section id="myworkpropsect">
+				<title>My Workspaceのタイトルと説明の編集</title>
+				<para id="myworkproppara1">
+          　タイトルやマイワークスペースの説明を編集するには、以下の手順を行ってください。          
+          <list id="myworkproplist">
+		<item><code>マイワークスペース</code>をクリックして、個人ワークスペース画面を表示してください。</item>
+		<item>プロパティタブをクリックして、Edit Folder Properties画面を表示してください。</item>
+		<item>Titleに新しいタイトルや、個人ワークスペースの名前を入力してください。</item>
+		<item>Descriptionに個人ワークスペースの説明を入力してください。</item>
+		<item><code>Save</code>をクリックしてください。</item>
+	</list>
+</para>
+			</section>
+			<section id="workgrouppropsect">
+				<title>Workgroupのタイトル、Eメールアドレス、説明の編集</title>
+				<para id="workgroupproppara1">
+          　タイトル、Eメールアドレス、メンバーに含まれているワークグループの説明を編集するには、以下の手順を行ってください。          
+          <list id="workgroupproplist">
+	<item>ワークスペースサイドバーでワークグループの名前をクリックして、ワークグループ画面を表示してください。</item>
+	<item>Propertiesタブをクリックして、Properties of画面を表示してください。
+           </item>
+	<item>Nameにワークグループの新しいタイトルや名前を入力してください。
+           </item>
+	<item>EmailにグループEメールアドレスを入力してください。これは、ワークグループのすべてのメンバーによって共有されるEメールアドレスか、メーリングリストであるべきです。</item>
+	<item>Descriptionにワークグループの説明を入力してください。
+           </item>
+	<item><code>Update</code>をクリックしてください。</item>
+</list>
+</para>
+			</section>
+		</section>
+		<section id="wgmemberssect">
+			<title>ワークグループメンバーの管理</title>
+			<para id="wgmemberspara1">
+	　ワークグループを作成するか、既存のワークグループのメンバーになると、他のメンバーをワークグループに追加することができます。追加したメンバーは、ワークグループ内で一緒に作業することができます。
+	<note id="id1171705657422" type="note">
+	　Connexionsアカウントを持っている人だけが、ワークグループのメンバーになることができます。
+	</note>
+</para>
+			<para id="manageviewgroup">　ワークグループのメンバーの名前とEメールアドレスは、Membersタブにリストアップされています。マイワークスペースは個人ワークスペースなので、このタブは利用できません。
+       </para>
+			<figure id="memberstabfig">
+				<media id="id1171705169659" alt=""><image src="../../media/members.png" mime-type="image/png"/></media>
+				<caption>Workgroup "Members" tab.</caption>
+			</figure>
+			<para id="managewg3">
+	　Membersタブから、以下の動作を行うことができます。        <list id="managewglist">
+	<item><link target-id="addingmembers">ワークグループへのメンバーの追加</link></item>
+	<item><link target-id="removememberpara" strength="3">ワークグループからのメンバーの削除</link></item>
+	<item><link target-id="emailfullwg" strength="3">メンバー全員へのEメール送信</link></item>
+	<item><link target-id="emailmembersec" strength="3">個人メンバーへのEメール送信
+</link></item>
+	<item><link target-id="leavewgsec" strength="3">ワークグループからの脱退</link></item>
+	<item><link target-id="deletewgsec" strength="3">ワークグループの削除</link></item>
+</list>
+</para>
+			<para id="joingingpara">
+	　ワークグループに参加するには招待状が要ります。詳しくは<link target-id="joinwgsec" strength="3">Joining a Workgroup</link>を見てください。      </para>
+			<section id="addingmembers">
+				<title>ワークグループへのメンバーの追加</title>
+				<para id="addmemberpara1">　新しいメンバーを、自分のワークグループに追加するには、以下の手順を行ってください。
+	  
+	  <list id="addmemberlist" list-type="enumerated">
+	<item><code>Search</code> ボタンの隣のテキストボックスに、メンバーに追加したい人の名前を入力してください。</item>
+	<item><code>Search</code>をクリックしてください。検索条件に合ったConnexionsのアカウント所有者の一覧が表示されます。もし何も検索条件に合致しなかったら、ユーザーネームやラストネームだけを使って、再び検索してみてください。</item>
+	<item>ワークグループに追加したい人の名前の横のチェックボックスを選択してください。</item>
+	<item><code>Add selected users</code>をクリックしてください。新しいメンバーを含めた形でCurrent Group Membersの表がアップデートされます。</item>
+</list>
+</para>
+			</section>
+			<section id="removememberpara">
+				<title>ワークグループからのメンバーの削除</title>
+				<para id="removepara1">
+	    　ワークグループからメンバーを削除するには、以下の手順を行ってください。
+
+    	  <list id="removememberlist" list-type="enumerated">
+	<item>Removeコラムの、削除したいメンバーのチェックボックスを選択してください。</item>
+	<item><code>Remove selected users from group</code>をクリックしてください。メンバーの削除が反映された形でCurrent 
+	    Group Membersの表がアップデートされます。</item>
+</list>
+</para>
+			</section>
+			<section id="emailfullwg">
+				<title>メンバー全員へのEメール送信</title>
+				<para id="emailwgfull1">
+              　ワークグループ全体にEメールを送信するには、以下の手順を行ってください。
+              
+              <list id="emailfullwglist" list-type="enumerated">
+	<item>Current Group Membersの表のタイトルの横で<emphasis>email group</emphasis>のリンクをクリックしてください。標準メールアプリケーションが立ち上がります。</item>
+	<item>本文を入力して、送信してください。</item>
+</list>
+</para>
+			</section>
+			<section id="emailmembersec">
+				<title>個人メンバーへのEメール送信</title>
+				<para id="emailmember">
+            　グループ全体にメールすることに加えて、ワークグループの特定のメンバーにメールすることができます。特定のメンバーにメールするには、以下の手順を行ってください。            
+              <list id="emailindlist" list-type="enumerated">
+	<item>Eメールを送りたいメンバーの名前の隣のE-mailのコラムのアドレスをクリックしてください。標準のメールアプリケーションが立ち上がります。</item>
+	<item>本文を入力して、送信してください。</item>
+</list>
+</para>
+			</section>
+			<section id="joinwgsec">
+				<title>ワークグループへの参加</title>
+				<para id="workg4">　グループに参加するには、現在のグループメンバーに、メンバーリストに追加してもらわなくてはなりません。ワークグループに参加したいのなら、そのワークグループのメンバーに連絡し、彼らにお願いしてください。</para>
+			</section>
+			<section id="leavewgsec">
+				<title>ワークグループからの脱退</title>
+				<para id="leavewgpara">　ワークグループから脱退するか、そのメンバーリストから抜けるなら、ワークグループのメンバーではなくなります。再びメンバーになるには、現在のメンバーに追加してもらう必要があります。ワークグループを脱退するには、以下の手順を行ってください。
+	  
+	  <list id="leavewg" list-type="enumerated">
+		<item>脱退したいワークグループのMembersタブを表示してください。</item>
+		<item>自分の名前の隣のRemoveコラムのチェックボックスを選択してください。</item>
+		<item><code>Remove selected users from group</code>をクリックして、Leave 
+            Workgroup確認画面を表示してください。</item>
+		<item><code>Yes, Leave</code>をクリックしてください。これでワークグループから抜け、そのワークグループの名前は、ConnexionsのWebページのWorkspacesサイドバーから削除されます。</item>
+	</list>
+	    　メンバー全員がグループから抜けると、グループは削除されます。最後に抜けるメンバーは確認しなければなりません。
+	  </para>
+			</section>
+			<section id="deletewgsec">
+				<title>ワークグループの削除</title>
+				<para id="deletewgpara1">　すでにメンバーがいないと、ワークグループは削除されます。ワークグループを削除したいなら、自分を含めすべてのメンバーを脱退させる必要があります。ワークグループを削除するには、以下の手順を行ってください。
+	  
+	  <list id="deletewglist" list-type="enumerated">
+	<item>削除したいワークグループのMembersタブを表示してください。</item>
+	<item>すべてのメンバーの名前の隣のRemoveコラムで、チェックボックスを選択してください。</item>
+	<item><code>Remove selected users from group</code>をクリックしてください。Delete 
+            Workgroup確認画面が表示されます。</item>
+	<item><code>Yes, Delete it</code>をクリックしてください。これですべてのメンバーがワークグループから抜け、ワークグループは削除されます。そして、すべてのメンバーのWorkspacesサイドバーから、ワークグループの名前が削除されます。</item>
+</list>
+</para>
+			</section>
+		</section>
+	</content>
+</document>

@@ -1,0 +1,89 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>XMLの基礎</title>
+  <metadata>
+  <md:content-id>m13003</md:content-id><md:title>XMLの基礎</md:title>
+  <md:abstract>This module describes XML (eXtensible Markup Language) and the rules that govern its usage.  It also explains what a well-formed and valid document is.</md:abstract>
+  <md:uuid>d2b47812-e89e-489f-aebb-317795de5969</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://www.w3.org/Math/" strength="2">The MathML Language</link>
+    </link-group>
+    <link-group type="supplemental">
+      <link url="http://www.w3.org/TR/REC-xml" strength="3">The XML Specification</link>
+      <link url="http://www.unicode.org" strength="2">Unicode</link>
+      <link url="http://xml.com" strength="2">XML.com</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+ 
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m9002">http://cnx.org/content/m9002/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+   
+    <section id="whatxml">
+      <title>XMLとは</title>
+      <para id="pa1">　<term>XML</term>(eXtensible Markup Language)は、<link url="http://www.w3.org">World Wide Web Consortium(W3C)</link>によって定義されたメタマークアップ言語です。厳密に言えば、それ自身はマークアップ言語ではなく、むしろマークアップ言語を生成するルールの集まりのようなものです。私たちの目的のために、<term>マークアップ言語</term>は、情報伝達のためにテキストをタグで囲む言語（例えばHTML）です。<link url="http://cnx.rice.edu">Connexionsプロジェクト</link>で使用されているマークアップ言語、<link url="http://cnx.rice.edu/cnxml">CNXML</link>はXMLで書かれた言語の1つの例です。
+他の多くの例がW3Cのサイトにあります。CNXMLの記述例です。
+      </para>
+      <code id="id13087810" display="block">
+&lt;para&gt;
+  This is a paragraph in &lt;term&gt;CNXML&lt;/term&gt;.  Notice that the markup
+  contains tags that express the meaning of the text.
+&lt;/para&gt;
+      </code>
+      <para id="pa5">　<code display="inline">&lt;para&gt;</code>と<code display="inline">&lt;/para&gt;</code>がテキストを含んでいるタグです。XMLでは、タグは<code display="inline">&lt;</code>と<code display="inline">&gt;</code>で記述されます。普通<term>タグ</term>はペアになります。開始のタグが<code display="inline">&lt;tagname&gt;</code>のようになり、終了のタグが<code display="inline">&lt;/tagname&gt;</code>のようになります。
+      </para>
+      <para id="pa2">　XMLでは、コンテンツからプレゼンテーションを分離することができます。例えば、HTMLには<code display="inline">&lt;u&gt;</code>や<code display="inline">&lt;i&gt;</code>などのタグがあります。前者はテキストにアンダーラインを付け、後者はテキストをイタリック体にします。これはフォーマットしているだけであり、コンテンツを説明してはいません。XMLではコンテンツの内容を表すため、あなたの好きなタグのタイトルを定義することができます。例えば本のタイトルを表すために、<code display="inline">&lt;book&gt;</code>というタグを作成することができます。そしてスタイルシートでイタリック体にしたり、アンダーラインを引いたりできます。そして、そのタイプのコンテンツのプレゼンテーションを変更したい時、スタイルシートの1箇所を変更するだけで行うことができます。また、ドキュメントの中身を伝えるタグを作成するなら、探すよりいい方法があります。例えば、Authorタグを見ることによって、ドキュメントのAuthorを探すかもしれません。
+      </para>
+    </section>
+
+
+    <section id="xmlrules">
+      <title>Well-formed XML</title>
+      <para id="pa3">　XMLには、CNXMLを含むすべての言語に適用されるいつくかのルールがあります。ドキュメントがこれらのルールを満たすなら、きちんと形成されてると言えます。XMLドキュメントはきとんと形成されていなければなりません。
+
+	<list id="threerules">
+	<item>
+開かれたすべてのタグは閉じられなければなりません。<code display="inline">&lt;module&gt;</code>で始まり、<code display="inline">&lt;/module&gt;</code>で終わるように。簡単な方法があります。タグが他のタグを含まないなら、開始のタグの「&gt;」の前に「/」を入力することで、終了のタグを削除することができます。例えば、<code display="inline">&lt;media&gt;</code>と<code display="inline">&lt;/media&gt;</code>は<code display="inline">&lt;media/&gt;</code>と簡略化することができます。
+	  </item>
+	<item>
+タグは互いに入れ子になっていなくてはなりません。<code display="inline">&lt;b&gt;red &lt;i&gt;and&lt;/i&gt;
+	    blue&lt;/b&gt;</code>は正しくて、<code display="inline">&lt;b&gt;red &lt;i&gt;and&lt;/b&gt;
+	    blue&lt;/i&gt;</code>は正しくありません。なぜなら後者は入れ子になっていないからです。
+	  </item>
+	<item>
+属性値には、シングルコーテーションかダブルコーテーションを付けなければなりません。<term>属性</term>はタグに関連している情報です。例えば、<code display="inline">&lt;module id="m0001"&gt;</code>は正しくて<code display="inline">&lt;module id=m0001&gt;</code>は正しくありません。
+	  </item>
+	<item>
+また、すべてのドキュメントを<term>XML宣言</term>ではじめることを選択することができます。XML宣言を使用するなら、それはファイルの最初で行わなければいけません。前に空白も入れてはいけません。それはタグではありません。XML宣言は以下の通りです。<code display="inline">&lt;?xml version="1.0"?&gt;</code>ドキュメントのエンコードや、他のファイルを読み込むかどうかなどの別の情報も含めることができます。
+	  </item>
+	<item>
+すべてのタグを含む1つのタグがあるはずです。例えば、XHTMLでは<code display="inline">&lt;html&gt;</code>と<code display="inline">&lt;/html&gt;</code>は他のすべてのタグを囲まなくてはなりません。ドキュメントの最初にあり、タグで含まれていないものもあります。XML宣言はその例です。
+	  </item>
+</list>
+</para>
+    </section>
+
+
+    <section id="valid">
+      <title>Valid XML</title>
+      <para id="pvalid">　特定のXML言語のタグに適応されるルールを定義することは可能です。これらのルールは異なった方法で定義することができます。もっとも一般的な方法は<term>DTD</term>(Document Type Definition)を使用することです。その言語のルールに従う全てのドキュメントは、<term>有効</term>であると言えます。ドキュメントは有効なXMLになる必要はありませんが、一般的にそれはいい考えです。
+      </para>
+    </section>
+    <section id="entities">
+      <title>Entities</title>
+      <para id="pent1">　<term>entity</term>は拡張文字を表示するためのものです。それには基本的なフォームがあります。アンパーサンドで始まり、セミコロンで終わります。例えば&amp;amp;は&amp;という文字を表示するためのものです。もしソースファイルに&amp;amp;と入力すると、ブラウザでは&amp;が表示されます。これにはさまざまな種類があり、全てのXMLファイルで使えます。例えば&amp;amp;(&amp;)、&amp;lt(&lt;)、&amp;gt(&gt;)、&amp;quot(")、&amp;apos(')などです。これらはHTMLで定義されているものと同じです。これらの基本記号に加えて、DTDを使用することにより、自分自身の記号を定義することができます。これらの定義は他のシンボルを示したり、長いテキストへのショートカットとして利用できます。
+      </para>
+      <para id="pent2">　<term>Unicode</term>の文字もまたXMLに記述することができます。Unicodeは全ての言語の全ての文字のための、ユニークなコードを定義するためのプロジェクトです。UnicodeはASCIIの一部ではないシンボルを使用するとき、とても役に立ちます。
+</para>
+      <para id="pent3">　Unicodeのentityには、#があります。したがって&amp;#134;のようになります。もしくはコードが16真数で書かれているなら、&amp;#x03C0;のようにxがつきます。
+</para>
+    </section>
+  </content>
+</document>

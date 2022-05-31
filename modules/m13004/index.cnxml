@@ -1,0 +1,135 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>XML言語の結合</title>
+
+  <metadata>
+  <md:content-id>m13004</md:content-id><md:title>XML言語の結合</md:title>
+  <md:abstract>This module explains how to use XML namespaces and DTDs to combine multiple XML languages in the same document.</md:abstract>
+  <md:uuid>70804f92-182c-40a4-8f68-2a21422c8404</md:uuid>
+</metadata>
+
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="para1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m10159">http://cnx.org/content/m10159/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="para2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+
+    <para id="namesp1">　<link url="http://www.w3.org/XML">XML</link>では、カスタムマークアップ言語でドキュメントを作成することができます。しかし、同じドキュメントで、複数の言語からのマークアップを結合したい場合、どうなるでしょうか？1つ以上のタグが、異なった意味で両方の言語に存在していたらどうなるでしょうか？例えば、あなたはHTMLに<code>&lt;table&gt;</code>タグを入力できます。機能を失うことなく、これらのタグをどのように使用しますか？</para>
+
+    <para id="namesp1.5">　解決策は、<term>ネームスペース</term>（W3Cのサイトをみてください。<link url="http://www.w3.org/TR/REC-xml-names/">Namespaces in
+      XML</link>)）と呼ばれる拡張子をXMLで使用することです。ネームスペースは、特定のタグのセットとそれらの使用ルールに、Unique Global Identifier (URI)を関連付けます。特定のタグのためにネームスペースを宣言するには、ユニークな拡張子の値に<code>xmlns</code>属性を設定してください。
+    </para>
+
+    <para id="namesp2">　あなたはまたドキュメント内で使用するため、<term>ネームスペースの接頭語</term>を定義することができます。これをするには、<code>xmlns</code>属性の変更されたバージョンを使ってください。例えば、ネームスペースを示す<code>http://somewhere.org/foo</code>の、<code>foo</code>という接頭語に関連付けるため、<code>xmlns:foo="http://somewhere.org/foo"</code>のような属性を使うでしょう。そのときあなたは、適切な接頭語を加えることによって、そのネームスペースからどのタグが来るかを示すことができます。したがって、fooのネームスペースおける<code>bar</code>タグは<code>&lt;foo:bar&gt;</code>や<code>&lt;/foo:bar&gt;</code>のように書かれるでしょう。
+      
+    </para>
+<para id="namesp3">　ディフォルトのネームスペースを使用すると、そのタグのどんな子も、同じネームスペースから来たと思われるでしょう。タグのすべての子に対してネームスペースが定義できます。特に<term>ルートノード</term>で使用するときに役に立ちます。</para>
+    <example id="namesp">
+      <para id="namesp4">　CNXMLのバージョン0.5のためのネームスペース識別子は<code>http://cnx.rice.edu/cnxml</code>です。したがって、ドキュメントのディフォルトのネームスペースとして、CNXMLに申告するためには、<code>ドキュメント</code>タグに属性を追加するでしょう。よって、MathMLのためのネームスペース識別子は<code>http://www.w3.org/1998/Math/MathML</code>、だからMathMLネームスペースと接頭語<code>m</code>を関連付けるには、<code>ドキュメント</code>タグに<code>xmlns:m="http://www.w3.org/1998/Math/MathML"</code>という属性を追加してください。
+
+      </para>
+    </example>
+   <para id="p1">　ネームスペースでは、同時に複数の言語でドキュメントを書くことができます。しかしながら、これらのドキュメントが有効であるように、それらはある言語のタグが、別の言語のタグの中に存在することを可能にする<term>Document Type Definition</term> (DTD)を持たなくてはなりません。よって、CNXMLドキュメントにMathMLを含めたいなら、MathMLがCNXMLタグ内に存在できるDTDが必要です。DTDがあれば、DOCTYPEを宣言できます。
+    </para>
+    <example id="cmcombo">
+      <para id="pcnxp">　CNXMLのDOCTYPE宣言は以下の通りです。
+      </para>
+      <code id="id1165256990545" display="block">
+    &lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5//EN" 
+              "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_plain.dtd"&gt;
+      </code>
+      <para id="pcnxmath">　CNXMLとMathMLのDOCTYPE宣言は以下の通りです。
+      </para>
+      <code id="id8060015" display="block">
+    &lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5 plus MathML//EN" 
+              "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_mathml.dtd"&gt;
+      </code>
+      <para id="pcnxqml">　CNXMLとQMLのDOCTYPE宣言は以下の通りです。
+      </para>
+      <code id="id1165259538202" display="block">
+    &lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5 plus QML//EN" 
+              "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_qml.dtd"&gt;
+      </code>
+      <para id="pcnxqmlmath">　CNXML、QML、およびMathMLのDOCTYPE宣言は以下の通りです。
+      </para>
+      <code id="id1165255625671" display="block">
+    &lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5 plus
+              MathML plus QML//EN" 
+              "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_mathml_qml.dtd"&gt;
+      </code>
+    </example>
+    <para id="p2">　CNXMLとMathMLを含む簡単なドキュメントです。CNXMLのネームスペースがディフォルトで、MathMLのネームスペースが接頭語<code>m</code>を持っていることに注意してください。
+    </para>
+<code id="id1165258360312" display="block">&lt;?xml version="1.0" standalone="no"?&gt;
+&lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5 plus MathML//EN" 
+              "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_mathml.dtd"&gt;
+
+      &lt;document xmlns="http://cnx.rice.edu/cnxml"
+              xmlns:m="http://www.w3.org/1998/Math/MathML"
+              . . .&gt;
+
+       &lt;metadata xmlns:md="http://cnx.rice.edu/mdml/0.4"&gt;
+  &lt;md:version&gt;2.14&lt;/md:version&gt;
+  &lt;md:created&gt;2005/08/24 15:08:34.203 GMT-5&lt;/md:created&gt;
+  &lt;md:revised&gt;2005/08/24 15:09:19.244 GMT-5&lt;/md:revised&gt;
+  &lt;md:authorlist&gt;
+      &lt;md:author id="selc"&gt;
+      &lt;md:firstname&gt;Sarah&lt;/md:firstname&gt;
+      
+      &lt;md:surname&gt;Coppin&lt;/md:surname&gt;
+      &lt;md:email&gt;coppin@alumni.rice.edu&lt;/md:email&gt;
+    &lt;/md:author&gt;
+      &lt;md:author id="brentmh"&gt;
+      &lt;md:firstname&gt;Brent&lt;/md:firstname&gt;
+      &lt;md:othername&gt;Michael&lt;/md:othername&gt;
+      &lt;md:surname&gt;Hendricks&lt;/md:surname&gt;
+      &lt;md:email&gt;brentmh@rice.edu&lt;/md:email&gt;
+    &lt;/md:author&gt;
+      &lt;md:author id="takaryo"&gt;
+      &lt;md:firstname&gt;Hironori&lt;/md:firstname&gt;
+      
+      &lt;md:surname&gt;Takaryo&lt;/md:surname&gt;
+      &lt;md:email&gt;s043105@ishikawa-nct.ac.jp&lt;/md:email&gt;
+    &lt;/md:author&gt;
+  &lt;/md:authorlist&gt;
+
+  &lt;md:maintainerlist&gt;
+    &lt;md:maintainer id="takaryo"&gt;
+      &lt;md:firstname&gt;Hironori&lt;/md:firstname&gt;
+      
+      &lt;md:surname&gt;Takaryo&lt;/md:surname&gt;
+      &lt;md:email&gt;s043105@ishikawa-nct.ac.jp&lt;/md:email&gt;
+    &lt;/md:maintainer&gt;
+  &lt;/md:maintainerlist&gt;
+  
+  &lt;md:keywordlist&gt;
+    &lt;md:keyword&gt;DTD&lt;/md:keyword&gt;
+    &lt;md:keyword&gt;namespace&lt;/md:keyword&gt;
+    &lt;md:keyword&gt;tutorial&lt;/md:keyword&gt;
+    &lt;md:keyword&gt;XML&lt;/md:keyword&gt;
+  &lt;/md:keywordlist&gt;
+
+  &lt;md:abstract&gt;This module explains how to use XML namespaces and DTDs to combine multiple XML languages in the same document.&lt;/md:abstract&gt;
+&lt;/metadata&gt;
+
+       &lt;content&gt;
+        &lt;para id='p1'&gt;
+         This math says "3y".
+         &lt;m:math display='inline'&gt;
+          &lt;m:apply&gt;
+           &lt;m:times/&gt;
+           &lt;m:cn&gt;3&lt;/m:cn&gt;
+           &lt;m:ci&gt;y&lt;/m:ci&gt;
+          &lt;/m:apply&gt;
+         &lt;/m:math&gt;
+        &lt;/para&gt;
+       &lt;/content&gt;
+
+      &lt;/document&gt;</code>
+    
+    <para id="last">　よって、ネームスペースの使用を結合することと、慎重に書かれたDTDによって、あなたは複数のXML言語を使用するドキュメントを、同時に書くことができます。</para>
+
+  </content>
+</document>

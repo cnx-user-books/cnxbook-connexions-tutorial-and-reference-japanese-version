@@ -1,0 +1,142 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>編集の提案</title>
+  <metadata>
+  <md:content-id>m13002</md:content-id><md:title>編集の提案</md:title>
+  <md:abstract>Instructions for using the Suggest Edits function to recommend changes in a module and how to apply or reject those changes.</md:abstract>
+  <md:uuid>ce46a065-a398-495c-a55e-653890f22e6f</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.rice.edu/help/reference/collaboration" strength="3">Collaboration Methods</link>
+      <link url="http://cnx.rice.edu/content/m10887/latest/" strength="3">Editing Modules</link>
+      <link url="http://cnx.rice.edu/content/m11804/latest/" strength="2">Derived Copy</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m11817">http://cnx.org/content/m11817/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+    
+    <para id="para1">　Connexionsの<link url="http://cnx.rice.edu">Connexions</link> Edit機能を使うと、Connexionsアカウントをもっている人ならだれでも、maintainerにモジュールなどの変更を提案することができます。maintainerとは、モジュールの最後の行のMaintained Byの後ろに名前がある人のことです。Suggest Editsはモジュールのmaintainerに変更を提案するだけなので、提案する側にコンテンツを変更する許可は必要ありません。実際はコンテンツを変更しているのではありません。そして変更を提案しようとする人がmaintainerを知っている必要もありません。すべてのmaintainerは、提案された編集に対する通知を受け取り、それを受理するかどうかを決定することができます。このドキュメントでは、編集の提案方法と、maintainerのオプションについて述べます。
+
+       <note id="id1167288052794" type="note">
+あるモジュールに対してmaintainerのrolesを持っている場合は、そのモジュールへSuggest Editの機能を使用することはできません。なぜなら、maintainerのrolesがあれば編集できるからです。
+    </note>
+</para>
+
+    <section id="suggesteditssection">
+      <title>Maintainersへの編集の提案</title>
+      <para id="suggestpara1">　Suggest Edits機能は、モジュール内容の変更に参加することから、共同作業の形を取っていると言えます。それらは誤字・脱字の指摘、リンクの追加、キーワードの変更などの簡単な編集から、新しい教材の追加という大きな編集までさまざまです。
+      </para>
+
+      <para id="separa2">　Connexionsのモジュール編集を提案するには、以下の手順を行ってください。
+
+	<list id="selist1" list-type="enumerated">
+	<item>ワークスペースにモジュールを追加してください。</item>
+	<item>モジュールにアクセスし、編集画面で必要な編集を行ってください。</item>
+	<item>(任意で)StatusサイドバーのViewの<emphasis>Changes</emphasis>リンクをクリックして、変更内容を確認してください。</item>
+	<item>StatusサイドバーのActionの<emphasis>Suggest Edit</emphasis>リンクをクリックしてください。Suggest Edits画面が表示されます。</item>
+	<item>Description of Editsというテキストボックスに行った編集の説明を入力してください。これはmaintainerに報告されます。</item>
+	<item><code>Send Edits</code>をクリックしてください。
+編集はmaintainerに提出されましたというメッセージと伴に、Manage Files画面が再び表示されます。maintainer側には、あなたの提案を使用するかどうか決める権利があります。maintainerが提案に対して何らかの行動をすると、彼らはその行動に対する説明を入力しなければなりません。それは提案の状況を調べると分かります。 	  </item>
+</list>
+</para>
+
+      <para id="separa3">　編集後にモジュールを発行しようとすると、Publish moduleページは、あなたにこのモジュールの新しいバージョンを公開する権利がないと警告します。このページは2つの実行可能な2つの提案をしてくれます。1つ目はモジュールのmaintainerに編集の提案をすること。2つ目はこのモジュールに基づいた新しいモジュールを作成することです。編集の提出を選択するなら、ステップ3のSuggest Edits画面が表示されます。そうではなく新しいモジュールの作成を選択するなら<link document="m12975">Derive a Copy</link>画面が表示されます。
+      </para>
+    </section>
+
+    <section id="acceptsec">
+      <title>提案された編集の受理と拒否</title>
+      
+      <para id="arpara1">　Suggest Edit機能は、あなたのコンテンツのため、多くの異なったソースから変更と提出を集めるためのツールであるかもしれません。もう不可解なメールでのコンテンツ変更の提案は届かないでしょう。変更内容とそれがどこにあるかを見ることができます。あなたのモジュールに対して、誰かが編集を提案すると、あなたが次にログインしたときに通知があります。Connexionsホームページの右上の<link target-id="SuggestEditPending">Pendingサイドバー</link>は、<emphasis>Suggested Edit</emphasis>リンクを表示します。このリンクから提案内容を見ることができます。そして、それらの編集を使用するかどうかを決めることができます。
+
+      
+<figure id="SuggestEditPending">
+		<media id="id1167288053074" alt=""><image src="../../media/SuggestEditPending.png" mime-type="image/png"/></media>
+		<caption>Pending Sidebar with one Suggested Edit</caption>
+	</figure>
+</para>
+
+    <section id="reviewsect">
+      <title>提案された編集のレビュー</title>
+      
+      <para id="reviewsuggestpara">　提案された編集を見るには、以下の手順を行ってください。
+
+	<list id="reviewlist" list-type="enumerated">
+	<item>
+Pendingサイドバーで<emphasis>Suggested Edit</emphasis>リンクをクリックしてください。Suggested Edits画面が表示されます。この画面はあなたのモジュールに対して提案された編集と、あなたが提案した編集のすべてが表示されます。また提案者のユーザ名、提案日時、提案者からのメッセージ、提案の状態も表示されます。
+</item>
+	<item>
+Editコラムで<emphasis>View</emphasis>をクリックして、提案された編集を見直してください。編集の<link target-id="SuggestedEditsDetails">詳細</link>は画面に表示されます。この画面は前の画面と同じ情報を含んでいます。
+
+	  
+      <figure id="SuggestedEditsDetails">
+			<media id="id1167288053171" alt=""><image src="../../media/SuggestedEditDetails.png" mime-type="image/png"/></media>
+			<caption>Details of a suggested edit to a module</caption>
+		</figure>
+変更、削除、追加されたすべてのファイルの詳細が表示されます。
+</item>
+<item>
+ファイル名をクリックして中身を見てください。削除された行は「-」が左にあり、追加された行は「+」が左にあります。「-」がある行はオリジナルの行を含み、「+」がある行は変更箇所を含みます。
+</item>
+<item>
+提案された編集を使用するかどうかを決めてください。使用したいなら<link target-id="applyedit">Applying Suggested Edits</link>に行ってください。使用したくないなら<link target-id="ignoresec">Rejecting Suggested Edits.</link>に行ってください。
+</item>
+</list>
+</para>
+
+    </section>
+
+    <section id="applyedit">
+      <title>提案された編集の受理</title>
+
+      <para id="applysuggetpara">　提案された編集を適用するには、以下の手順を行ってください。
+
+	<list id="applylist" list-type="enumerated">
+<item>
+変更を適用したいワークスペースのラジオボタンを選択してください。ワークスペースの表は既にモジュールが存在している場所をリストアップします。Otherを選択することで異なったワークスペースを指定することができます。そしてConnexionsはそのモジュールを調べるでしょう。
+</item>
+<item>
+
+
+Click
+<code>Apply In</code>をクリックしてください。Accept Suggested Edits画面が表示されます。
+</item>
+<item>
+Commentsテキストボックスの編集の受理についてのメッセージを入力して、<code>Update</code>をクリックしてください。提案者が次に画面を表示したときに、そのメッセージは見られます。モジュール編集画面は、編集の提案が受け入れられたというメッセージを表示します。
+</item>
+<item>
+モジュールを公開してください。
+</item>
+	</list>
+	<note id="id1167288062494" type="note">
+	変更をすべての人に見えるようにモジュールを公開しなければなりません。	</note>
+</para>
+    </section>
+
+    <section id="ignoresec">
+      <title>提案された編集の拒否</title>
+      <para id="igpara">　提案された編集拒否するには、以下の手順を行ってください。
+
+	<list id="ignorelist" list-type="enumerated">
+	<item><code>Reject</code>をクリックしてください。Reject Suggested Edits画面が表示されます。
+	  </item>
+	<item>Commentsテキストボックスの編集の拒否についてのメッセージを入力して、<code>Update</code>をクリックしてください。提案者が次に画面を表示したときに、そのメッセージは見られます。モジュール編集画面は、編集の提案が拒否されたというメッセージを表示します。
+	  </item>
+</list>
+</para>
+
+    </section>
+
+    </section>
+
+  </content>
+  
+</document>

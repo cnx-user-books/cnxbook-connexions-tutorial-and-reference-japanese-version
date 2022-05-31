@@ -1,0 +1,418 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>CNXML中級</title>
+
+  <metadata>
+  <md:content-id>m13006</md:content-id><md:title>CNXML中級</md:title>
+  <md:abstract>This is the second installment of the CNXML language tutorials.  It is designed to give a more comprehensive look at the CNXML tags and explain some more advanced uses of the language.  Includes helpful examples of CNXML tags, extending the module created in The Basic CNXML tutorial.</md:abstract>
+  <md:uuid>0f88123e-7520-4173-bee8-df6199b8743c</md:uuid>
+</metadata>
+
+<content>   
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m9006">http://cnx.org/content/m9006/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+ 
+    <section id="example">
+      <title>例</title>
+      <para id="examp1">　テキストブックでよくあるように、チャプターやセクションの中に例を入れるでしょう。このため、ドキュメント内に例を含めることができるようにするタグを、CNXMLは提供しています。exampleタグは固有のid属性を持ち、子要素としてほとんどのタグを含むことができます。1番目は任意の<link document="m9000" target-id="name">name</link>です。詳細が知りたいならば、<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">CNXML
+	Spec</link>に相談してください。
+      </para>
+      <example id="exampexamp">
+	<code id="id1171117080897" display="block">
+	  
+&lt;example id='tboneexam'&gt;
+  &lt;figure id='tbonefig'&gt;
+    &lt;name&gt;T-Bone Steak&lt;/name&gt;
+    &lt;media type='image/jpg' src='tbone.jpg'/&gt;
+  &lt;/figure&gt;
+&lt;/example&gt;
+	  
+	</code>
+      </example>
+    </section>
+
+    <section id="figure">
+      <title>Figure</title>
+      <para id="figp1">　<code>figure</code>タグは、ドキュメント内に図を作成するための構造を提供します。それらは2つ以上の<link target-id="subfigure">subfigure</link>タグか、1つの<link target-id="media">media</link>タグ、<link document="m9007" target-id="table">table</link>タグ、<link document="m9007" target-id="code">code</link>タグを含むことができます。
+      </para>
+      <para id="figp2">
+	　<code>figure</code>タグは2つの属性を持っています。
+	<list id="figlist">
+	<item><code>id</code> - 固有のIDです。必ず必要です。</item>
+	<item><code>orient</code> - 複数の<link target-id="subfigure">subfigure</link>（副図）をどのように表示するかを指定する属性です。<code>vertical</code>か<code>horizontal</code>という2つの値が入ります。ディフォルトでは<code>horizontal</code>が入ります。	  </item>
+</list>
+</para>
+      <para id="name">　<code>figure</code>タグの任意のタグは<link document="m9000" target-id="name">name</link>です。これは図のタイトルとして使用されます。
+      </para>
+      <para id="media">　<code>name</code>タグは上で述べられているどのタグにも従います。しかし、最も一般的に使用されるタグは、画像、動画、音声、Javaアプレットなどを含めるmediaタグです。mediaタグは2つの属性を持っています。
+
+	<list id="medialist">
+	<item><code>src</code> - 表示されるメディアの場所</item>
+	<item>
+		<code>type</code> - 表示されるメディアのタイプの定義。それは有効な<link url="http://www.ietf.org/rfc/rfc1341.txt?number=1341">MIME</link>の一種であるかもしれません
+	    <list id="MIME">
+			<item>audio/FILETYPE - audio/mp3, audio/wav, etc.</item>
+			<item>video/FILETYPE - video/qt, video/mov, etc.</item>
+			<item>image/FILETYPE - image/png, image/gif, etc.</item>
+			<item>application/FILETYPE - application/PostScript,
+		application/x-java-applet, etc.</item>
+		</list>
+	</item>
+</list>
+</para>
+      <para id="caption">　最後のタグは任意の<code>caption</code>タグです。これは図の小さな見出しを追加するのに使用されます。
+      </para>
+      <example id="figexamp">
+	<code id="id1171121829412" display="block">
+	  
+&lt;figure id='tbone'&gt;
+  &lt;name&gt;T-Bone Steak&lt;/name&gt;
+  &lt;media type='image/jpeg' src='tbone.jpg'/&gt;
+  &lt;caption&gt;
+    Upon successful completion of these documents, you should be able
+    to grill a steak that looks just as good!
+  &lt;/caption&gt;
+&lt;/figure&gt;
+	  
+	</code>
+      </example>
+    </section>
+    
+    <section id="subfigure">
+      <title>Subfigure</title>
+      <para id="subp1">　<code>subfigure</code>タグは、1つ以上の<link target-id="media">media</link>、<link document="m9007" target-id="code">code</link>、<link document="m9007" target-id="table">table</link>を同じ<link target-id="figure">figure</link>内に含めたいときに使用します。
+	
+      </para>
+      <para id="subp2">　<code>subfigure</code>タグの使い方は<link target-id="figure">figure</link>タグと同じです。任意の<code>id</code>属性、任意の最初の子要素の<link document="m9000" target-id="name">name</link>タグ、1つの<link target-id="media">media</link>、<link document="m9007" target-id="code">code</link>、<link document="m9007" target-id="table">table</link>があります。
+      </para>
+      <para id="subp3">　現在、<link target-id="figure">figure</link>の<code>orient</code>属性は重要になるので、副図が横並びで表示されるか、縦に表示されるかに関わらず、<code>orient</code>属性を指定してください。
+      </para>
+      <example id="subfigexamp">
+	<para id="subp4">
+	  <code id="id1171122276812" display="block">
+	  
+&lt;figure orient='horizontal' id='horfig'&gt;
+  &lt;name&gt;Steaks&lt;/name&gt;
+  &lt;subfigure id='subfigtbone1'&gt;
+    &lt;name&gt;T-Bone&lt;/name&gt;
+    &lt;media type='image/jpeg' src='tbone.jpg'/&gt;
+  &lt;/subfigure&gt;
+  &lt;subfigure id='subfingnystrip1'&gt;
+    &lt;name&gt;New York Strip&lt;/name&gt;
+    &lt;media type='image/jpeg' src='ny_strip.gif'/&gt;
+  &lt;/subfigure&gt;
+  &lt;caption&gt;
+      Upon successful completion of these documents, you
+      should be able to grill a steak that looks just as good!
+  &lt;/caption&gt;
+&lt;/figure&gt;
+	  
+	  </code>
+	  Or
+	  <code id="id1171122129837" display="block">
+	  
+&lt;figure orient='vertical' id='verfig'&gt;
+  &lt;name&gt;Steaks&lt;/name&gt;
+  &lt;subfigure id='subfigtbone2'&gt;
+    &lt;name&gt;T-Bone&lt;/name&gt;
+    &lt;media type='image/jpeg' src='tbone.jpg'/&gt;
+  &lt;/subfigure&gt;
+  &lt;subfigure id='subfig2'&gt;
+    &lt;name&gt;New York Strip&lt;/name&gt;
+    &lt;media type='image/jpeg' src='ny_strip.jpg'/&gt;
+  &lt;/subfigure&gt;
+  &lt;caption&gt;
+    Upon successful completion of these documents, you
+    should be able to grill a steak that looks just as good!
+  &lt;/caption&gt;
+&lt;/figure&gt;
+	    
+	  </code>
+	</para>
+      </example>
+    </section>
+
+    <section id="list">
+      <title>List</title>
+      <para id="listp1">　<code>list</code>タグはリストを作成するのに使用されます。<code>list</code>タグは2つの属性をもっています。
+
+	<list id="listlist">
+		<item><code>id</code> - 固有のIDです。必ず必要です。</item>
+		<item><code>type</code> - リストのフォーマットの定義。<code>type</code>属性は<code>bulleted</code>（ディフォルト）、<code>enumerated</code>、<code>named-item</code>、<code>inline</code>という値を取ります。</item></list>
+　<code>list</code>タグには、2つの子要素があります。<link target-id="name">name</link>（任意）と<code>item</code>です。これらはリストの情報が格納されているところです。
+      </para>
+      <example id="listexamp">
+	<title>Example List</title>
+	<para id="reglist">
+	<code id="id1171115900763" display="block">
+		
+&lt;list id='marinade' type='enumerated'&gt;
+  &lt;name&gt;Beer Marinade&lt;/name&gt;
+  &lt;item&gt;pour beer into large bowl&lt;/item&gt;
+  &lt;item&gt;add chili powder to taste&lt;/item&gt;
+  &lt;item&gt;squeeze half lime into beer marinade&lt;/item&gt;
+  &lt;item&gt;place steak in beer, let soak for 30 minutes&lt;/item&gt;
+&lt;/list&gt;
+	    
+	</code>
+	  　結果はこのようになります。
+	  <list id="marinadedisplay" list-type="enumerated">
+		<title>Beer Marinade</title>
+		<item>pour beer into large bowl</item>
+		<item>add chili powder to taste</item>
+		<item>squeeze half lime into beer marinade</item>
+		<item>place steak in beer, let soak for 30 minutes</item>
+	</list>
+</para>
+      </example>
+
+      <example id="namedlistexample">
+	<title>New List Types Example</title>
+	<section id="namedlistsec">
+	  <title>Named Item Lists</title>
+	  <para id="namedpara">　CNXML0.5では2つの新しいタイプのリストを使うことができます。最初のタイプはnamed itemリストです。このタイプのリストを使うには、listタグの<code>type</code>属性に<code>named-item</code>と指定してください。名前のあるリストの各アイテムは名前を持ちます。
+
+	    <code id="id1171122076517" display="block">
+		
+&lt;list id='marinade' type='named-item'&gt;
+  &lt;name&gt;Beer Marinade&lt;/name&gt;    
+  &lt;item&gt;&lt;name&gt;Step 1&lt;/name&gt;pour beer into large bowl&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 2&lt;/name&gt;add chili powder to taste&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 3&lt;/name&gt;squeeze half lime into beer marinade&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 4&lt;/name&gt;place steak in beer, let soak for 30 minutes&lt;/item&gt;
+&lt;/list&gt;
+	      
+	</code>
+	    　結果はこのようになります。
+	    <list id="marinade" list-type="labeled-item">
+		<title>Beer Marinade</title>
+		<item><label>Step 1</label>pour beer into large bowl</item>
+		<item><label>Step 2</label>add chili powder to taste</item>
+		<item><label>Step 3</label>
+			squeeze half lime into beer marinade</item>
+		<item><label>Step 4</label>
+			place steak in beer, let soak for
+		30 minutes
+	      </item>
+	</list>
+</para>
+	</section>
+	
+	<section id="inlinelists">
+	  <title>Inline Lists</title>
+	  <para id="inlinelistpara">
+　もう1つの新しいタイプのリストはinlineリストです。このタイプのリストは以下のようになります。
+	    <code id="id1171116871608" display="block">
+		 
+In order to make a good marinade follow these directions:&lt;list
+id='marinade' type='inline'&gt;
+  &lt;name&gt;Beer Marinade&lt;/name&gt;
+  &lt;item&gt;&lt;name&gt;Step 1&lt;/name&gt;pour beer into large bowl&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 2&lt;/name&gt;add chili powder to taste&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 3&lt;/name&gt;squeeze half lime into beer marinade&lt;/item&gt;
+  &lt;item&gt;&lt;name&gt;Step 4&lt;/name&gt;place steak in beer, let soak for 30 minutes&lt;/item&gt;
+&lt;/list&gt;.
+	      
+	</code>
+ 
+	    The resulting list will look like: In order to make a good
+	    marinade follow these directions:
+	    
+	    <list id="marinade2" list-type="labeled-item" display="inline">
+		<title>Beer Marinade</title>
+		<item><label>Step 1</label>pour beer into large bowl</item>
+		<item><label>Step 2</label>add chili powder to taste</item>
+		<item><label>Step 3</label>
+			squeeze half lime into beer marinade</item>
+		<item><label>Step 4</label>
+			place steak in beer, let soak for 30 minutes</item>
+	</list>
+</para>
+	</section>
+      </example>
+    </section>
+    
+    <section id="equation">
+      <title>Equation</title>
+      <para id="eqnp1a">　<code>equation</code>タグは、ASCIIテキストや数式を表示するための<link target-id="media">media</link>などを使って、Connexions内のドキュメントで数式を表示するために使用されます。
+
+	<note id="id1171122094283" type="note">しかし、数式を表示するときは、<link document="m9008">MathML</link>タグで数式を使うことが推奨されます。</note>
+</para>
+
+      <section id="nonmathml">
+	<title>ASCII Text and Images</title>
+	<para id="eqnp2">　最初の子要素は、ASCIIテキストに埋め込まれた<link target-id="media">media</link>タグの番号に続く、任意の<link document="m9000" target-id="name">name</link>です。
+	</para>
+	<example id="equationexample">
+	  <para id="eqnpara">
+	    <code id="id1171117043052" display="block">
+	    
+&lt;equation id="eqn14"&gt;
+  &lt;name&gt;Euler's Relation&lt;/name&gt;
+  &lt;media type='image/gif' src='euler.gif' /&gt;
+&lt;/equation&gt;
+	    
+	    </code>
+	    <code id="id1171117061156" display="block">
+	    
+&lt;equation id='eqn15'&gt;
+  &lt;name&gt;Simple Arithmetic&lt;/name&gt;
+    11+27=38
+&lt;/equation&gt;
+	    
+	    </code>
+	    This equation will display as: 
+	    <equation id="eqn15">
+	      <title>Simple Arithmetic</title>
+	      11+27=38
+	    </equation>
+	  </para>
+	</example>
+      </section>
+    </section>
+
+    <section id="definition">
+      <title>Definition</title>
+      <para id="defp1">　<code>definition</code>タグはConnexionsドキュメントの単語を定義するのに使用されます。それは必ず<code>id</code>属性を持ち、<link document="m9000" target-id="term">term</link>、<code>meaning</code>、<link target-id="example">example</link>という3つの子要素を持ちます。definitionタグの使い方は少し難しいので、<link target-id="definitionexamp"/>を調べることを忘れないでください。
+      </para>
+      <para id="defp2">　最初の子要素のタグは、定義された単語や熟語を含む<link document="m9000" target-id="term">term</link>タグです。この次にはいろいろな<link target-id="example">example</link>を伴った<code>meaning</code>タグが来ます。この過程は繰り返されます。
+      </para>
+      <example id="definitionexamp">
+	<code id="id1171117078911" display="block">
+	  
+&lt;definition id='tbonedef'&gt;
+  &lt;term&gt;T-Bone&lt;/term&gt;
+  &lt;meaning&gt;
+    "The T-bone steak is cut between 1 and 3 inches thick and comes
+     from the center section of the short loin. This steak is
+     characterized by its T-shape bone, has a fine-grained shell and a
+     small tenderloin eye,"
+     &lt;cite&gt;http://www.chophousecalgary.com/steak.html&lt;/cite&gt;.
+  &lt;/meaning&gt;
+  &lt;example id='tboneexam'&gt;
+    &lt;figure id='tbonefig'&gt;
+      &lt;name&gt;T-Bone Steak&lt;/name&gt;
+      &lt;media type='image/jpeg' src='tbone.jpg'/&gt;
+    &lt;/figure&gt;
+  &lt;/example&gt;
+&lt;/definition&gt;
+	  
+	</code>
+	<para id="defpara">
+	  <definition id="tbonedef">
+	    <term>T-Bone</term>
+	    <meaning id="id1171116994792">
+	      "The T-bone steak is cut between 1 and 3 inches thick
+	      and comes from the center section of the short
+	      loin. This steak is characterized by its T-shape bone,
+	      has a fine-grained shell and a small tenderloin eye,"
+	      <cite><cite-title>http://www.chophousecalgary.com/steak.html</cite-title></cite>.
+	    </meaning>
+	    <example id="tboneexam">
+	      <figure id="tbonefig">
+		<title>T-Bone Steak</title>
+		<media id="id1171115874727" alt=""><image src="../../media/tbone.jpg" mime-type="image/jpeg"/></media>
+	      </figure>
+	    </example>
+	  </definition>
+	</para>
+      </example>
+    </section>
+
+    <section id="rule">
+      <title>Rule</title>
+      <para id="rule_par1">　<code>rule</code>タグは、定理、原理、経験則などのルールを、CNXMLドキュメントに挿入するのに使用されます。それは2つの属性を持っています。
+
+	<list id="rulelist">
+		<item><code>id</code> - 固有のID。必ず必要です。</item>
+		<item><code>type</code> - ルールの種類。必ず必要です。（例えば定理、原理、経験則）</item>
+	</list>
+　また任意の<link document="m9000" target-id="name">name</link>タグ、1つ以上の<link target-id="statement">statement</link>タグ、<link target-id="proof">proof</link>もしくは<link target-id="example">example</link>タグを持つかもしれません。
+      </para>
+
+      <section id="statement">
+	<title>Statement</title>
+	<para id="state_p1">　<code>statement</code>タグは<code>rule</code>タグの中で使用され、ルールの宣言を定義します。任意の<code>id</code>属性を持ちます。また、<link document="m9000" target-id="para">para</link>と<link target-id="equation">equation</link>の2つの子要素を持ちます。
+	</para>
+      </section>
+      
+      <section id="proof">
+	<title>Proof</title>
+	<para id="proof_p1">　<code>proof</code>タグは<code>rule</code>タグの中で使用され、ルールの証拠をマークします。それは任意の<code>id</code>属性を持ち、別のrule、<link document="m9000" target-id="para">para</link>、<link target-id="equation">equation</link>、<link target-id="figure">figure</link>、<link document="m9000" target-id="list">list</link>タグを持つことがあります。
+	</para>
+      </section>
+
+      <section id="ruleexmpsec">
+	<title>Using rule</title>
+	<example id="ruleexmp">
+	  <code id="id1171122159120" display="block">
+	    
+&lt;rule id='murph' type='law'&gt; 
+  &lt;name&gt;Murphy's Law&lt;/name&gt;
+  &lt;statement&gt;
+    &lt;para id='murphp1'&gt;
+      If there are two or more ways to do something, and one of those
+      ways can result in a catastrophe, then someone will do it.
+    &lt;/para&gt;
+  &lt;/statement&gt;
+  &lt;proof&gt;
+    &lt;para id='murphp2'&gt;
+      Edward A. Murphy, Jr. was one of the engineers on the
+      rocket-sled experiments that were done by the U.S. Air Force in
+      1949 to test human acceleration tolerances (USAF project
+      MX981). One experiment involved a set of 16 accelerometers
+      mounted to different parts of the subject's body. There were two
+      ways each sensor could be glued to its mount, and somebody
+      methodically installed all 16 the wrong way around. Murphy then
+      made the original form of his pronouncement, which the test
+      subject (Major John Paul Stapp) quoted at a news conference a
+      few days later
+      &lt;cite&gt;http://www.lylemariam.com/murphy.htm&lt;/cite&gt;.
+    &lt;/para&gt;
+  &lt;/proof&gt;
+&lt;/rule&gt;
+	    
+	  </code>
+	  <para id="rulepara">
+	    <rule id="murph" type="law"> 
+	      <title>Murphy's Law</title>
+	      <statement id="id1171117175144">
+		<para id="murphp1">
+		  If there are two or more ways to do something, and
+		  one of those ways can result in a catastrophe, then
+		  someone will do it.
+		</para>
+	      </statement>
+	      <proof id="id1171117013063">
+		<para id="murphp2">
+		  Edward A. Murphy, Jr. was one of the engineers on
+		  the rocket-sled experiments that were done by the
+		  U.S. Air Force in 1949 to test human acceleration
+		  tolerances (USAF project MX981). One experiment
+		  involved a set of 16 accelerometers mounted to
+		  different parts of the subject's body. There were
+		  two ways each sensor could be glued to its mount,
+		  and somebody methodically installed all 16 the wrong
+		  way around. Murphy then made the original form of
+		  his pronouncement, which the test subject (Major
+		  John Paul Stapp) quoted at a news conference a few
+		  days later
+		  <cite><cite-title>http://www.lylemariam.com/murphy.htm</cite-title></cite>.
+		</para>
+	      </proof>
+	    </rule>
+	  </para>
+	</example>
+      </section>
+    </section>
+
+    <section id="end">
+      <title>最後に</title>
+      <para id="endp1">　更なる情報は<link document="m9007">The Advanced CNXML</link>を見てください。または<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">CNXML
+	Spec</link>に相談してください。</para>
+    </section>
+  </content>
+</document>

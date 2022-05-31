@@ -1,0 +1,377 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>コンテンツへのマルチメディアファイルの追加</title>
+  <metadata>
+  <md:content-id>m13000</md:content-id><md:title>コンテンツへのマルチメディアファイルの追加</md:title>
+  <md:abstract>An explanation of how to add various types of multimedia objects to your Connexions content. Examples of some of the more common multimedia objects are included.</md:abstract>
+  <md:uuid>6f7d6c4c-c218-4979-b5b7-3e0a823e4ebb</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://www.duke.edu/websrv/file-extensions.html" strength="2">MIME Type List</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning"><para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m12660">http://cnx.org/content/m12660/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="intro">
+      <title>概要</title>
+      <para id="intropara1">　Connexionsのモジュールには、様々なタイプのマルチメディアファイルを組み込むことができます。このドキュメントでは、以下に示すタイプのマルチメディアファイルをモジュールに組み込む方法を説明していきます。
+
+	<list id="l1">
+	<item><link target-id="images">画像</link></item>
+	<item><link target-id="flash">Flash</link></item>
+	<item><link target-id="movies">動画</link></item>
+	<item><link target-id="java">Javaアプレット</link></item>
+	<item><link target-id="audiofiles">音声ファイル</link>
+	</item>
+	<item><link target-id="labview">LabVIEW demonstrations</link></item>
+</list>
+</para>
+      <para id="intropara2">　CNXMLの<code>media</code>タグを使用することで、様々なタイプのマルチメディアファイルを、ConnexionsモジュールのWebページに組み込むことができます。<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec/#media">media</link>タグについての解説は<cite><cite-title>CNXML Language Specification</cite-title></cite>を参照してください。ただしファイルに有効なMIME(Multipurpose Internet Mail Extension)がなくてはなりません。MIMEはASCIIフォーマットに翻訳されることなく、インターネット上で音声や動画ファイルの転送を可能にするプロトコルです。詳しくは<link url="http://www.ietf.org/rfc/rfc1341.txt?number=1341">MIME
+	Types</link>を参照してください。以降では、各マルチメディアファイルを組み込むためのCNXMLの入力例とその表示結果例を述べていきます。
+      </para>
+      
+    <section id="importnotes">
+       <title>マルチメディアファイル追加の際の注意点</title>
+       	<para id="importpara1">　マルチメディアファイルをモジュールに組み込む場合、以下の事に注意してください。
+
+       	  <list id="importlist">
+	<item>
+このモジュールで示されているCNXML例は特定のメディアを表示するためのものでるので、もしこれらをコピーしてあなたのモジュールに入れるのなら、あなたの環境に合うようにCNXMLを編集してください。</item>
+	<!-- <item>All material within Connexions
+       	  is licensed under the <link
+       	  src="http://creativecommons.org/licenses/by/2.0/">Creative
+       	  Commons Attribution license</link>. Any multimedia objects
+       	  you add to your module must be in the public domain or under
+       	  the Creative Commons Attribution license.</item> -->
+	<item>
+モジュールで表示したいメディアファイルのために、属性<code>タイプ</code>はMIMEタイプとマッチしなくてはなりません。例えば、もし画像ファイルをPNG形式でモジュールに追加しようとするなら、属性タイプは<code>image/png</code>でなければなりません。入力は以下のように行ってください。
+
+	  	<code id="id1169487621003" display="block">
+			
+	  	    &lt;media type="image/png" src="mypicture.png"/&gt;
+	  	
+		</code>
+	</item>
+	<item>
+有効なMIMEタイプがあるならば、どのようなタイプのメディアファイルも使用することができます。
+</item>
+	<item>マルチメディアファイル追加のサポートを必要とするか、このモジュールに記載されている以外のファイルに関する質問がありましたら、<link url="mailto:techsupport@cnx.rice.edu">techsupport@cnx.rice.edu</link>に連絡してください。       	  </item>
+	<item>
+		<link target-id="paramsect">param</link>タグで、オプションやパラメタを制御することができます。</item>
+</list>
+</para>
+      </section>
+    </section>
+    
+    <section id="images">
+      <title>画像</title>
+      <para id="imagepara1">　画像ファイルの種類とConnexionsモジュールで使用されるMIMEタイプは以下の通りです。
+	<list id="l4"><item>eps - mime-type="application/postscript"</item>
+		<item>png - mime-type="image/png" </item>
+		<item>jpeg - mime-type="image/jpeg"</item>
+		<item>gif - mime-type="image/gif"</item>
+	</list>
+　上記がすべてではありません。有効な<link url="http://www.duke.edu/websrv/file-extensions.html">MIMEタイプ</link>がある画像なら使用することができます。
+      </para>
+      <para id="imagepara2">　モジュールに画像を埋め込むには、以下のようにCNXMLを入力してください。
+	<code id="id1169487437678" display="block">
+	  &lt;figure id="figure-01" orient="horizontal" display="block"&gt;
+	    &lt;name&gt;Example Figure&lt;/name&gt;
+	    &lt;media id="envimg" alt="An envelope w/ tall text.&gt;
+              &lt;image type="image/png" src="envelope-taller.png"/&gt;
+	    &lt;/media&gt;
+	    &lt;caption&gt;A graphic image displayed as a figure.&lt;/caption&gt;
+	  &lt;/figure&gt; 
+	
+	</code>
+</para>
+      
+      <para id="imagepara3">　mediaタグの<code>src</code>属性には、モジュールで表示したい画像を、場所かソースで指定します。画像がアップロードするか、インターネット上のほかの場所に保存されたイメージの完全なURLを持っている場合、この属性はファイル名のみになる場合があります。</para>
+      
+      <para id="imagepara3a">　<link target-id="figure-01">実際の画面</link>は以下のようになります。	 <figure id="figure-01">
+		<title>Example Figure</title>
+		<media id="id6410470" alt=""><image src="../../media/envelope-taller.png" mime-type="image/png"/></media>
+		<caption>A graphic image displayed as a figure.</caption>
+	</figure>
+</para>
+       
+       <para id="imagepara4">　<code>subfigure</code>タグを使用することで、あなたは1つの図の中に2つの画像を置くことができます。これは、画像を左右や上下に並べて表示したい場合に役に立ちます。2つの画像を1つの図の中に表示するには、以下のようにCNXMLを入力してください。
+
+
+	<code id="id1169489242612" display="block">
+     &lt;figure id="figure-2" orient="horizontal" display="block"&gt;
+        &lt;subfigure id="subfigure-1"&gt;
+          &lt;title&gt;Tall Icon and Envelope&lt;/title&gt;
+          &lt;media id="tallenv" alt="An envelope w/ tall writing."&gt;
+            &lt;image mime-type="image/png" src="envelope-taller.png"/&gt;
+          &lt;/media&gt;
+          &lt;caption&gt;
+          Subfigure 1.
+          &lt;/caption&gt;
+        &lt;/subfigure&gt;
+        &lt;subfigure id="subfigure-2"&gt;
+          &lt;name&gt;Small Icon and Envelope&lt;/name&gt;
+          &lt;media id="smallenv" alt="An envelope/ small writing."&gt;
+            &lt;image mime-type="image/png" src="envelope.png"/&gt;
+          &lt;/media&gt;
+          &lt;caption&gt;
+            Subfigure 2.            
+          &lt;/caption&gt;
+        &lt;/subfigure&gt;
+ 	&lt;caption&gt;Two images displayed horizontally in one figure.&lt;/caption&gt;
+     &lt;/figure&gt;
+	  
+	</code>
+</para>
+      
+      <para id="imagepara5">　<link target-id="figure-02">実際の画面</link>は以下のようになります。
+
+	<figure id="figure-2" orient="horizontal">
+		<subfigure id="subfigure-1">
+			<title>Tall Icon and Envelope</title>
+			<media id="id1169487305588" alt=""><image src="../../media/envelope-taller.png" mime-type="image/png"/></media>
+			<caption>
+          Subfigure 1.
+          </caption>
+		</subfigure>
+		<subfigure id="subfigure-2">
+			<title>Small Icon and Envelope</title>
+			<media id="id1169490434503" alt=""><image src="../../media/envelope.png" mime-type="image/png"/></media>
+			<caption>
+            Subfigure 2.            
+          </caption>
+		</subfigure>
+		<caption>Two images displayed horizontally in one figure.</caption>
+	</figure>
+</para>
+      
+      <para id="imagepara6">　<code>orient</code>属性は<code>horizontal</code>か<code>vertical</code>という値を持つことができます。それにより画像がどのように配置されるか指定することができます。
+      </para>
+
+      <section id="print">
+	<title>オンライン・印刷の両バージョンでの画像の使用</title>
+	<para id="printp">　オンラインで画像を閲覧するときは適切なサイズで表示されるが、印刷時に大きくなってしまう場合、印刷バージョンのための画像ファイルの追加ができます。<code>eps</code>形式でフォーマットされた画像ファイルは印刷に適しています。同じ画像の<code>eps</code>形式ファイルと<code>png</code>形式ファイルがモジュール内にある場合、Connexionsは印刷時のPDFファイル生成には<code>eps</code>形式を、オンラインでモジュールを表示するには<code>png</code>形式を使用します。
+	</para>  
+	<para id="printp2">　印刷バージョンのための追加画像ファイルの追加方法は以下のようになります。
+
+	  <list id="printlist" list-type="enumerated">
+		<item>画像ファイルの<code>eps</code>形式バージョンを作成してください。そして適切なサイズにしてください。</item>
+		<item>
+			<code>eps</code>画像ファイルの<code>メディアタイプ</code>入力を、index.cnxml内に挿入してください。画像ファイルは同じ名前を持たなくてはなりません。例えば"image1.png"(オンライン)であれば、"image1.eps"(印刷)となります。
+</item>
+		<item><code>eps</code>画像ファイルをモジュールに追加してください。</item>
+	</list>
+	  　CNXMLコードの例です。	  <code id="id2892583" display="block">
+		
+	    &lt;figure id='printimage'&gt;
+	     &lt;media type='application/postscript' src='image.eps'&gt;
+	      &lt;media type='image/png' src='image.png'/&gt;
+             &lt;/media&gt;
+            &lt;/figure&gt;
+	    
+	</code>
+	<note id="id1169484026928">印刷画像(<code>eps</code>）の入力は、オンライン画像(<code>png</code>)の入力の上に現れなくてはなりません。オンライン画像の入力はインデントされ、入れ子にされていなければなりません。
+	  </note>
+</para>
+      </section>
+      
+      <section id="clickable">
+	<title>大きいサイズへのリンクを持った画像の作成</title>
+	<para id="linked">　画像をクリックすると、画像を大きなサイズで見ることができます。以下がその方法です。
+
+	  <list id="tlist" list-type="enumerated">
+		<item>画像ファイルのサムネイルサイズバージョンを作成してください。</item>
+		<item>以下の例で示されているように、フルサイズとサムネイルサイズの<code>メディアタイプ</code>入力を挿入してください。</item>
+		<item>フルサイズとサムネイルサイズの画像をモジュールに追加してください。</item>
+	</list>
+	  　CNXMLコードの例です。	  <code id="id2656803" display="block">
+	    &lt;figure id='thumbnail' orient="horizontal" display="block"&gt;
+            &lt;media id="taj" alt="An image of the Taj Mahal"/&gt;
+	     &lt;image type='image/png' src='TajMahal_medium.jpg' thumbnail='TajMahal_Thumb.jpg'/&gt;
+            &lt;/media&gt;
+            &lt;/figure&gt;
+	    
+	</code>
+	　<link target-id="thumbnail">実際の画面</link>は以下のようになります。
+	   <figure id="thumbnail">
+		<media id="id8839066" alt=""><image src="../../media/TajMahal_medium.jpg" mime-type="image/jpeg" thumbnail="TajMahal_Thumb.jpg"/></media>
+		<caption>Photograph of the Taj Mahal taken by <link url="http://www.flickr.com/photos/babasteve/">Steve
+	  Evans</link>.  It is licensed for public use under the
+	  Creative Commons Attribution License.</caption>
+	</figure>
+</para>
+      </section>
+    </section>
+
+    <section id="flash">
+      <title>Flash</title>
+      <para id="flpara">　Flashをモジュールに挿入することができます。CNXMLコードの例です。
+
+	<code id="id1169490874506" display="block">
+         &lt;figure id='flashfig' display='block' orient='horizontal'&gt;
+	  &lt;media&gt;
+           &lt;flash mime-type="application/x-shockwave-flash" src="flash.swf" height='250' width='250'/&gt;
+          &lt;/media&gt;
+	  &lt;caption&gt;"Welcome to Connexions" example Flash object.&lt;/caption&gt;
+         &lt;/figure&gt;
+	  
+	</code>
+	　<link target-id="flashfig">Flash</link>は画像や動画が表示されるのと同じように、モジュール内で表示されます。
+
+          <figure id="flashfig">
+		<media id="id1169491600742" alt=""><flash src="flash2.swf" mime-type="application/x-shockwave-flash" height="250" width="250"/></media>
+		<caption>"Welcome to Connexions" example Flash object.</caption>
+	</figure>
+</para>
+	<note id="id1169482865476">上記の例は説明のため、<code>figure</code>タグ内に記述されています。<code>figure</code>タグは、モジュール内でこれらのメディアファイルを含めるのに必要ではありません。</note>
+    </section>
+
+    <section id="movies">
+      <title>動画</title>
+      <para id="movieslist">　以下のリストはモジュールに含めることができる動画形式のリストです。これらのタイプと、Webページに挿入できる他のタイプの動画を埋め込むことができます。
+      <list id="l2">
+		<item>quicktime</item>
+		<item>mpeg</item>
+	</list>
+</para>
+      <para id="moviep">　以下のようなコードによって、動画をモジュールに追加することができます。
+	<code id="id1169489802938" display="block">
+	&lt;figure id='moviefig2'&gt;
+          &lt;media id="pastvid" alt="A video clip about building on the past."&gt;
+	     &lt;video mime-type="video/mpeg" src="Building_on_the_Past.mpg" width='450' height='400' autoplay='false'&gt;
+	  &lt;/media&gt;
+	  &lt;caption&gt;The Creative Commons movie: "Building on the Past". 
+	 Click the Play button to start the movie.&lt;/caption&gt;
+	&lt;/figure&gt;
+	  
+	</code>
+	　<link target-id="moviefig2">実際の画面</link>は以下のようになります。
+	<figure id="moviefig2">
+		<media id="id1169487392277" alt=""><video src="Building_on_the_Past.mpg" mime-type="video/mpeg" height="400" width="450" autoplay="false"/></media>
+		<caption>The Creative Commons movie: "Building on the Past". 
+	    Click the Play button to start the movie.</caption>
+	</figure>
+</para>
+	<note id="id1169486425990">上記の例は説明目的のため、<code>figure</code>タグ内に記述されています。<code>figure</code>タグは、モジュール内でこれらのメディアファイルを含めるのに必要ではありません。</note>
+    </section>
+
+    <section id="java">
+      <title>Javaアプレット</title>
+      <para id="javap">　以下のようなコードによって、Javaアプレットをモジュールに追加することができます。
+	<code id="id7971875" display="block">
+	&lt;figure id="javafig"&gt;
+          &lt;media id="javapiece" alt="An animated java applet."&gt;
+            &lt;java-applet mime-type="application/x-java-applet" src="PhasorDemo.class" width='430' value='500'/&gt;
+	  &lt;/media&gt;
+          &lt;caption&gt;3D Animation of a Complex Sinusoid. Click the Run button 
+           to start the animation.&lt;/caption&gt;
+        &lt;/figure&gt;
+	  
+	</code>
+　<link target-id="moviefig2">実際の画面</link>は以下のようになります。
+	<figure id="javafig">
+		<media id="id6054503" alt=""><java-applet src="PhasorDemo.class" mime-type="application/x-java-applet" height="500" width="430" code="PhasorDemo.class"/></media>
+		<caption>3D Animation of a Complex Sinusoid. Click the Run button 
+	    to start the animation.</caption>
+	</figure>
+
+　グラフィックがうまく表示されないなら、コンピュータにJavaプラグインをインストールするか、またはアップグレードさせる必要があります。<link url="http://java.com">java.com</link>にアクセスし、最新版のJavaプラグインをダウンロードしてください。
+      </para>
+	<note id="id1169487379801">上記の例は説明目的のため、<code>figure</code>タグ内に記述されています。<code>figure</code>タグは、モジュール内でこれらのメディアファイルを含めるのに必要ではありません。</note>
+    </section>
+
+    <section id="audiofiles">
+      <title>音声ファイル</title>
+      <para id="audiop">　MP3、リアルオーディオ、WAVファイルなどの音声ファイルを簡単にモジュールに入れることができます。モジュールに音声ファイルを入れるには、対応する音声ファイルをアップロードしてください。そして以下のようなコードをindex.cnxmlに入力してください。
+	<code id="id2796843" display="block">
+      	 &lt;figure id='musicscale'&gt;
+      	  &lt;media id="soundbite" alt="A small sound snippet of a chromatic scale."&gt;
+      	     &lt;audio mime-type="audio/x-wav" src="chromatic_slurred.wav"/&gt;
+      	  &lt;/media&gt;
+      	  &lt;caption&gt;A chromatic scale performed on clarinet by Michael Lawrence.&lt;/caption&gt;
+         &lt;/figure&gt;
+	  
+	</code>
+</para>
+      <para id="parascale">　<link target-id="moviefig2">実際の画面</link>は以下のようになります。
+      	 <figure id="musicscale">
+		<media id="id7217118" alt=""><audio src="chromatic_slurred.wav" mime-type="audio/x-wav"/></media>
+		<caption>A chromatic scale performed on clarinet by Michael Lawrence.</caption>
+	</figure>
+</para>
+	<note id="id1169487558542">上記の例は説明目的のため、<code>figure</code>タグ内に記述されています。<code>figure</code>タグは、モジュール内でこれらのメディアファイルを含めるのに必要ではありません。</note>
+    </section>
+
+    <section id="labview">
+      <title>LabVIEW Demonstrations</title>
+      <para id="labviewp">　モジュールにLabVIEW demonstrationsを含めることについての情報は、<link document="m11601">Creating LabVIEW demonstrations for Connexions</link>を参照してください。
+
+
+      </para>
+    </section>
+    
+    <section id="paramsect">
+      <title>メディアタイプパラメタ</title>
+      <para id="parampara1">　いくつかのマルチメディアファイルが適切に表示されるには、オプションかパラメタを必要とします。<code>param</code>タグでこの情報をマルチメディアファイルに与えることができます。このタグは<code>media</code>タグに含まれていて、<code>media</code>タグの変更を必要としません。<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec/#param">param</link>タグの解説は<emphasis>CNXML Language Specification</emphasis>を見てください。
+</para>
+      
+      <para id="parampara2">　動画ファイル(mpg)の<code>param</code>タグ入力の例です。
+
+      	<code id="id6467637" display="block">
+		
+      	 &lt;media type="video/mpeg" src="testmovie.mpg"&gt;
+       	   &lt;param name="width" value="300"/&gt;
+      	   &lt;param name="height" value="300"/&gt;
+      	 &lt;/media&gt;
+      	  
+	</code>
+	<note id="id4301984">動画、Flash、Javaアプレットすべてに対して、オンライン上で表示される高さと幅のパラメタを含める必要があります。ディフォルトの単位はピクセルです。前の例では動画は300x300ピクセルで表示しています。
+      	</note>
+</para>
+      
+      <para id="parampara3">　異なったタイプのマルチメディアファイルは、異なったタイプのパラメタに対してサポート、応答を行います。異なったタイプのマルチメディアファイルのパラメタの例です。
+
+      <list id="paramlist">
+		<item>Images (image/*): height, width, title, alt</item>
+		<item>Flash (application/x-shockwave-flash): height, width, base</item>
+		<item>Video (video/*): height, width, classid, codebase, autostart</item>
+		<item>Java Applets (application/x-java-applet): height, width, 
+      code, codebase, archive</item>
+		<item>Audio (audio/*): title, volume</item>
+		<item>LabVIEW (application/x-labview): viinfo 
+      (See <link document="m11601">Creating LabVIEW demonstrations for Connexions</link> 
+      for more information.)</item>
+	</list>
+	<note id="id4196177"><code>param</code>タグで、XHTMLドキュメントに挿入されたファイルのランタイム設定を指定することができます。
+
+      </note>
+</para>
+      
+      <section id="paramsect2">
+	<title>Params and Alternate Images</title>
+      <para id="parampara4">　オンラインバージョンで表示される動画を、印刷バージョンでは静止画として表示したい場合は、以下のように記述してください。
+
+      	<code id="id1169489249364" display="block">
+		
+         &lt;media type="video/mov" src="howto.mov"&gt;
+           &lt;param name="height" value="250" /&gt;
+           &lt;param name="width" value="250" /&gt;
+           &lt;media type="image/png" src="novideo.png /&gt;
+         &lt;/media&gt; 
+      	  
+	</code>
+</para>
+      </section>
+    </section>
+    
+  </content>
+  
+</document>

@@ -1,0 +1,325 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/">
+  <title>CNXML Reference Extensions</title>
+  <metadata>
+  <md:content-id>m13008</md:content-id><md:title>CNXML Reference Extensions</md:title>
+  <md:abstract>A module describing the use of bibtexml with cnxml, as well as as introduction to the glossary tag.</md:abstract>
+  <md:uuid>771c5a7e-e560-4648-a3a9-e26b802179f7</md:uuid>
+</metadata>
+
+<content>	
+
+<note id="deprecated-translate" type="warning">
+<para id="notep1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m11215">http://cnx.org/content/m11215/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="notep2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+	
+    <section id="introduction">
+      <title>はじめに</title>
+      <para id="intro_me">　著者や編集者として、あなたは時々、実際はテキストに現れないドキュメント内の追加情報を含める方法が必要になるかもしれません。この情報はglossary、bibliographic referenceを含むかもしれません。このタイプの情報を含める方法はたくさんありますが、私たちの目的のために、私たちは<code>glossary</code>という名前の新しいCNXMLタグを作成することを選びました。そして、リファレンスのためにbibteXMLと呼ばれるXML言語を使用することを選びました。以下でその2つを説明します。また私はglossayとbibteXMLファイルの例を、このドキュメントのソースに含めました。ページの下までスクロールし、例がどのように表されているか見てください。
+      </para>
+      <section id="introbibtex">
+	<title>BibteXML</title>
+	<para id="p1">
+	<quote id="id1169490808985" display="block" url="http://freshmeat.net/projects/bibtexml/?topic_id=87">
+	  "BibteXML is a bibliography DTD for XML that expresses the
+	  content model of BibTeX, the bibliographic system for use
+	  with LaTeX. It provides conversion tools for tagging your
+	  bibliographic data in XML, or export it to HTML or native
+	  BibTeX syntax, saving typing time."
+	  </quote>
+　平たく言えば、bibtexmlがポピュラーで広く受け入れられたlatex extension bibtexのXMLバージョンであることを、これは意味しています。<code>author</code>や<code>editor</code>などのsemanticタグを使うそれらのドキュメントで、リファレンスをマークアップすることができます。
+	</para>
+      </section>
+      <section id="introglossary">
+	<title>Glossaryタグ</title>
+	<para id="p2">　テキストブックにはよく、巻末に用語のリスト（索引）があります。同じように、<code>glossary</code>タグはモジュールの最後に、定義のリストを含みます。これは<code>term</code>タグを用いて、これらの定義にリンクしています（<link target-id="linking_to_definitions"/>を見てください）。
+	  
+	</para>
+      </section>
+    </section>
+
+    <section id="gloosarymore">
+      <title>Glossaryを含める</title>
+      <para id="cnxml_glossary">　CNXMLドキュメントにglossaryを含めるのは簡単です。<link document="m9000">Basic CNXML
+	Tutorial</link>では構造は通常以下のようになっていると述べられています。
+
+	<list id="structure">
+		<title>Document</title>
+		<item><code>name</code></item>
+		<item><code>metadata</code>(optional)</item>
+		<item><code>content</code></item>
+	</list>
+
+　glossaryを追加したいとき、構造は以下に合わせて変化するでしょう。
+
+	<list id="structure2">
+		<title>Document</title>
+		<item><code>name</code></item>
+		<item><code>metadata</code>(optional)</item>
+		<item><code>content</code></item>
+		<item><code>glossary</code></item>
+	</list>
+　glossaryタグの内部では、追加したいだけ定義を追加することができます。definitionタグについての詳しい情報は、<link url="http://cnx.rice.edu/technology/cnxml/0.5/spec">CNXML 0.5 specification</link>を見てください。
+      </para>
+
+      <example id="glossary_example">
+	<title>Glossary Example</title>
+	<para id="glossary_examplepara">
+	  Following is an example of the code necessary to add a
+	  glossary with one definition.
+	  <code id="id8819832" display="block">
+&lt;glossary&gt;
+  &lt;definition id='quardef'&gt;
+    &lt;term&gt;quarter&lt;/term&gt;
+    &lt;meaning&gt;&lt;name&gt;Meaning Name&lt;/name&gt;One fourth of something.&lt;/meaning&gt;
+    &lt;example id='def'&gt;
+      &lt;para id='par'&gt;
+	"He cut the pie into quarters and gave all four people a
+	piece."
+      &lt;/para&gt;
+    &lt;/example&gt;
+    &lt;meaning&gt;25 cents, a quarter of a dollar.&lt;/meaning&gt;
+    &lt;example id='def2'&gt;
+      &lt;para id='par2'&gt;
+	"The drink cost a quarter."
+      &lt;/para&gt;
+    &lt;/example&gt;
+    &lt;example id='def3'&gt;
+      &lt;para id='par3'&gt;
+	"She picked up a roll of quarters so that she could do
+	laundry."
+      &lt;/para&gt;
+    &lt;/example&gt;
+  &lt;/definition&gt;
+&lt;/glossary&gt;
+	  </code>
+	</para>
+      </example>
+
+      <example id="linking_to_definitions">
+	<title>Linking to Definitions in a Glossary</title>
+	<para id="linkingdef">
+	  Often, one will need to refer to a definition in the
+	  glossary. To do this, one can use the <code>term</code>
+	  tag. By putting the <code>src</code> attribute in the term
+	  tag, one can link to a definition. Simply set the value of
+	  the <code>src</code> attribute to the <code>id</code> of the
+	  definition in the glossary, and that term will automatically
+	  become a link to the definition in the glossary. Shown below
+	  is an example of the term tag being used to link to the
+	  definition in the <link target-id="glossary_example">definition
+	  example</link>:
+	  <code id="id1169487341066" display="block">
+	    &lt;term src='#quardef'&gt;quarter&lt;/term&gt;
+	  </code>
+	</para>
+      </example>
+    </section>      
+
+    <section id="including_bibtexml">
+      <title>BibteXMLを含める</title>
+      <para id="cnxml_bibtexml">　CNXMLドキュメントにbibteXMLリファレンスセクションを含めるのは簡単です。<link document="m0000">Basic CNXML
+	Tutorial</link>では構造は通常以下のようになっていると述べられています。
+
+	<list id="structure3">
+		<title>Document</title>
+		<item><code>name</code></item>
+		<item><code>metadata</code>(optional)</item>
+		<item><code>content</code></item>
+	</list>
+　bibteXMLリファレンスセクションを追加したいとき、構造は以下に合わせて変化するでしょう。
+
+	<list id="structure4">
+		<title>Document</title>
+		<item><code>name</code></item>
+		<item><code>metadata</code>(optional)</item>
+		<item><code>content</code></item>
+		<item><code>glossary</code></item>
+		<item><code>file</code></item>
+	</list>
+	<note id="id4384518">
+　glossary、bibteXML、もしくは両方のファイルを含めることは可能です。唯一の制限は、両方のファイルを入れる場合、glossaryが先にならないといけないことです。
+	</note>
+　<code>file</code>タグはbibteXML言語のルートのタグです。fileタグ内部では、図書目録の異なった種類に対応する他のタグを追加することができます。図書目録に関する例を以下に示します。
+      </para>
+      <example id="bibtex_example">
+	<title>BibteXML Example</title>
+	<para id="bibtex_examplepara">
+	  <code id="id1169491096686" display="block">
+&lt;bib:file&gt;
+  &lt;bib:entry id="esbensen"&gt;
+    &lt;bib:book&gt;
+      &lt;bib:author&gt;Kim Esbensen; Tonje Midtgaard; Suzanne Schonkopf&lt;/bib:author&gt;
+      &lt;bib:title&gt;Multivariate Analysis in Practice&lt;/bib:title&gt;
+      &lt;bib:publisher&gt;Camo AS&lt;/bib:publisher&gt;
+      &lt;bib:year&gt;1994&lt;/bib:year&gt;
+      &lt;bib:address&gt;Trondheim&lt;/bib:address&gt;
+    &lt;/bib:book&gt;
+  &lt;/bib:entry&gt;
+
+  &lt;bib:entry id="martens.nes"&gt;
+    &lt;bib:book&gt;
+      &lt;bib:author&gt;Harald Martens; Tormod Nas&lt;/bib:author&gt;
+      &lt;bib:title&gt;Multivariate Calibration&lt;/bib:title&gt;
+      &lt;bib:publisher&gt;John Wiley &amp;amp; Sons Ltd.&lt;/bib:publisher&gt;
+      &lt;bib:year&gt;1989&lt;/bib:year&gt;
+      &lt;bib:address&gt;Chichester&lt;/bib:address&gt;
+    &lt;/bib:book&gt;
+  &lt;/bib:entry&gt;
+&lt;/bib:file&gt;
+	  </code>
+	  <note id="id1169491193719">例のコードの各タグは、ネームスペースプリフィックスで始まっています。bibteXMLの場合では、プリフィックスは<code>bib:</code>です。
+	  </note>
+	</para>
+      </example>
+
+      <example id="linking_to_bibliography">
+	<title>Linking to Bibliography</title>
+	<para id="linkingbib">
+	  You will want to refer to an entry in the bibliography. To
+	  do this, one can use the <code>cite</code> tag. By putting
+	  the <code>src</code> attribute in the cite tag, one can link
+	  to a bibliographic entry. Simply set the value of the
+	  <code>src</code> attribute to the <code>id</code> of the
+	  <code>bib:entry</code>, and that reference will automatically
+	  become a link to the bibliographic entry. Shown below
+	  is an example of the cite tag being used to link to the
+	  bibliography in <link target-id="bibtex_example"/>:
+	  <code id="id1169485079250" display="block">
+	    &lt;cite src='#esbensen'&gt;Multivariate Analysis in Practice&lt;/cite&gt;
+	  </code>
+	</para>
+      </example>
+      <section id="bibteXMLtags">
+	<title>BibteXMLタグ</title>
+	<para id="bibteXMLtagspara">　<link target-id="bibtex_example"/>を見ることによって、bibteXML内で使用可能なタグの種類を見ることができます。以下に、bibteXMLタグの使用についての簡単な説明をします。より詳しい情報は、<link url="http://bibtexml.sourceforge.net/">BibteXMLホームページ</link>を見てください。</para>
+	<section id="file">
+	  <title>File</title>
+	  <para id="file_para">　<code>file</code>タグはbibteXML言語のルートタグです。それは図書目録の始まりを指示しています。
+	  </para>
+	  <para id="file_para2"><title>Children</title>
+	
+　<code>file</code>タグは1つ以上の<code><link target-id="entry">entry</link></code>タグを含まなければなりません。
+	  </para>
+	</section>
+	<section id="entry">
+	  <title>Entry</title>
+	  <para id="entry1">
+　<code>entry</code>タグは個々の参照の始まりを指示しています。
+	  </para>
+	  <para id="entry2"><title>Children</title>
+	
+　<code>entry</code>タグは以下のcontainersを1つ含まなければなりません。
+
+	    <list id="entry_children">
+		<item>article</item>
+		<item>book</item>
+		<item>booklet</item>
+		<item>manual</item>
+		<item>techreport</item>
+		<item>mastersthesis</item>
+		<item>phdthesis</item>
+		<item>inbook</item>
+		<item>incollection</item>
+		<item>proceedings</item>
+		<item>inproceedings</item>
+		<item>conference</item>
+		<item>unpublished</item>
+		<item>misc</item>
+	</list>
+</para>
+	</section>
+
+	<section id="containers">
+	  <title>Containers</title>
+	  <para id="contain_para">　<code>entry</code>で使用可能な各子要素（article、book、bookletなど）は、その特定の種類のentryに関するメタデータのcontainersです。
+	  </para>
+	  <para id="container_children"><title>Children</title>
+	
+　containerタグはbibteXML<code><link target-id="metadata_tags">metadata</link></code>タグの異なった結合を含まなければなりません。詳しい情報は、<link url="http://bibtexml.sourceforge.net/">BibteXMLホームページ</link>.を見てください。
+	  </para>
+	</section>
+	<section id="metadata_tags">
+	  <title>BibteXML Metadata Tags</title>
+	  <para id="para1meta">　<code><link target-id="entry">entry</link></code>の可能な子要素としてリストアップされたすべての子要素は、metadataタグを含むことができます。これれのmetadataタグを以下にリストアップされます。
+	    <list id="meta_list">
+		<title>Metadata Tag List</title>
+		<item>address</item>
+		<item>author</item>
+		<item>booktitle</item>
+		<item>chapter</item>
+		<item>edition</item>
+		<item>editor</item>
+		<item>howpublished</item>
+		<item>institution</item>
+		<item>journal</item>
+		<item>month</item>
+		<item>note</item>
+		<item>number</item>
+		<item>organization</item>
+		<item>pages</item>
+		<item>publisher</item>
+		<item>school</item>
+		<item>series</item>
+		<item>title</item>
+		<item>type</item>
+		<item>volume</item>
+		<item>year</item>
+	</list>
+</para>
+	  <para id="para2meta"><title>Children</title>
+	
+　すべてのmetadataタグはユニコードのテキストを含むことができます。</para>
+	</section>
+      </section>
+    </section>
+  </content>
+
+   <glossary>
+    <definition id="quardef">
+      <term>quarter</term>
+      <meaning id="id1169491023547"><title>Meaning Name</title>One fourth of something.</meaning>
+      <example id="def">
+	<para id="par">
+	  "He cut the pie into quarters and gave all four people a
+	  piece."
+	</para>
+      </example>
+      <meaning id="id6468248">25 cents, a quarter of a dollar.</meaning>
+      <example id="def2">
+	<para id="par2">
+	  "The drink cost a quarter."
+	</para>
+      </example>
+      <example id="def3">
+	<para id="par3">
+	  "She picked up a roll of quarters so that she could do
+	  laundry."
+	</para>
+      </example>
+    </definition>
+  </glossary>
+  
+   <bib:file>
+	      <bib:entry id="esbensen">
+      <bib:book>
+	<bib:author>Kim Esbensen; Tonje Midtgaard; Suzanne Schonkopf</bib:author>
+	<bib:title>Multivariate Analysis in Practice</bib:title>
+	<bib:publisher>Camo AS</bib:publisher>
+	<bib:year>1994</bib:year>
+	<bib:address>Trondheim</bib:address>
+      </bib:book>
+    </bib:entry>
+
+    <bib:entry id="martens.nes">
+      <bib:book>
+	<bib:author>Harald Martens; Tormod Nas</bib:author>
+	<bib:title>Multivariate Calibration</bib:title>
+	<bib:publisher>John Wiley &amp; Sons Ltd.</bib:publisher>
+	<bib:year>1989</bib:year>
+	<bib:address>Chichester</bib:address>
+      </bib:book>
+    </bib:entry>
+  </bib:file>
+
+</document>

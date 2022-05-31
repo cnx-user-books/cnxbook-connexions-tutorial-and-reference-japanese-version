@@ -1,0 +1,263 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Connexionsの紹介</title>
+  <metadata>
+  <md:content-id>m12989</md:content-id><md:title>Connexionsの紹介</md:title>
+  <md:abstract>An overview of Connexions, the Connexions home page, navigation tools, and accounts.</md:abstract>
+  <md:uuid>8a37e33e-3c07-44f7-8f99-e474fdb01e3a</md:uuid>
+</metadata>
+
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m10884">http://cnx.org/content/m10884/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="overview1">
+      <title>概要</title>
+
+      <para id="overviewpara">
+　Connexionsは、教育と研究教材のためのウェブベースのドキュメント作成とマネージメントシステムです。Connexionsには2つのパートが存在しています。1つ目はこれらの教材や、その教材を作成、管理、利用するためのソフトウェアツールを含む共同コンテンツです。2つ目はConnexionsの作業とその一部の<link url="http://cnx.rice.edu/aboutus/tour/">ツアー</link>であり、それはConnexionsのWebページの概要というタブの下に表示されます。
+      </para>
+
+      <para id="overview2">
+　Connexionsは設計当初から、教材の共同開発と自由な利用ができるように設計されました。
+指導者と著者はあらゆる目的のために、この教材に変更を加えることができます。Connexionsは、地球規模の教育コミュニティに貢献し、知識を共有・推進するために、これらの情報資源を管理する学生、指導者、そして著者を助ける目的から、フリーオープンソースのソフトウェア・ツールを提供しています。これらすべては<link url="http://creativecommons.org/licenses/by/1.0/">Creative 
+        Commons Attribution license</link>.の下で許されるものとします。
+        
+      </para>
+
+      <para id="overview3">
+　Connexionsユーザには3つの一般的な種類があります。
+	<list id="cnxuserlist">
+		<item>Students - 授業の準備のため、オンラインで情報にアクセスしConnexionsを使用する。</item>
+		<item>Authors - モジュールと呼ばれるドキュメントファイルにコンテンツを入力する。</item>
+		<item>Instructors - 関連するモジュールを特定の順序で結びつけることによって作成されたドキュメント、いわゆるコースを作成します。</item>
+	</list>
+</para>
+
+      <para id="overview4">
+        　Connexionsシステムを使い始める前に、あなたは必要なソフトウェアがすべてあるかどうか確かめなければなりません。あなたが必要とするであろうソフトウェアや、あなたのダウンロードを助けてくれるであろうリンクの一覧表作成のため、<link url="http://cnx.rice.edu/help/qstart/">Connexions Quick Start 
+        Guide</link>を訪問してください。
+      </para>
+    </section>
+
+    <section id="cnx_home_section">
+      <title>Connexionsホームページ</title>
+
+      <para id="cnx_home_intro">
+	　<link target-id="cnx_home_figure">Connexionsホームページ</link>は、あなたがConnexionsを使用する出発点であり、以下の項目を含んでいます。
+
+	<list id="home_list">
+	<item><link target-id="tabsection">ホーム、概要、コンテンツ、ソフトウェア、ヘルプタブ</link></item>
+	<item><link target-id="breadcrumbsection">Breadcrumbナビゲーションバー</link></item>
+	<item><link target-id="searchsection">検索</link></item>
+	<item><link target-id="quickstartsection">Quick Start</link></item>
+	<item><link target-id="coursesection">Courses</link></item>
+	<item><link target-id="personalsection">パーソナルツールバー</link></item>
+	<item><link target-id="navigationsection">ナビゲーションサイドバー
+           </link></item>
+	<item><link target-id="loginsection">ログインサイドバー</link></item>
+	<item><link target-id="spotlightsection">概要サイドバー</link></item>
+	<item><link target-id="mailbagsection">e-Mailbagサイドバー</link></item>
+	<item><link target-id="whatsnewsection">What's Newサイドバー</link></item>
+	<item><link target-id="workspacessection">ワークスペースサイドバー</link></item>
+</list>
+	
+	　これらの項目は、他のConnexionsのWebページにも表示されます。
+
+	<figure id="cnx_home_figure">
+	<media id="id13826095" alt=""><image src="../../media/ConxHP.PNG" mime-type="image/png"/></media>
+	<caption>Connexionsのトップページ</caption>
+</figure>
+</para>
+
+      <section id="tabsection">
+      <title>ホーム、概要、コンテンツ、ソフトウェア、ヘルプ</title>
+       <para id="tabpara1">
+        　Connexionsホームページの左上に、ホーム、概要、コンテンツ、ソフトウェア、ヘルプという名前のタブがあります。これらのタブをクリックすると、以下のConnexionsページが表示されます。
+
+       <list id="tablist">
+	<item><link url="http://cnx.rice.edu/">ホーム</link> 
+           Connexionsのトップページへ戻ります。</item>
+	<item><link url="http://cnx.rice.edu/aboutus/">概要</link> 
+           Connexionsの動作環境、スタッフ、コンタクト情報など、Connexionsについてのより詳細な情報へのリンクを含むページを表示します。</item>
+	<item><link document="">コンテンツ</link> 
+           タイトル、著者、もしくはキーワードによるモジュールリストや、コースリストを表示します。</item>
+	<item><link url="http://cnx.rice.edu/technology/">ソフトウェア</link> 
+           Connexionsソフトウェアやツールへのリンクを含むConnexsions Technologyページを表示します。</item>
+	<item><link url="http://cnx.rice.edu/help/">ヘルプ</link> 
+           インストールリファレンスや、Connexsionsについての疑問に答えるヘルプページを表示します。</item>
+</list>
+</para>
+      </section>
+
+      <section id="breadcrumbsection">
+	<title>ナビゲーションバー</title>
+
+	<para id="breadpara1">
+	 
+        　現在の場所を示す<link target-id="breadcrumbfig">Breadcrumbナビゲーションバー</link>は、ホーム、概要、コンテンツ、ソフトウェア、ヘルプのタブの下に表示されています。このナビゲーションツールは、Connexions内部での現在のページの位置を表しています。現在の場所の中で、任意の場所をクリックすると、そのページに戻ることができます。この機能はワークグループ内のコンテンツで作業した後に、ワークグループのトップページに戻る時などに役に立ちます。	
+        <figure id="breadcrumbfig">
+	<media id="id13781683" alt=""><image src="../../media/breadcrumbtrailj.png" mime-type="image/png"/></media>
+	<caption>Breadcrumbナビゲーションバー</caption>
+</figure></para>
+      </section>
+
+      <section id="searchsection">
+	<title>検索</title>
+	<para id="searchpara1">
+	  　Connexionsのトップページの右上のテキストボックスと<code>検索</code>ボタンを使用することで、特定のモジュールやコースを探すことができます。名前、キーワード、コースタイトル、モジュールタイトル、オブジェクトIDなどををテキストボックスに入力し、<code>検索</code>をクリックしてください。Connexsionsは検索条件に合ったすべてのモジュールとコースの一覧と表示します。モジュールかコースを見るには、タイトルをクリックしてください。 
+
+	</para>
+
+      </section>
+
+      <section id="quickstartsection">
+	<title>クイックスタートリンク</title>
+	<para id="quickstartpara1">
+          　Connexionsのトップページの右上でこのリンクをクリックすると、"Connexions Quick Start Guide"ページが表示されます。このページは、AuthorとInstructorのConnexionsのコンテンツ作成の開始を助けます。
+	</para>
+      </section>
+    
+      <section id="coursesection">
+	<title>コースリンク</title>
+	<para id="coursespara1">
+          　Connexionsのトップページの右上のこのリンクはConnexions Content Commonsの現在のコース一覧を表示します。コースタイトル、団体、もしくは指導者によって分類されており、簡単にコースを探すことができます。閲覧するには、コース名をクリックしてください。
+	</para>
+      </section>
+      
+      <section id="personalsection">
+	<title>パーソナルツールバー</title>
+	<para id="personalpara1">
+          　パーソナルツールバーはQuick StartとCoursesのリンクの下に位置しています。このツールバーのオプションは、システムにログインするかどうによって異なります。
+ 	</para>
+
+        <para id="personalpara2">
+          　もしあなたがConnexionsにログインしていないか、Connexionsのアカウントを持ってない場合、この<link target-id="personaltbfig">ツールバー</link>で以下の動作を実行することができます。
+         
+       <list id="personallist">
+	<item><link target-id="loginoutpara1">ログイン</link> - システムへログインします。</item>
+	<item><link document="m12990">バグ報告</link> - Connexionsへバグを報告します。</item>
+	<item><link target-id="accountsection">ユーザ登録</link> - Connexionsアカウントを申請します。</item>
+</list>
+	<figure id="personaltbfig">
+	<media id="id13664041" alt=""><image src="../../media/bfloginPB.PNG" mime-type="image/png"/></media>
+	<caption>ログイン前のパーソナルツールバー</caption>
+</figure>
+</para>
+
+        <para id="personalpara3">
+          　Connexionsにログインしたなら、この<link target-id="personaltbfig2">ツールバー</link>で以下の動作を実行することができます。
+          
+
+         <list id="personallist2">
+	<item>マイワークスペース - パーソナルワークスペースを表示します。</item>
+	<item>ユーザ情報 - ユーザ情報の変更や環境設定を行います。</item>
+	<item><link document="m12990">バグ報告</link> - Connexionsへバグの報告をします。</item>
+	<item>ログアウト - システムからログアウトします。</item>
+</list>
+	<figure id="personaltbfig2">
+	<media id="id13805158" alt=""><image src="../../media/afloginPB.PNG" mime-type="image/png"/></media>
+	<caption>ログイン後のパーソナルツールバー</caption>
+</figure>
+</para>
+      </section>
+
+      <section id="navigationsection">
+	<title>ナビゲーションサイドバー</title>
+	<para id="navigationpara1">
+          　このサイドバーは、Connexionsについての有用な情報へのリンクと、あなたがホーム、概要、コンテンツ、ソフトウェア、ヘルプのタブを通してアクセスできる情報と同様のものを含みます。
+  	</para>
+      </section>
+
+      <section id="loginsection">
+	<title>ログインサイドバー</title>
+	<para id="loginpara1">
+          　もしConnexionsアカウントを持っているなら、あなたはこのサイドバーでシステムにログインできます。さらに、あなたのパスワードをリセットするリンク（忘れた時のため）と、新しいConnexions<link target-id="accountsection">アカウント</link>を作成するページへのリンクがあります。下図はシステムにログインしてない場合の<link target-id="loginbox">サイドバー</link>です。
+
+	<figure id="loginbox">
+	<media id="id13597962" alt=""><image src="../../media/LoginSB.PNG" mime-type="image/png"/></media>
+	<caption>ログインサイドバー</caption>
+</figure>
+</para>
+      </section>
+      
+      <section id="spotlightsection">
+	<title>スポットライトサイドバー</title>
+	<para id="spotpara1">
+          　このサイドバーは、Connexionsのコンテンツのため、大きな貢献をしていただいたConnexionsのAuthorを特集しています。Authorの写真は彼らの仕事の解説と、彼らのConnexionsコンテンツへのリンクとともに表示されます。  	</para>
+      </section>
+
+      <section id="mailbagsection">
+	<title>e-Mailbagサイドバー</title>
+	<para id="mailbagpara1">
+          　このサイドバーはConnexionsに送られたユーザのコメントの例を表示します。他のユーザのコメントへのリンクもあります。
+  	</para>
+      </section>
+
+      <section id="whatsnewsection">
+	<title>What's Newサイドバー</title>
+	<para id="whatsnewpara1">
+          　このサイドバーはConnexionsへの最新の開発に関する<link url="http://cnx.rice.edu/news/news_all">ニュース</link>へのリンクを含んでいます。
+  	</para>
+      </section>
+
+      <section id="workspacessection">
+	<title>ワークスペースサイドバー</title>
+	<para id="workspacespara1">
+          　この<link target-id="workspacesfigure">サイドバー</link>は個人的なワークスペース、メンバーに登録されているワークグループ、そしてワークグループを作成できる<link url="http://cnx.rice.edu/create_workgroup">ワークグループの作成</link>へのリンクを含んでいます。この項目はシステムにログインした時だけ表示されます。
+
+	<figure id="workspacesfigure">
+	<media id="id13631125" alt=""><image src="../../media/WSSB.PNG" mime-type="image/png"/></media>
+	<caption>ワークスペースサイドバー</caption>
+</figure>
+</para>
+      </section>
+
+    </section>
+
+    <section id="accountsection">
+	<title>アカウントのリクエスト</title>
+
+      <para id="accountpara1">
+	　Connexionsアカウントを申し込むには、以下の手順を行ってください。
+
+	<list id="accountlist" list-type="enumerated">
+	<item>ログインサイドバーの<emphasis>新しいユーザ</emphasis>をクリックしてください。<link target-id="requestfig">Request a Connexions Account</link>ページが表示されます。
+
+      <figure id="requestfig">
+			<media id="id11428388" alt=""><image src="../../media/accountreq.png" mime-type="image/png"/></media>
+			<caption>Request a Connexions Accountページ</caption>
+		</figure></item>
+	<item>あなたのタイトル、名前、Eメールアドレス、およびホームページURLを入力してください。フォーム名の横に赤い正方形がある項目は必ず入力してください。</item>
+	<item><code>Continue</code>をクリックし、Account Request: Select Usernameページを表示します。</item>
+	<item>ユーザ名を入力してください。最初の入力に元づき、提案されたユーザーネームの一覧が表示されます。</item>
+	<item>（任意で）参考のために研究分野を入力してください。どのようにConnexionsを見つけたかを示してください。何かコメントがあれば入力してください。さらに新しい機能をテストすることを手伝ってもかまわないかどうかを示してください。</item>
+	<item><code>Continue</code>をクリックし、Account Request: Confirmationページを表示します。</item>
+	<item>サイトライセンス協定に目を通してください。</item>
+	<item>サイトライセンスを読み、同意するなら、チェックボックスにチェックを入れてください。</item>
+	<item><code>Request Account</code>をクリックし、Account Request Completeページを表示します。ConnexionsからEメールがあなたのアドレスに送られます。そのEメールには、あなたのアカウントを起動するための指示が書いてあります。</item>
+</list>
+</para>
+      </section>
+
+    <section id="loginout">
+      <title>ログインとログアウト</title>
+      <para id="loginoutpara1">
+        　Connexionsにログインするには、ログインサイドバーに、ユーザ名とパスワードを入力し、。<code>ログイン</code>をクリックしてください。
+      </para>
+ 
+       <para id="loginoutpara3">
+        　いったんログインすると、ログインサイドバーは<link target-id="workspacessection">ワークスペースサイドバー</link>になります。<emphasis>マイワークスペース</emphasis>と<emphasis>ユーザ情報</emphasis>のリンクがパーソナルツールバーに表示されます。
+       </para>
+
+      <para id="loginoutpara2">
+        　ログアウトするには、Connexionsのトップページの右上、<link target-id="personaltbfig2">パーソナルツールバー</link>にある<emphasis>ログアウト</emphasis>をクリックしてください。
+       </para>
+
+    </section>
+
+  </content>
+  
+</document>

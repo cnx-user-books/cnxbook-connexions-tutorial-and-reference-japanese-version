@@ -1,0 +1,141 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+	<title>Connexionsコンテンツの閲覧</title>
+	<metadata>
+  <md:content-id>m12992</md:content-id><md:title>Connexionsコンテンツの閲覧</md:title>
+  <md:abstract>A description of how to view courses and modules in Connexions.</md:abstract>
+  <md:uuid>b5245938-ac33-43f5-8829-8a678c6f1c29</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.rice.edu/content/col10151/latest/" strength="3">Connexions Tutorial and Reference</link>
+      <link url="http://cnx.rice.edu/content/m10338/latest/" strength="3">Connexions Roadmap</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m11837">http://cnx.org/content/m11837/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+		<para id="ov1">
+	　Connexionsの概要は<link document="m12989">Connexionsの紹介</link>を見てください。
+      </para>
+	<section id="search">
+	<title>コンテンツの検索</title>
+	<para id="sp1">
+	　ConnexionsのWebページの右上の<code>検索</code>ボタンとテキストボックスを使用することで、<term>Content Commons</term>を探すことができます。検索テキストボックスに名前、キーワード、コースタイトル、モジュールタイトル、文字列、またはオブジェクトIDを入力してください。そして<code>検索</code>をクリックしてください。Connexionsはあなたの入力に合うすべてのモジュールとコースを表示します。検索したモジュールかコースを見るには、タイトルをクリックしてください。
+      </para>
+	</section>
+
+	<section id="navsec">
+	<title>ロードマップを使用したConnexionsコースのナビゲーション</title>
+	<para id="navapara">
+	　Connexions Roadmapは、Connexions内のコンテンツを探すことを助けてくれます。Roadmapにアクセスする場合、Mozillaブラウザを使用しなければいけません。Roadmapの特徴、使用方法などに関する説明は<link document="m10338">Connexions Roadmap</link>に表示されます。
+        
+      </para>
+	</section>
+
+	<section id="navwo">
+	<title>ロードマップを使用しないConnexionsコースのナビゲーション</title>
+	<para id="openp0">
+	　RoadmapはConnexions内で唯一のナビゲーション手段ではありません。RoadmapをサポートしていないブラウザでConnexionsにアクセスする場合、他のナビゲーションシステムを使用することができます。
+	</para>
+
+	<section id="openrm">
+	<title>コースを開く</title>
+	<para id="openp1">
+	　ConnexionsのWebページの右上で<emphasis>Courses</emphasis>リンクをクリックして、<link target-id="studentig1">Courses in Connexions</link>画面を表示してください。これは、Contentのタブを選択して、ページの中央のCourse ListからSort by Titleを選択することでも見ることができます。閲覧したいコースタイトルをクリックしてください。	</para>
+	
+	<figure id="studentig1">
+	<media id="id1167286195565" alt=""><image src="../../media/NoRoadmapj1.png" mime-type="image/png"/></media>
+	<caption>Connexions Courses</caption>
+</figure>
+	
+	</section>
+
+	<section id="navwithout">
+	<title>コース内のナビゲーション</title>
+	<para id="navwopara1">
+	　あなたが最初にコースを開くと、コースタイトルページが表示されます。このページは2つのパネルを含んでいます。1つ目のパネルはCourse Contentというもので、そのコース内のコンテンツの目次を含んでいます。モジュール名をクリックすることで、そのモジュールを表示できます。2つ目のパネルは<emphasis>Start Course</emphasis>のリンクと、団体、インストラクター、著者、コースの簡単な説明などのコース情報を表示します。<emphasis>Start Course</emphasis>をクリックし、最初のモジュールから順番にコースを閲覧してください。
+
+	</para>
+	
+	<para id="navwo2">
+	 　コース内のモジュールを表示すると、右上に表示される<emphasis>‹‹前のモジュール名</emphasis>や<emphasis>次のモジュール名››</emphasis>というリンクをクリックすることで、コース内の前のモジュールや次のモジュールに移動することができます。また前後のモジュール名の間にあるコースタイトルのリンクをクリックすることで、コースタイトルページに戻ることができます。	</para>
+	
+	<figure id="prevnextlinks">
+	<media id="id1167288689018" alt=""><image src="../../media/PrevNextLinkj.png" mime-type="image/png"/></media>
+	<caption>Links to the previous and next modules in a course</caption>
+</figure>
+	
+	<note id="id1167285655726">
+これらのリンクはコース内からモジュールを表示したときだけ表示されます。ブラウザから直接モジュールにアクセスした場合は、これらのリンクは表示されません。
+	</note>	
+	</section>
+	</section>
+	
+	<section id="findlinksect">
+	<title>関連資料の閲覧</title>
+	<para id="viewrelpara1">
+        　あなたは、モジュール内容の左に表示される、Related Materialというパネルで、表示しているモジュールに関する情報を見ることができます。このパネルは以下のものを含みます。
+        <list id="relatedlist1">
+	<item>モジュール作者によって供給された例題、補足資料、必要な資料へのリンク。このリンクの重要性は、リンクの左にあるボックスの中のバーの数によって、表示されます。これらのリンクは、Connexions内の資料や、Connexions外部のWebサイトにもリンクできます。</item>
+	<item>現在のモジュールと似たような内容を含む他のモジュールの名前。モジュール名をクリックすれば、そのモジュール内容が見れます。</item>
+	<item>現在のモジュールを含む他のすべてのコース。コース名をクリックすれば、そのコース内容が見れます。</item>
+</list>
+</para>
+	<figure id="relatedmaterialfig">
+         <media id="id1167288816042" alt=""><image src="../../media/RelatedMaterial.png" mime-type="image/png"/></media>
+	 <caption>Links to related material</caption>
+	</figure>
+	</section>
+	
+	<section id="displaystyle1">
+	<title>ページスタイルの変更</title>
+	<para id="style12">
+        　あなたはPersonalizeボックスの中で、<term>style</term>オプションを選択することで、Contentページのカラーやレイアウトを変更することができます。ディフォルトのContentページのスタイルは<emphasis>Summer Sky</emphasis>です。いろいろなスタイルがあり、若いConnexionsユーザーのための<emphasis>Playland</emphasis>というデザインなどもあります。
+	</para>
+	<figure id="pagestylefig">
+         <media id="id1167290415986" alt=""><image src="../../media/PageStyles.png" mime-type="image/png"/></media>
+	 <caption>The style selection box</caption>
+	</figure>
+	</section>
+	
+	<section id="editinplacesec">
+	<title>クイックエディット</title>
+	<para id="editinplacepara1">
+	　現在のモジュールに対して、編集権利があるならば、<emphasis>Edit In Place</emphasis>のリンクで、迅速で簡単な編集を行うことができます。<link url="http://cnx.rice.edu/technology/EditingTools/editInPlace.html">Edit in Place</link>についての詳しい情報はConnexionsページを見てください。 
+	</para>
+	</section>	
+	
+	<section id="aboutlink">
+	<title>モジュール情報の表示</title>
+	<para id="aboutlink1">
+	　モジュールの<term>メタデータ</term>を表示するには、モジュールの終わりの<emphasis>More about this content</emphasis>のリンクをクリックしてください。メタデータはモジュールに関する非内容情報です。たとえば、モジュールID、ライセンスタイプ、バージョンナンバー、作成日、改正日、著者、maintainers、著作権保有者、モジュール名、キーワード、要約などです。
+	</para>
+	</section>
+	
+	<section id="history">
+	<title>モジュールの改正履歴の閲覧</title>
+	<para id="histmod1">
+        　モジュールの改正履歴を見るには、モジュールの最後の<emphasis>Version history</emphasis>リンクをクリックしてください。そうすれば、モジュールの履歴ページが表示されます。新しいモジュールが公開されるとき、Connexionsは改正番号をそのモジュールのバージョンに与えます。モジュールを更新する必要が出てきたら、著者はそれを調べ、編集し、再び公開します。増加していく改正番号は更新されたバージョンに割り当てられます。Connexionsはすべての改正番号を格納し、それはモジュールのHistoryページで見ることができます。
+        </para>
+	</section>
+	
+	<section id="print">
+	<title>モジュールの印刷</title>
+	<para id="printmod">
+	　印刷可能なPDFファイルを生成するには、モジュール画面の右上にある<emphasis>Print(PDF)</emphasis>リンクをクリックしてください。時々、研究のため印刷した資料が欲しい場合があるかもしれません。すべてのモジュールからPDFファイルが生成できます。これらのPDFファイルは、ページ番号、ヘッダー、および番号付き見出しで印刷するためフォーマットされます。PDFファイルで印刷するため、PCにPDFファイルを印刷することのできるソフトウェアがないといけません。
+	</para>
+
+	<para id="print1">
+        　コース全体のコピーが必要ならば、Connexionsのプロジェクトチームに連絡してください。Connexionsツールでは将来的に、Connexionsプロジェクトチームに連絡しなくても、印刷ができるようになるでしょう。
+	</para>
+	</section>
+	</content>
+</document>

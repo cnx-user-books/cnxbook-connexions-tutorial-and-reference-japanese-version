@@ -1,0 +1,589 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>モジュールの編集</title>
+  <metadata>
+  <md:content-id>m12998</md:content-id><md:title>モジュールの編集</md:title>
+  <md:abstract>This module shows how to edit the contents of a module. This includes the text, files, and metadata of a module.</md:abstract>
+  <md:uuid>3e66ee13-6fe2-47e6-acc9-90054e978722</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.rice.edu/content/m11817/latest/" strength="3">Suggest Edits</link>
+      <link url="http://cnx.rice.edu/content/m11804/latest/" strength="3">Derived Copy</link>
+      <link url="http://cnx.rice.edu/technology/EditingTools" strength="3">Editing Tools</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m10887">http://cnx.org/content/m10887/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="modulesummary">
+      <title>モジュールとは？</title>
+      
+      <para id="modulessummarypara">　モジュールはConnexionsコースの基本的なブロックです。モジュールは、1つのトピックなどを記述してあるフォルダ、イメージ、およびCNXMLファイルとして考えることができます。モジュールの著者はモジュールのサイズを決定します。各モジュールは単独で機能するための、十分な情報を含まなくてはなりません。コースを閲覧している学生にとって、モジュールは特定のトピックに対する単純なWebページです。学生はモジュールにより、彼らのインストラクターが作成したコース経路を通ること、または彼ら自身の経路を見つけることができます。コースをまとめるインストラクターにとって、異なったトピックを異なったモジュールにしておくと、情報の簡単な選択とアレンジができます。コースを作成するとき、インストラクターは他のコースの既存モジュールか、他の専門分野のモジュールを含めることができます。
+      </para>
+
+      	
+      <para id="interfacemodules">　新しいモジュールとしてのコンテンツの例は<link target-id="modulefiles"/>で示されています。Manage Files画面のファイルタブをあらわしています。
+      </para>
+
+	<figure id="modulefiles">
+	<media id="id13174394" alt=""><image src="../../media/modulefilesj.png" mime-type="image/png"/></media>
+	<caption>"Files" tab of a new module that contains only the index.cnxml file.</caption>
+</figure>
+    </section>
+
+
+    <section id="statussec">
+      <title>Module Statusサイドバー</title>
+        <para id="statuspara">
+       	    　<link target-id="statasboxfig">"Module Status"</link>サイドバーは、モジュールに関する状態情報と、モジュール編集に役立つタスクへのリンクを含んでいます。このサイドバーはモジュールコンテンツの右にあり、以下の項目を含んでいます。
+	    <list id="statuslist">
+	<item><link document="m10885" target-id="contentstatuslist">State</link> - 
+	      モジュールの現在の状態</item>
+	<item>Last action - 最後にモジュールに対して実行された行動、行った人、日時</item>
+	<item>Actions - 新しいモジュールのため、この項目はContent Commonsにモジュールを公開し、現在の操作を放棄するために、Connexionsページへのリンクを表示します。既存のモジュールを編集するとき、この項目はオリジナルの著者に編集を提案する<link document="m13002">編集の提案</link>のリンクや、既存モジュールの<link document="m12975">既存のモジュールのコピーと利用</link>を作成するリンクを表示したりします。
+ </item>
+	<item>View - 新しいモジュールのためにこの項目は、モジュールの<link target-id="onlinepreview">オンライン</link>バージョン、<link target-id="previewprint">印刷</link>バージョン、および<link target-id="onlinecodesource">CNXMLソース</link>を表示するリンクを表示します。また、既存のモジュールを編集するとき、この項目は、最後に公開されたモジュールとワークスペースにあるモジュールとの<link target-id="viewchanges">違い</link>を表示します。</item>
+</list>
+</para>
+	  <figure id="statasboxfig">
+	<media id="id13174566" alt=""><image src="../../media/statusboxnewmodulej.png" mime-type="image/png"/></media>
+	<caption>The "Module Status" sidebar for a new module.</caption>
+</figure>
+    </section>
+      
+
+    <section id="modules">
+      <title>モジュールの編集</title>
+      <para id="editmodulespara1">　ワークスペースに新しいモジュールを<link document="m10885" target-id="creatingmodules">作成</link>するか、既存のモジュールを<link document="m10885" target-id="addingexistingmodules">追加</link>すると、内容、ファイル、画像を追加するなどの編集をする必要があるかもしれません。Manage Files画面かModule Statusサイドバーのボタンで、これらの操作は実行できます。これらの操作を行うための手順は、以下に説明されています。
+      
+	    <list id="sequecncelist" list-type="enumerated">
+		<item><link target-id="edittext">CNXML</link>ファイルを編集してください。</item>
+		<item>モジュールに関連付けしたいすべてのファイルを<link target-id="createfileimage">追加</link>してください。</item>
+		<item>適切な検索キーワードとモジュールタイトルなどを入力して、<link target-id="editmetadata">メタデータ</link>を編集してください。</item>
+		<item>モジュールの<link target-id="editroles">roles</link>を編集してください。</item>
+		<item><link target-id="editlinks">links</link>モジュールへのリンクを追加してください。</item>
+		<item>印刷バージョンとオンラインバージョンの両方を<link target-id="previewmodule">プレビュー</link>してください。</item>
+		<item>モジュールを<link target-id="submitmodule">公開</link>してください。</item>
+	</list>
+
+　モジュール編集のこれらの操作は、以下のパラグラフで紹介されています。
+      </para>
+    </section>
+
+
+    <section id="edittext">
+      <title>CNXMLファイルの編集</title>
+	<para id="edittextpara">　ファイルタブは、モジュールに関連しているすべてのファイルの一覧を表示するためのものです。そのファイルは、index.cnxmlというCNXMLでマークアップされたテキストを含んでいます。編集するにはファイル名をクリックしてください。<link target-id="editmodule">"Edit CNXML File: index.cnxml"</link>画面が表示されます。この画面で、ファイルに対して以下の操作を行うことができます。
+
+	    <list id="editoptions">
+		<item><link target-id="importexport" strength="3">Export to an XML 
+	      Editor</link></item>
+		<item><link target-id="external" strength="3">Export to an External 
+	      Text Editor</link></item>
+		<item><link target-id="downloadupload" strength="3">Download to a Specific
+	      Location for Editing</link></item>
+		<item><link target-id="editingonline" strength="3">Edit Text in 
+	      Connexions</link></item>
+	</list>
+
+　また、他の種類のファイルを<link target-id="importexport">インポート／エクスポート</link>し、モジュールをプレビューすることができます。	</para>
+	  
+	  <figure id="editmodule">
+	<media id="id13174996" alt=""><image src="../../media/editmodulej.png" mime-type="image/png"/></media>
+	<caption>The "Edit CNXML File: index.cnxml" tab.</caption>
+</figure>
+
+
+    <section id="importexport">
+      <title>XMLエディターへのインポート／エクスポート</title>
+        <para id="importexport1">　ファイルを編集する適した方法が、XMLファイルを編集するために特別に設計されたソフトウェアパッケージにあります。これを行うため、index.cnxmlファイルは変更されることにより、XMLエディターで読めるようになります。そして、そのファイルはConnexionsからエディターにエクスポートされます。編集を完了すると、ファイルはConnexionsにインポートされ、エディターの読みやすさのため、変更が取り除かれます。モジュールの<link target-id="importexportfig">"Import/Export"</link>タブでインポートやエクスポートの機能を使うと、ディ他の読みやすさのために、自動的に変更を追加・削除します。現在、ConnexionsによってサポートされているXMLエディター形式は、<link url="http://www.altova.com">Altova</link>
+	<term>xmlspy</term>®エディターかAltova <term>authentic</term>®エディターだけです。</para>
+
+	  <figure id="importexportfig">
+	<media id="id13175096" alt=""><image src="../../media/importexportjp.png" mime-type="image/png"/></media>
+	<caption>The module "Import/Export" function.</caption>
+</figure>
+
+        <para id="importexportpara2">　XMLエディターで編集するindex.cnxmlファイルをエクスポートするには、以下の手順を行ってください。
+
+	    
+	  <list id="importexportlist1" list-type="enumerated">
+	<item>モジュールコンテンツ画面の編集タブをクリックしてください。</item>
+	<item>プルダウンメニューからファイル形式を選択し、<code>Export</code>をクリックしてください。</item>
+	<item>保存を指定してください。</item>
+	<item>ファイル名と保存する場所を指定してください。</item>
+	<item>XMLエディターを立ち上げ、編集してください。</item>
+</list>
+</para>
+	    
+        <para id="importexportpara3">
+	    index.cnxmlファイルをConnexionsにインポートして戻すには、以下の手順を行ってください。
+	    
+	  <list id="importexportlist2" list-type="enumerated">
+		<item>モジュールコンテンツ画面の編集タブをクリックしてください。</item>
+		<item>プルダウンメニューからファイル形式を選択し、<code>Import</code>をクリックしてください。</item>
+		<item>参照をクリックし、選択した形式のファイルを選択してください。</item>
+		<item><code>Import</code>をクリックしてください。</item>
+
+	</list>
+</para>
+    </section>
+
+
+    <section id="external">
+      <title>外部XMLエディター</title>
+	<para id="externalpara">　index.cnxmlを編集する別の方法は、XML編集のために設計されたものではない外部のテキストエディターの使用です。モジュール<link target-id="modulefiles">コンテンツ</link>を見るとき、小さい鉛筆のアイコンがindex.cnxmlのファイル名の右に表示されたら、注意してください。
+外部のテキストエディターでindex.cnxmlを編集するため、このアイコンをクリックしてください。この編集方法はあなたのために、index.cnxmlファイルをダウンロード・アップロードしますが、それはテキストエディターにすぎません。あなたは手動でCNXMLを組まなくてはなりません。CNXMLに詳しくない場合、この方法ではあまり作業ははかどりません。さらにこの方法では、あなたもしくはあなたのシステム管理者が、エディターを利用する前に、この<term>.cnxml</term>ファイルタイプのディフォルトのエディター設定をしななければなりません。さらに、Zope ExternalEditorクライアントをウィンドウズかマッキントッシュの環境にインストールしなければなりません。</para>
+    </section>
+	  
+
+    <section id="downloadupload">
+      <title>モジュールテキストのダウンロード／アップロード</title>
+	<para id="downloadpara">　index.cnxmlファイルをダウンロードし、テキストエディターで編集することができます。ファイルをダウンロードするには、以下の手順を行ってください。
+	   
+          <list id="downloadlist1" list-type="enumerated">
+		<item>編集タブの<emphasis>Download a copy</emphasis>をクリックしてください。</item>
+		<item>保存を指定してください。</item>
+		<item>ファイル名と保存する場所を指定してください。</item>
+		<item>XMLエディターを立ち上げ、編集してください。</item>
+	</list>
+</para>
+	    
+        <para id="downloadpara2">index.cnxmlをConnexionsにアップロードして戻すには、以下の手順を行ってください。
+	    
+	  <list id="downloadlist2" list-type="enumerated">
+		<item>編集タブの<emphasis>参照</emphasis>ボタンをクリックしてください。</item>
+		<item>編集したindex.cnxmlファイルを指定してください。</item>
+		<item><code>開く</code>をクリックしてください。</item>
+		<item><code>Upload File</code>をクリックしてください。編集されたファイルはConnexionsにアップロードされます。
+	    </item>
+	</list>
+	<note id="id13177961" type="note">
+index.cnxmlファイルをダウンロードすると、さまざまなエディターで編集することができます。CNXMLを書いたり、編集したりするには<link document="m9000">The Basic CNXML</link>を見てください。
+            
+	  </note>
+</para>
+    </section>
+
+
+    <section id="editingonline">
+      <title>index.cnxmlの直接編集</title>
+	<para id="editonlinepara">　あなたはConnexionsの編集インタフェースにより、Web上で直接index.cnxmlファイルを編集することができます。直接編集するには、以下の手順を行ってください。
+	    
+	  <list id="editingonlinelist" list-type="enumerated">
+		<item>モジュール<link target-id="modulefiles">コンテンツ</link>画面内のindex.cnxmlのファイル名ををクリックしてください。The Edit CNXML File: index.cnxml tabが表示されます。</item>
+		<item>編集したい箇所のテキストをクリックして、編集を始めてください。</item>
+		<item><code>Save</code>をクリックして、変更を保存してください。</item>
+	</list>
+</para>
+	
+	<para id="editonlinepara2">　この方法はちょっとした変更に適しています。このエディターは、ほかの多くのテキストエディターに比べ、高度な機能はありません。</para>
+
+
+    <section id="saving">
+      <title>作業の保存</title>
+        <para id="modules11">　Connexionsのindex.cnxmlを編集するとき、どのポイントでも<code>Save</code>をクリックしてください。CNXMLのマークアップをチェックしたい場合、Validate during saveのチェックボックスをチェックして、<code>Save</code>をクリックしてください。。ページはリロードされ、マークアップにおけるエラーが、ページ上部にリストアップされます。もしエラーがないなら、あなたのマークアップは有効です。そして、Validation resultsの見出しの隣に、File OKという文字が表示されます。
+
+        </para>
+
+
+            <para id="validatepara">　どんなindex.cnxmlファイルも、有効なCNXMLドキュメントに違いありません。これはファイルが整っており、エラーを含んでいないことを意味します。もしエラーを含んでいれば、ファイルを保存するとき、<link target-id="validatefig">エラーの説明</link>がピンクのボックスに表示されます。
+
+	      <note id="id13178141" type="warning">すべてのエラーが改善され、index.cnxmlファイルが有効になるまで、モジュールをConnexionsで公開することはできません。
+	      </note>
+</para>
+	    <figure id="validatefig">
+	      <media id="id13178160" alt=""><image src="../../media/validateerror.png" mime-type="image/png"/></media>
+	      <caption>Example of validation errors</caption>
+	    </figure>
+    </section>
+    </section>
+    </section>
+
+
+    <section id="createfileimage">
+      <title>モジュールへの関連ファイルの追加</title>
+	<para id="createfilepasra">　index.cnxmlファイルに加えて、モジュールは画像、ファイル、そしてCNXMLドキュメントなど他のファイルを含むことができます。ファイルタブからこれらのファイルを追加することができます。画像とファイルは、追加する前に作成しておかなくてはなりません。追加中もCNXMLドキュメントを作成することができます。これらのアイテムを追加するとき、Connexionsでこれらのアイテムのインスタンスを作成します。
+	</para>
+	
+    <section id="filenamerestrictions">
+      <title>ファイルガイダンス</title>
+        <para id="filenamepara1">関連ファイルをモジュールに追加する前に、ファイルやファイル名に関する以下のガイダンスに注意してください。
+
+            <list id="filenamelist1">
+	<item>ファイルサイズは10MB以下にしてください。</item>
+	<item>ファイル名の最初の文字に数字は使用できません。たとえば、1965mustangphoto.gifというファイル名ではエラーになるので、photo1965mustang.gifなどに<link document="m10885" target-id="renamingfilesec">改名</link>してください。</item>
+	<item>ファイル名にスペースは含めないでください。
+たとえばeiffel tower.pngというファイル名ではエラーになるので、eiffel_tower.pngかeiffeltower.pngに<link document="m10885" target-id="renamingfilesec">改名</link>してください。</item>
+	<item>英数字、.（ドット）、-（ハイフン）、_（アンダーバー）だけを使用してください。</item>
+	<item><link document="m12660">マルチメディアファイル</link>は、登録されたMIME (Multipurpose Internet Mail Extension)が必要です。</item>
+</list>
+</para>
+    </section>
+    
+    <section id="createfileimage2">
+      <title>モジュールへの画像ファイルの追加</title>	
+      <para id="addimagepara1">画像をモジュールに追加するには、以下の手順を行ってください。
+	    
+	    <list id="addimagelist1" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>の隣のテキストボックスの下矢印をクリックしてください。ファイルタイプのドロップダウンリストが表示されます。</item>
+	<item>ドロップダウンリストから画像を選択して、<code>新規アイテムの作成</code>をクリックしてください。Edit Imageタブが表示されます。</item>
+	<item><code>参照</code>をクリックしてください。</item>
+	<item>適切な画像ファイルを指定してください。</item>
+	<item><code>開く</code>をクリックしてください。参照ボタンの隣のテキストボックスにファイル名が表示されます。</item>
+	<item><code>Save</code>をクリックして、Connexionsに画像をアップロードしてください。確認メッセージと画像のレビューが表示されます。</item>
+</list>
+</para>  
+    </section>
+
+
+    <section id="createfileimage3">
+      <title>モジュールへのファイルの追加</title>	
+	<para id="addfilepara1">モジュールにファイルを追加するには、以下の手順を行ってください。
+	    
+	    <list id="addfilelist1" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>の隣のテキストボックスの下矢印をクリックしてください。ファイルタイプのドロップダウンリストが表示されます。</item>
+	<item>ドロップダウンリストからファイルを選択して、<code>新規アイテムの作成</code>をクリックしてください。Edit Fileタブが表示されます。</item>
+	<item><code>参照</code>をクリックしてください。	      </item>
+	<item>適切なファイルを指定してください。</item>
+	<item><code>開く</code>をクリックしてください。<code>参照</code>ボタンの隣のテキストボックスにファイル名が表示されます。
+ </item>
+	<item><code>Save</code>をクリックして、Connexionsにファイルをアップロードしてください。確認メッセージとファイル情報が表示されます。
+ 
+	      </item>
+</list>
+</para>
+    </section>
+
+
+    <section id="createfileimage4">
+      <title>モジュールへのCNXMLドキュメントの追加</title>	
+	<para id="addcnxmldocpara1">CNXMLドキュメントをモジュールに追加するには、以下の手順を行ってください。
+	    
+	    <list id="addcnxmldoclist1" list-type="enumerated">
+	<item><code>新規アイテムの作成</code>の隣のテキストボックスの下矢印をクリックしてください。ファイルタイプのドロップダウンリストが表示されます。</item>
+	<item>ドロップダウンリストからCNXMLドキュメントを選択して、<code>新規アイテムの作成</code>をクリックしてください。Edit CNXML Fileタブが表示されます。</item>
+	<item>Edit Directlyボックスに、テキストを入力するか、ファイルをアップロード・インポートすることによって、CNXMLの内容を入力してください。</item>
+	<item><code>Save</code>をクリックしてください。確認メッセージとCNXMLファイル情報が表示されます。</item>
+</list>
+</para>
+    </section>
+
+
+    <section id="createfileimage5">
+      <title>モジュール内での名前の変更、切り取り、コピー、削除</title>	
+        <para id="addcnxmldocpara2">　モジュールに追加したファイルに対して、名前の変更、切り取り、コピー、削除ができます。これらの操作はワークスペースレベルで行われるのと同じように、モジュールレベルで行われます。ワークスペースでこれらの操作をどのように行えばよいかは、<link document="m12996" target-id="removingfiles">ワークスペース内のアイテムの削除</link>、<link document="m12996" target-id="renamingfilesec">ワークスペース内のアイテムの名前変更</link>、<link document="m12996" target-id="cuttingcoying">ワークスペース内のアイテムの切り取り・コピー
+</link>を見てください。
+
+	  </para>
+	  <note id="id13178704" type="note">index.cnxmlファイルは名前の変更、切り取り、コピー、貼り付けはできません。
+	  </note>
+    </section>
+  </section>
+
+
+    <section id="editmetadata">
+      <title>メタデータの編集</title>
+        <para id="editmetadatapara">　ユーザがConnexionsのコンテンツを検索することを可能にするためには、モジュールに何らかの情報を持たせなくてはなりません。よって、<link target-id="metadatafig">メタデータ</link>をモジュールに入力することはきわめて<emphasis>重要</emphasis>です。
+
+        </para>
+        
+          <figure id="metadatafig">
+	<media id="id13178767" alt=""><image src="../../media/editmetadatajp.png" mime-type="image/png"/></media>
+	<caption>Example "Metadata" tab with entries for name, keywords, and abstract.
+	    </caption>
+</figure>
+	  
+        <para id="metadatapara2">メタデータを入力するには、以下の手順を行ってください。
+            
+          <list id="metadatalist1" list-type="enumerated">
+	<item>メタデータタブをクリックして、メタデータを表示してください。</item>
+	<item>モジュール名をタイトルに入力してください。モジュール名はさまざまな場所に表示されます。
+            </item>
+	<item>ユーザがキーワード検索で使えそうな言葉をキーワードに入力してください。1行に1つのキーワードを入力してください。</item>
+	<item>モジュールの簡単な説明をAbstractに入力してください。モジュールタイトルの下にこれは表示されるので、モジュールタイトルをそのまま入力するのは避けてください。</item>
+	<item><code>Save</code>をクリックしてください。メタデータが更新されたというメッセージが表示され、モジュールタイトルが変わります。</item>
+</list>
+</para>
+    </section>
+
+
+    <section id="editroles">
+      <title>モジュールのRolesの編集</title>
+        <para id="rolespara">　モジュールの作成者として、ディフォルトでは、author、maintainer、copyright holderの3つすべてのrolesを持っています。あなたは他のConnexionsアカウントホルダーに、rolesを与えることができます。<link target-id="rolesfig">"Roles"</link>タブ画面の底の表は、ユーザ名と現在のrolesを表示します。チェックされたチェックボックスは、そのrolesがあることを示します。
+        </para>
+
+	  <figure id="rolesfig">
+	<media id="id13178896" alt=""><image src="../../media/rolesj.png" mime-type="image/png"/></media>
+	<caption>Example "Roles" tab.</caption>
+</figure>
+
+
+    <section id="editroles2">
+      <title>他のユーザにRolesを与える</title>
+	 <para id="addingroles">
+　ユーザにモジュールの<link url="http://cnx.rice.edu/help/reference/roles/document_view">roles</link>を与えたいときは、以下の手順を行ってください。
+	    
+	   <list id="editroleslist1" list-type="enumerated">
+	<item>Rolesタブをクリックして、Roles画面を表示してください。</item>
+	<item>Searchボタンの隣のテキストボックスに、追加したいユーザ名を入力してください。</item>
+	<item><code>Search</code>を検索してください。検索結果が表示されます。</item>
+	<item>追加したいユーザ名の隣のチェックボックスをチェックし、<code>Add People</code>をクリックしてください。Rolesの表の下に、Roles Pending Approvalの表が表示されます。</item>
+	<item>そのユーザに3つのrolesが与えられているか確認してください。ディフォルトではすべてのrolesが与えられます。</item>
+	<item>与えたくないrolesがあるなら、チェックボックスのチェックをはずして、<code>Update Roles</code>をクリックしてください。</item>
+	<item>rolesのリクエストがあったことは、そのユーザがログインしたときに表示されます。</item>
+</list>
+</para>
+	  
+	<para id="collaboration">　別のユーザにrolesを与えるか、rolesをアップデートするとき、他のユーザがrolesの変更を受理するまで、rolesは変化しません。ユーザが変更を承認すると、rolesの表に反映されます。<link target-id="requestsawaiting">approving role requests</link>を見てください。
+
+	    <note id="id13179055" type="note">
+rolesの変更は受理されるか拒否されるかしないと、モジュールは公開できません。
+	    </note>
+</para>
+    </section>
+
+
+    <section id="pending">
+      <title>Rolesリクエストの閲覧・処理</title>
+	
+	<para id="pendingpara">　Connexionsでは、同一教材上での共同作業は簡単です。これを行う1つの方法は、コースやモジュールのAuthorやMaintenaceの権限を共有することです。もし他のAuthorがあなたにrolesを与えたなら、彼らと共同作業を行うことができます。そして、Connexionsページの右上に<link target-id="collabbox">"Pending"</link>サイドバーが表示されます。
+	</para>
+
+	<figure id="collabbox">
+	  <media id="id13179119" alt=""><image src="../../media/collaborationbox.png" mime-type="image/png"/></media>
+	  <caption>"Pending" sidebar with one role request.</caption>
+	</figure>
+	
+	<para id="pendingpara2">　<emphasis>Role Request</emphasis>リンクをクリックして、<link target-id="collab2">"Collaboration Requests"</link>画面を表示してください。この画面から以下の事柄が行えます。
+	  
+	  <list id="things">
+		<item><link target-id="requestsawaitingsect">Requests awaiting your approval</link></item>
+		<item><link target-id="requestsyouhavemadesect">Requests you have made awaiting others' acceptance</link></item>
+		<item><link target-id="requestscompletedsect">Completed requests</link></item>
+	</list>
+</para>
+
+	<figure id="collab2">
+	  <media id="id13179212" alt=""><image src="../../media/collaborationrequests.png" mime-type="image/png"/></media>
+	  <caption>"Collaboration Requests" screen showing one request awaiting 
+	  your approval and one awaiting another author's approval.</caption>
+	</figure>
+
+	
+      <section id="requestsawaitingsect">
+	<title>Requests Awaiting Your Approval</title>
+
+	<para id="requestsawaiting">　別のConnexionsのauthorが、あなたを彼らのモジュールやコースのauthor、maintainer、cpyright holderとして、rolesを与えてくれるなら、エントリーはCollaboration Requests画面のRequests Awaiting Your Approval部分の下に表示されます。rolesの要求を受理するには、受理したいリクエストの表のチェックボックスをチェックして、<code>Accept</code>をクリックしてください。
+	</para>
+	
+	<para id="requestawaiting2">　逆に要求を拒否するには、拒否したいリクエストの表のチェックボックスをチェックして、<code>Reject</code>をクリックしてください。
+	  
+	<note id="id13179290" type="note">もしcopyright holderとして、モジュールかコースに加わるように要求されたら、要求を受理する前に、モジュールのライセンスに同意しなければなりません。ライセンスへのリンクは、Licenseコラムの表にあります。
+	</note>
+</para>
+      </section>
+
+
+      <section id="requestsyouhavemadesect">	
+        <title>Requests You Have Made</title>
+
+	<para id="requestsyouhavemade">　自分のモジュールかコースに、誰かをauthor、mainainer、copyright holderとして追加する要求を行ったなら、他のauthorが返事をするまで、Collaboration Requests画面のRequests You Have Made部分の下に、エントリーが表示されます。ここから要求の取り消しができます。
+	</para>
+       </section>	
+       
+	
+       <section id="requestscompletedsect">
+	 <title>Completed Requests</title>
+
+	 <para id="requestscompleted">　受理されるか拒否された要求は、Collaboration Requests画面のRequests You Have Made -- Completed部分で表示されます。保存しておく必要がないので、消すことができます。
+	</para>
+	
+      </section>
+    </section>
+
+    </section>
+
+	
+    <section id="editlinks">
+      <title>モジュールへのリンクの追加</title>
+        <para id="editlinkspara">　モジュールに関連しているリンクの追加・変数を行うためには、編集インタフェースのリンクのタブをクリックしてください。<link target-id="editlinksfig">"Edit Links"</link>画面が表示されます。
+        </para>
+        
+	  <figure id="editlinksfig">
+	<media id="id13179413" alt=""><image src="../../media/editlinksj.png" mime-type="image/png"/></media>
+	<caption>The "Links" tab.</caption>
+</figure>
+
+        <para id="editlinkspara2">
+	    　Linksタブから以下のことが行えます。
+
+	    <list id="editlinkslist">
+		<item><link target-id="addlinksect">Add new links</link></item>
+		<item><link target-id="editlinksect">Edit existing links</link></item>
+		<item><link target-id="deletelinksect">Delete a link</link></item>
+	</list>
+	    　これらのリンクは各モジュールで表示するリンクタブから見ることが可能です。リンクは指定されたカテゴリタイプの下に現れます。例えば、補足のリンクはSupplementalの見出しの下に表示されています。</para>
+	    
+
+     <section id="addlinksect">
+        <title>新しいリンクの追加</title>
+        <para id="editlinkspara3">　モジュールに新しいリンクを追加するには、以下の手順を行ってください。
+	    To add a new link to a module, use the following steps:
+	    
+	    <list id="addlinklist1" list-type="enumerated">
+		<item>リンクの名前をLink Nameに入力してください。</item>
+		<item>モジュールIDをModule IDに入力するか、URLをLink URLに入力することで、リンク先を指定してください。モジュールIDを入力したなら、好きなバージョンを指定することができます。</item>
+		<item>Link Typeのドロップダウンリストから、リンクの種類を選択してください。</item>
+		<item>Link Strengthのドロップダウンリストからリンクの強さを選択してください。5が最も強いリンクです。</item>
+		<item><code>Add</code>をクリックして、リンクを追加してください。</item>
+	</list>
+</para>
+      </section>
+      
+      
+      <section id="editlinksect">
+        <title>既存リンクの編集</title>
+	  <para id="editlinkspara3a">　モジュールがすでにリンクを含んでいると、画面の上半分にそれらは表示されるでしょう。既存のリンクを編集するには、以下の手順を行ってください。
+	    
+	  <list id="editlinklist1" list-type="enumerated">
+	<item>Nameの内容の変更をアップデートして、リンクの名称を変更してください。</item>
+	<item>URLの内容の変更をアップデートして、URLを変更してください。</item>
+	<item>Link Typeの内容の変更をアップデートして、Link Typeを変更してください。</item>
+	<item>Link Strengthの内容の変更をアップデートして、Link Strengthを変更してください。</item>
+	<item><code>Update Links</code>をクリックしてください。</item>
+</list>
+</para>
+      </section>
+      
+
+      <section id="deletelinksect">
+        <title>リンクの削除</title>
+	<para id="deletelinkspara1">　既存のリンクを削除するには、既存リンク一覧のDeleteコラムのチェックボックスをチェックして、<code>Update Links</code>をクリックしてください。
+
+	</para>
+    </section>
+    </section>
+
+
+    <section id="previewmodule">
+      <title>モジュールのプレビュー</title>
+	<para id="previewpara">モジュールを編集した後に、意図したように表示されるかを確かめるべきです。確認はPreviewタブから、以下の方法で見ることができます。
+
+	  <list id="previewlist">
+		<item><link target-id="onlinepreview" strength="3">Preview the module 
+	    on-line</link></item>
+		<item><link target-id="previewprint" strength="3">Preview the module 
+	    in a print version (PDF file)</link></item>
+		<item><link target-id="viewchanges">View the change summary</link></item>
+		<item><link target-id="onlinecodesource">View the markup source for 
+	    the module</link></item>
+	</list></para>
+
+    <section id="onlinepreview">
+      <title>オンラインバージョン</title>
+	<para id="onlinepreviewpara">　オンラインでモジュールを見るには、以下の手順を行ってください。
+	    To view a module on-line, use the following steps:
+	    
+	  <list id="onlinepreviewlist1" list-type="enumerated">
+		<item>Previewタブをクリックして、Preview画面を表示してください。</item>
+		<item><emphasis>Online Preview</emphasis>リンクをクリックしてください。公開されているモジュールと似たようなモジュール画面を表示します。公開バージョンとプレビューバージョンの違いは、モジュールの下部にリンクやタブを含んでいないことです。意図したように表示されているか見てください。</item>
+		<item>ブラウザの戻るボタンで、Preview画面に戻ってください。</item>
+	</list>
+</para>
+    </section>
+    
+    
+    <section id="previewprint">
+      <title>印刷バージョン</title>
+        <para id="previewprintpara">　印刷バージョンはオンラインバージョンと異なったフォーマットをされます。この違いが必要です。印刷バージョンを見るには、以下の手順を行ってください。
+	    
+	  <list id="printpreviewlist1" list-type="enumerated">
+	<item>Previewタブをクリックして、Preview画面を表示してください。</item>
+	<item><emphasis>Print Preview</emphasis>リンクをクリックしてください。ダイアログボックスが開きます。</item>
+	<item>ファイルを開くオプションが選択されていることを確かめて、<code>OK</code>をクリックしてください。モジュールの印刷バージョンが表示されます。</item>
+	<item>意図したようにテキストや図が表示されているか見てください。</item>
+	<item>使用しているPDF閲覧ソフトで、このPDFファイルを印刷することができます。</item>
+	<item>PDF閲覧ソフトを閉じてください。</item>
+</list>
+</para>
+	
+    </section>
+    
+    
+     <section id="viewchanges">
+	<title>変更箇所の閲覧</title>
+	  <para id="changespara1">　既存のモジュールを編集するとき、最新のバージョンと、現在編集しているバージョンの違いを見ることができます。<link target-id="changesummaryfig">change summary</link>を見るために<emphasis>Changes</emphasis>リンクをクリックしてください。昔のモジュールを調べて、どのような変更をお粉高思い出せないときに役に立ちます。
+	  </para>
+	  
+	   <figure id="changesummaryfig">
+	<media id="id13180029" alt=""><image src="../../media/changesummaryj.png" mime-type="image/png"/></media>
+	<caption>The "Changes to" summary.</caption>
+</figure>
+	   
+	  <para id="changespara2">　Change Toは、rolesの変更、変更・追加・削除されたファイル名など、モジュールへの変更一覧を表示します。ファイル名をクリックして、変更の簡単な説明を表示してください。</para>
+	   
+
+    </section>
+    
+    
+    <section id="onlinecodesource">
+      <title>ソースコードのプレビュー</title>
+	<para id="onlinecodesourcepara">　時々、それはマークアップソースを閲覧するのに便利かもしれません。モジュールのソースを見るには、Module StatusサイドバーのViewの下の<emphasis>Source</emphasis>リンクをクリックしてください。最新のマークアップソースは画面に保存されます。
+
+	  <note id="id13180098" type="note">
+	  この特徴はマークアップエラーを探すときに役に立ちます。
+	  </note>
+</para>
+    </section>
+    
+    
+    </section>
+
+    
+    <section id="discardmodule">
+      <title>変更箇所の復元</title>
+	<para id="discardpara">　編集前の状態にモジュールを戻したい場合、Module StatusサイドバーのActionsの見出しの下の<emphasis>Discard</emphasis>リンクをクリックしてください。
+	<note id="id13180146" type="note">
+	  もしモジュールが新しくてまだ公開されていないならば、入力したすべての内容は削除され、モジュールは空になるでしょう。
+	</note>
+</para>
+    </section>
+
+
+    <section id="submitmodule">
+      <title>モジュールの公開</title>
+ 	<para id="submittext">　モジュールを作成もしくは、既存のモジュールへの変更を行い、それらをインターネット上の誰からも閲覧可能にするには、公開しなければなりません。モジュールを公開するには、以下の手順を行ってください。
+	  
+	  <list id="submitmodulelist1" list-type="enumerated">
+		<item>Publishタブをクリックして、<link target-id="publishfig">Publish 
+	    Module</link>画面が表示されます。この画面は公開する前に確認しなくてはいけない条項を表示します。</item>
+		<item>作業の簡単な説明をDescription of Changesに入力してください。</item>
+		<item><code>Publish</code>をクリックしてください。Connexionsで公開され、インターネット上の誰からも閲覧可能になります。</item>
+	</list>
+</para>
+	
+	<figure id="publishfig">
+	<media id="id13180252" alt=""><image src="../../media/publishj.png" mime-type="image/png"/></media>
+	<caption>The "Publish" tab.</caption>
+</figure>
+
+	<para id="submittext2">　新しいモジュールは変更の必要があるわけではありません、よってDescription of Changesにはコメントのようなものを入力してください。例えば、Created a new module。
+	</para>
+
+	<note id="id13180281" type="note">モジュールを公開する行為は、編集の際に<code>Save</code>をクリックするのとは違います。Saveで保存された内容は、自分と共同作成者だけが見ることが可能ですが、公開したモジュールは全世界から閲覧可能になります。
+	</note>
+	
+    </section>
+
+
+  </content>
+</document>

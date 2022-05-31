@@ -1,0 +1,98 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>既存のモジュールのコピーと利用</title>
+  <metadata>
+  <md:content-id>m12975</md:content-id><md:title>既存のモジュールのコピーと利用</md:title>
+  <md:abstract>Derived Copy : 既存のコンテンツをコピーして変更・利用する方法 (日本語 - Japanese)</md:abstract>
+  <md:uuid>fa7aaf69-1cb9-4b22-a316-7445b3dfacce</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://cnx.rice.edu/content/col10151/latest/" strength="3">Connexions Tutorial and Reference</link>
+      <link url="http://creativecommons.org/licenses/by/2.5/" strength="3">Creative Commons License</link>
+      <link url="http://cnx.rice.edu/content/m11817/latest/" strength="2">Suggested Edit</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+   <section id="intro">
+      <title>はじめに</title>
+
+      <para id="intropara">　Connexions における Derive Copy (派生的なコピー)機能は、Conexions で公開されているあらゆるモジュールを元にして、それらを発展させたあなた独自の module を公開することを可能とする機能です。この作業は、あなたが改変したい既存のモジュールをコピーすることから始まります。Derive Copy の機能は、複数の著者が共同作業を行うための機能ではありません。既存のモジュールの著者に内容の訂正を推奨する場合には、Suggest Edits 機能を使用して下さい。
+        <note id="id1767318" type="注意事項"><label>注意事項</label>
+        あなたが Derive Copy 機能により既存のコンテンツを改変して作成した成果は、あなたの作業時におけるオリジナルの内容に対する派生物です。オリジナルのコンテンツが後日変更されたとしても、あなたのワークスペースに存在するコピーの内容にまで変化が及ぶわけではありません。
+	</note>
+      </para>
+
+      <para id="intro2">
+　オリジナルの内容の改変は、 
+<link url="http://creativecommons.org/licenses/by/1.0/">Creative 
+Commons	Attribution License(CCAL)</link> の下で許されるものとします。このライセンス条項は、すべての Connexions コンテンツに共通に適用されています。あなたがオリジナルを改変した派生物を公開した場合、Connexions はCCALに基づきコンテンツのライセンスの帰属を示す表示（オリジナルのコンテンツおよびその著者）を自動的に追加します。
+      </para>
+    </section>
+
+    <section id="uses">
+      <title>利用法</title>
+      
+      <para id="usespara">
+　Derive Copy 機能には、主に以下の二つの利用法があります。 
+
+	<list id="useslist">
+	  <item>既存のモジュールをテンプレートとして、新しいモジュールを作成することがで
+                きます。たとえば、あなたが作ろうと思っているコンテンツと似たモジュールを
+                見つけたら、あなたは Derived Copy 機能を利用してそのコンテンツのコピー 
+                を作成し、あなたの新しいモジュールの出発点とすることができます。
+	  </item>
+	  <item>既存のモジュールとよく似ていて、しかし少し内容を変えたい場合に便利です。
+                たとえば、あなたの講義で利用したい既存のモジュールを見つけてあなたの講義
+                で使用するためにモジュールの内容を少し変更したいという場合を考えましょ
+                う。そのモジュールの変更を行う権限があなたにない場合、あなたはそのモ
+                ジュールの著者に連絡を取り、
+                <link document="m11817">変更希望を伝える</link>ことになるでしょう。
+                しかし、そのモジュールの原著者はあなたの申し出には同意しないこと
+                でしょう。なぜならそのモジュールは、原著者の講義の目的に沿うように作られ
+                ているからです。あなたはそのモジュールを変更したいと強く思うに違いありま
+                せん。Derive Copy 機能によりコピーを作成し、あなたの変更を加えれば、
+                あなた自身の目的にかなう新しいモジュールを作成できるのです。
+ 	  </item>
+	</list>
+      </para>
+    </section>
+
+    <section id="createderive">
+      <title>Derived Copy を作成する</title>
+
+      <para id="createderivepara">　モジュールエディタの機能により、あなたのワークスペースまたはワークグループに Derived Copy を作成することができます。手順を以下に示します。 
+<list id="derivecopylist" list-type="enumerated">
+<item>あなたがコピーしたいモジュールをコンテンツの
+ <link url="http://cnx.rice.edu/content/search?words=">サーチページ</link>
+から検索します。　　
+</item>
+<item>検索結果の中で、希望のモジュールにチェックボックスをつけて選択し、Addボタンによりあなたのワークスペースまたはワークグループにそのモジュールを加えます。
+</item>
+<item>モジュールのタイトルをクリックして、モジュールエディタを起動します。 
+</item>
+<item>画面一番右側の"MODULE STATUS"メニューの中の"Actions"見出しの中にある <code>Derive Copy</code> をクリックします。
+</item>
+<item>Content Commons Attribution License に同意する旨のチェックボックスをチェックします。
+</item>
+	  <item>画面下側の<code>Yes, Create Copy</code>ボタンをクリックします。
+          "File" タブをクリックすると、derived copy によってコピーされたモジュールを構
+           成するファイルがモジュールエディタにより一覧表示されます。この時点で、あなたの
+           ワークスペースまたはワークグループ内にこれらの構成要素(テキストや図などの画像
+           ファイル)からなるモジュールが新しく準備された状態になっています。
+	  </item>
+	</list>
+
+　この新しいモジュールに含まれる構成要素（ファイル）は、オリジナルのモジュールを構成する構成要素と全く同じです。メタデータも 「roles」 を除いて同一です。あたらしい 
+「roles」 では、あなたがこのモジュールの著者・保守者・著作権保有者であることが示されています（言うまでもありませんが、これらの権限は、オリジナルのモジュールの権限に付加される形の権限であり、オリジナルの権利は留保されています）。あなたはモジュールを構成するファイル・メタデータ・roles・そしてリンクを必要に応じて自由に編集できます。この扱いは、あなたが新たに作成した新しいコンテンツを自由に編集できることと同一です。以上のようにしてあなたが編集したモジュールについて、モジュールの原著者に著作権の放棄を申請することもできます。しかしその際には、関連するroleの変更について充分な検証が必要となります（訳注：日本の著作権法では、著作権の放棄はできませんが、自分の権利を主張しないで下さいという要請はできるかもしれません）。
+	</para>
+	<para id="para3derive">
+　Derived Copy によりあなたが作成したモジュールを公開すると、Connexions は自動的にコンテンツのライセンスの帰属を示す表示（オリジナルのコンテンツおよびその著者）を自動的に追加します。この表示は、オリジナルのモジュールにリンクされているので、読者はあるモジュールがどれを基にしたモジュールであるかを判別することができます。
+	</para>
+    </section>
+  </content>
+  
+</document>

@@ -1,0 +1,498 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>CNXML初級</title>
+  <metadata>
+  <md:content-id>m13005</md:content-id><md:title>CNXML初級</md:title>
+  <md:abstract>This is a basic introduction to the CNXML language.  It includes a description on how to begin a CNXML module and also examples of the basic tags needed to start writing in CNXML.</md:abstract>
+  <md:uuid>e60e25f5-5d6e-4204-bdae-d97274d1cbdd</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="example">
+      <link url="http://cnx.rice.edu/content/m10275/latest/" strength="3">Tutorial example module</link>
+    </link-group>
+    <link-group type="supplemental">
+      <link url="http://cnx.rice.edu/technology/cnxml/0.5/spec/" strength="3">The CNXML Specification</link>
+      <link url="http://cnx.rice.edu/" strength="2">The Connexions Project</link>
+      <link url="http://cnx.rice.edu/content/m9006/latest/" strength="2">The Intermediate CNXML</link>
+      <link url="http://cnx.rice.edu/content/m9007/latest/" strength="2">The Advanced CNXML</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+
+<note id="deprecated-translate" type="warning">
+<para id="p1">This module contains Connexions documentation which is out-of-date.  The contents of this module are provided here for historical purposes only and <emphasis>should not be considered accurate</emphasis> for the current version of the Connexions website.  The current (English-language) version of this module can be located at <link document="m9000">http://cnx.org/content/m9000/latest/</link>.   If you have any additional questions or cannot find the answer to your question, please contact <link url="mailto:techsupport@cnx.org">techsupport@cnx.org</link> and we will be happy to assist in any way we can.</para>
+<para id="p2">If you would like to assist Connexions by helping us update this module with an appropriate translation from the current English version, please contact us at <link url="mailto:cnx@cnx.org">cnx@cnx.org</link> as we would appreciate your help with improving our support for non-English-speaking users.</para>
+</note>
+
+    <section id="sec1">
+      <title>CNXMLの開始</title>
+      <para id="intro">　CNXMLは、教育的なコンテンツを作成しやすいXMLマークアップ言語です。CNXMLの目標は、特定のプレゼンテーションではなく、コンテンツを伝えることです。<link url="http://cnx.rice.edu">Connexionsプロジェクト</link>は、ドキュメントを格納する第一言語として、Connexions Markup Language (CNXML)が使用されています。さぁ、はじめましょう。
+</para>
+    </section>
+
+    <section id="mark_up">
+      <title>CNXMLタグ</title>
+      
+      <section id="document_section">
+	<title>Document</title>
+	<para id="document">　すべてのCNXMLドキュメントには、ルートとして<code display="inline">document</code>タグがあります。ドキュメントについての全てを含んでいるメタデータや、documentタグ内で含まれれるコンテンツです。CNXMLドキュメントの基本構造を理解することは重要です。構造は以下の通りです。
+
+	  <list id="org_list">
+		<title>Document (root tag)</title>
+		<item><term>Name</term> (required)</item>
+		<item><term>Metadata Section</term> (optional)</item>
+		<item><term>Content Section</term> (required)</item>
+	</list>
+</para>
+	
+	<para id="note_para">
+	  <note id="id1171711427682" type="warning">ドキュメントを有効にするために必要な追加情報があります。それは<link target-id="required_stuff">Other
+	    Required Stuff</link>というタイトルのセクションの下で説明されています。
+	  </note>
+	</para>
+	
+	<para id="document_attributes">
+　documentタグには必須の属性が1つあります。
+	  <list id="documentlist">
+		<item>
+			<code display="inline">id</code> - ドキュメントに与えられた固有のID（通常、Connexionsプロジェクトから割り当てられます）	    </item>
+	</list>
+</para>
+
+	<section id="id_info">
+	  <title>ID属性</title>
+	  <para id="id">　CNXMLと他のマークアップ言語の主な違いは<code display="inline">id</code>属性要求です。あるタグは<code display="inline">id</code>属性を含めることを必要とします。それらのタグは以下に記載されています。
+
+	    <list id="required_id">
+		<item><code display="inline">document</code></item>
+		<item><code display="inline">para</code></item>
+		<item><code display="inline">equation</code></item>
+		<item><code display="inline">rule</code></item>
+		<item><code display="inline">definition</code></item>
+		<item><code display="inline">exercise</code></item>
+		<item><code display="inline">list</code></item>
+	</list>
+　上記のタグのどれかを使用するなら、id属性が必須なので、固有の<code display="inline">id</code>を必ず与えてください。例を以下に示します。
+	  </para>
+	  
+	  <example id="id_example">
+	    <code id="id1171707620761" display="block">
+	      
+&lt;para id='uniqueid1'&gt;
+  This is an example to illustrate the use of the &lt;code&gt;id&lt;/code&gt; attribute.
+&lt;/para&gt;
+&lt;para id='uniqueid2'&gt;
+  This paragraph has a different id than the last.
+&lt;/para&gt;
+	     
+	    </code>
+	  </example>
+	  <note id="id7684109" type="note">どんなタグも<code display="inline">id</code>属性を含むことができます。特定のタグに含まれた情報にリンクさせたいなら、これは役に立ちます。
+	  </note>
+	</section>
+
+	<section id="namespace_declaration">
+	  <title>ネームスペース</title>
+	  <para id="namespaces">　また<code display="inline">document</code>タグは<term>ネームスペース</term>宣言も含むべきです。<link document="m10159">Namespaces</link>はCNXML内で、タグ名の衝突の心配をすることなく、簡単に他のマークアップ言語を使えるようにしてくれます。CNXMLだけを使用する簡単なドキュメントのために、<code display="inline"/>というCNXMLネームスペース属性を含む必要があります。これは、プリフィックスのないタグがCNXMLで解釈されている間、プリフィックスmがあるタグはMathMLタグとして解釈されることを述べています。</para>
+
+	  <example id="namespace_example">
+	    <code id="id1171709276724" display="block">
+&lt;document id='doc1' xmlns='http://cnx.rice.edu/cnxml'&gt;
+	    </code>
+	  </example>
+	</section>
+      </section>
+
+      <section id="name">
+	<title>Name</title>
+	<para id="namep1">　<code display="inline">name</code>タグは親要素の名前を保持するために、多くのCNXMLタグで使用されます。このタグはASCIIテキストの情報のみを含むことができます。
+	</para>
+
+	<example id="nameexamp">
+	  <code id="id1171707750706" display="block">&lt;name&gt;Grilling a Good Steak&lt;/name&gt;</code>
+	</example>
+	
+	<note id="id2255016" type="note"><link url="http://cnx.rice.edu/cnxml/0.5/spec">CNXML 0.5
+	  specification</link>を見て、タグに名前を付けることができるか見てください。</note>
+      </section>
+
+      <section id="content">
+	<title>Content</title>
+	<para id="adding_content">　今あなたは、idとネームスペース情報でセットアップされた<code display="inline">document</code>タグを持っています。次にあなたのドキュメントに対して行うことは、内容の追加です。内容とはドキュメントの大半を占めるテキストという意味です。
+
+	  <note id="id1171700525903" type="note">厳密に言うと、メタデータは内容に関する情報を優先するべきですが、それは後からやりましょう。</note> 
+
+　内容の全てが<code display="inline">content</code>タグの中に置かれます。すべてのCNXMLドキュメントは1つだけ<code display="inline">content</code>タグを持ちます。ドキュメントの中身は<code display="inline">content</code>タグの中に位置します。
+
+
+
+
+</para>
+	<para id="structural_tags_para">
+　構造的なタグは、ドキュメントに構造を与えるため、<code display="inline">content</code>タグの中で使用されているタグです。これらのタグについて下で説明します。
+	</para>
+
+	<section id="content_tags">
+	  <title>Structure Tags</title>
+	  <para id="contentp1">　構造タグは<link target-id="section">section</link>、<link target-id="para">para</link>、<link target-id="document">document</link>、<link target-id="content">content</link>です。
+
+	  </para>
+	  <para id="already">　<link target-id="document">document</link>タグと<link target-id="content">content</link>タグについては述べました。よって、他のタグに関する短い解説と例を述べましょう。</para>
+
+	  <section id="para">
+	    <title>Para</title>
+	    <para id="parap1">　<code display="inline">para</code>タグを使用することによって、テキストをドキュメントに挿入することができます。各paraはドキュメント内で固有の<code display="inline">id</code>を持っています。
+	    </para>
+	    <example id="paraexamp">
+	      <code id="id1171706597768" display="block">
+
+&lt;para id='intro'&gt;
+  I have eaten many steaks in my life and none have been more satisfying
+  than the backyard-grill cooked steak.  Maybe this is because of the
+  relaxing nature of drinking a beer, being outside, and lounging that
+  accompanies the grilling procedure.  Maybe it is because of the aroma
+  of the grill and the beef perfectly seasoned to your taste.  Either
+  way, this document shows how a good steak can be prepared.
+&lt;/para&gt;
+	      </code>
+	    </example>
+	  </section>
+
+	  <section id="section">
+	    <title>Section</title>
+	    <para id="secp1">　教科書はしばしば、より小さなセクションを作成するため、チャプター単位で分割されます。なぜなら、より良い理解と一貫性のため、セグメントテキストにとって必要であるためです。CNXMLは<code display="inline">section</code>タグというものを持っています。</para>
+	    <para id="secp2">　<code>section</code>タグは必須の<code display="inline">id</code>属性と、最初の子要素の<link document="m9000" target-id="name">name</link>タグを持っています。
+	      
+	    </para>
+	    <example id="secexamp">
+	      <code id="id1171707760587" display="block">
+		
+&lt;section id='ingredsec'&gt;
+  &lt;name&gt;Ingredients&lt;/name&gt;
+    &lt;list&gt; ... &lt;/list&gt;
+&lt;/section&gt;
+&lt;section id='marinadesec'&gt;
+  &lt;name&gt;Marinade&lt;/name&gt;
+  &lt;para id='marinate'&gt; ... &lt;/para&gt;
+    &lt;list id='marinade'&gt; ... &lt;/list&gt;
+  &lt;para id='tobecontinued'&gt; ... &lt;/para&gt;
+&lt;/section&gt;
+&lt;section id='grillingsec'&gt;
+  &lt;name&gt;Grilling&lt;/name&gt;
+  &lt;para id='prepgrill'&gt; ... &lt;/para&gt;
+  &lt;para id='grilling'&gt; ... &lt;/para&gt;
+&lt;/section&gt;
+	      </code>
+	      <para id="secexampp1">
+		Obviously ellipses would be replaced by appropriate text.
+	      </para>
+	    </example>
+	  </section>  
+	</section>
+
+	<section id="Inline_tags">
+	  <title>Inline Tags</title>
+	  <para id="inline_tags_para">インラインタグは<link target-id="structural_tags">構造的なタグ</link>の内部に、内容と機能性を埋め込むために使用されます。一般的に使用されるタグを以下に示します。
+	  </para>
+
+	  <section id="emphasis">
+	    <title>Emphasis</title>
+	    <para id="emphp1">　<code display="inline">emphasis</code>タグは、CNXMLドキュメント内のテキストを強調するために使用されます。これは見た目の強調ではなく、<emphasis>意味</emphasis>の強調であることに注意してください。
+	    </para>
+	    <example id="emphexamp">
+	      <code id="id1171707659867" display="block">
+
+&lt;para id='intro'&gt;
+  I have eaten many steaks in my life and none have been more satisfying
+  than the backyard-grill cooked steak.  Maybe this is because of the
+  relaxing nature of drinking a beer, being outside, and lounging that
+  accompanies the grilling procedure.  Maybe it is because of the aroma
+  of the grill and the beef &lt;emphasis&gt;perfectly&lt;/emphasis&gt; seasoned to
+  your taste.  Either way, this document shows how a good steak can be
+  prepared.
+&lt;/para&gt;
+	      </code>
+	    </example>
+	  </section>
+
+	  <section id="term">
+	    <title>Term</title>
+	    <para id="termp1">　<code display="inline">term</code>タグは、定義されている単語や熟語をマークするのに使用されます。しかしながら、このタグの使用は<link target-id="para">para</link>タグか<link document="m9007" target-id="definition">definition</link>タグの中だけです。<code display="inline">term</code>タグは1つの属性を持ちます。
+
+	      <list id="term_attributes">
+	<item><code display="inline">src</code> - 用語のソースか定義が閲覧できるURL。</item>
+</list>
+</para>
+	    <example id="termexamp">
+	      <code id="id1171709247445" display="block">
+
+&lt;para id='marinade'&gt;
+  To ensure the best flavor possible, it is necessary to marinate the
+  beef.  A steak &lt;term src='http://marinade.com'&gt;marinates&lt;/term&gt; when
+  left to sit in a prepared sauce, or &lt;term&gt;marinade&lt;/term&gt;, where it
+  will absorb the flavors of the ingredients.  Marinating may take as
+  little as 15 minutes or as long as 6 hours and should
+  &lt;emphasis&gt;always&lt;/emphasis&gt; be done in the refrigerator and
+  &lt;emphasis&gt;not&lt;/emphasis&gt; at room temperature.
+&lt;/para&gt;
+	      </code>
+	    </example>
+	  </section>
+	  
+	  <section id="note">
+	    <title>Note</title>
+	    <para id="notep1">　<code display="inline">note</code>タグは、閲覧者に対する注意を作成します。それは警告、重要ポイントなどです。注意の種類は<code display="inline">type</code>属性で指定されます。
+	    </para>
+	    <example id="notexamp">
+	      <code id="id1171704095399" display="block">
+
+&lt;para id='intro'&gt;
+  I have eaten many steaks in my life and none have been more
+  satisfying than the backyard-grill cooked steak.  Maybe this is
+  because of the relaxing nature of drinking a beer, being outside,
+  and lounging that accompanies the grilling procedure.  &lt;note
+  type='warning'&gt;Excessive drinking or fun may result in overcooked or
+  burned steak.&lt;/note&gt; Maybe it is because of the aroma of the grill
+  and the beef &lt;emphasis&gt;perfectly&lt;/emphasis&gt; seasoned to your taste.
+  Either way, this document shows how a good steak can be prepared.
+&lt;/para&gt;
+	      </code>
+	      <para id="notep2">　上記の例は以下のように表示されます。
+	      </para>
+	      <para id="notep3">
+		I have eaten many steaks in my life and none have been
+		more satisfying than the backyard-grill cooked steak.
+		Maybe this is because of the relaxing nature of
+		drinking a beer, being outside, and lounging that
+		accompanies the grilling procedure.  <note id="id1171709510310" type="warning">Excessive drinking or fun may result in
+		overcooked or burned steak.</note> Maybe it is because
+		of the aroma of the grill and the beef
+		<emphasis>perfectly</emphasis> seasoned to your taste.
+		Either way, this document shows how a good steak can
+		be prepared.
+	      </para>
+
+	    </example>
+	  </section>
+	  
+	  <section id="cnln">
+	    <title>CNXNとLINK</title>
+	    <para id="cnlnp1">　CNXMLの<code display="inline">cnxn</code>タグと<code display="inline">link</code>タグは、他のドキュメントへのリンクのために使用されます。2つのタグの違いは、cnxnタグはConnexionsシステム内の他のドキュメントへのリンクに使用され、linkタグはインターネット上の他のドキュメントへのリンクに使用される点です。
+	    </para>
+	    <para id="cnxn">
+	      　<code display="inline">cnxn</code>タグは4つの属性を持っています。
+	      <list id="cnxnlist">
+		<item>
+			<code display="inline">target</code> - 特定のタグを対象とします。</item>
+		<item>
+			<code display="inline">document</code> - ドキュメントのIDを対象とします。</item>
+		<item>
+			<code display="inline">version</code> - ドキュメントの特定のバージョンを対象とします。		</item>
+		<item>
+			<code display="inline">strength</code> - リンクされた情報が現在のドキュメントに関連している程度を指定します。		</item>
+	</list>
+　<code display="inline">version</code>属性は任意です。指定されない場合は、ディフォルトで最新版のドキュメントにリンクを行います。そうすると一見version属性は無意味に感じるかもしれませんが、実際は役に立ちます。特定のバージョンを指定すると、そのリンクで指定される内容は今後変化することがありません。最新版にリンクを行っていると、重要な情報が見えなくなる可能性があります。
+
+	    </para>
+	    <para id="cnxn2">　<code display="inline">target</code>属性と<code display="inline">document</code>属性は一緒に使用したり、単独で使用したりすることができます。両方を使用するなら、他のドキュメントの特定ののタグへのリンクになります。<code display="inline">document</code>タグだけを使用するなら、他のドキュメントへのリンクになります。<code display="inline">target</code>タグだけを使用するなら、現在のドキュメントの特定のタグへのリンクになります。
+	    </para>
+	    <para id="cnxn2b">　<code display="inline">strength</code>属性は任意です。リンク先の情報が現在の項目にどのくらい関連性があるのかを、閲覧者に知らせることができます。
+	    </para>
+
+	    <example id="cnxn_info">
+	      <title>CNXNの例</title>
+
+	      <para id="cnxn_info_para">　cnxnタグはリンク先の記述が必要ありません。例えば、ページ内の図にリンクを行いたいけど、cnxnにどういう名前を付ければいいか分からない場合、以下のようなcnxnを使用することができるでしょう。
+		<code id="id4192734" display="block">
+		
+		&lt;cnxn target='figure1'/&gt;
+		  </code>		
+　上記の例のようなcnxnタグは、タグの中にテキストが挿入されていないため、テキストを挿入するという方法もあります。システムが適当な代替を見つけることができるかどうかに関係なく、上記の例は<code display="inline">
+		
+		  Figure 1
+		  </code>か<code display="inline">
+		
+		  Reference
+	</code>として表現できます。ほとんどの場合、リンク先の説明のため、以下のようにcnxn内でテキストを使用することができます。
+		<code id="id1171708738638" display="block">
+		
+		&lt;cnxn target='figure1'&gt;Steak Figure&lt;/cnxn&gt;
+		  </code>
+</para>
+	    </example>
+	    
+	    <para id="link">　一方、<code display="inline">link</code>タグはリンク先のURLを示す<code display="inline">src</code>属性だけが必要です。
+</para>
+	    <example id="cnlnexamp">
+	      <code id="id1171708960910" display="block">
+		
+&lt;para id='tobecontinued'&gt;
+  I'll be adding to this document in &lt;cnxn document='m9006' &gt;The
+  Intermediate CNXML&lt;/cnxn&gt; which focuses on more advanced CNXML tags.
+  For more marinades see the &lt;link src='http://www.2eatcab.com'&gt;Angus
+  Beef website&lt;/link&gt;.  Finally, a good resource is the &lt;cite&gt;Steak
+  Lover's Cookbook -- William Rice; Paperback&lt;/cite&gt;.
+&lt;/para&gt;
+		
+	      </code>
+	      <para id="noteex10a">　上記の例は以下のように表示されます。
+	      </para>
+	      <para id="noteex10b">
+		I'll be adding to this document in <link document="m9006">The Intermediate CNXML</link>
+		  which focuses on more advanced CNXML tags.  For more
+		  marinades see the <link url="http://www.2eatcab.com">Angus Beef
+		  website</link>.  Finally, a good resource is the
+		  <cite><cite-title>Steak Lover's Cookbook -- William Rice;
+		  Paperback</cite-title></cite>.
+	      </para>
+
+	    </example>
+	  </section>
+
+	  <section id="cite">
+	    <title>Cite</title>
+	    <para id="citep1">　<code display="inline">cite</code>タグは、ドキュメント内の非電子資料の参照に使用されます。主に作業のタイトルが含まれています。<link target-id="cnlnexamp"/>を見てください。
+	    </para>
+	  </section>
+
+	  <section id="quote">
+	    <title>Quote</title>
+	    <para id="quote_para">　<code display="inline">quote</code>タグは、他のソースから直接引用したテキストを表示するために使用されます。quoteタグは、引用文が<code display="inline">インライン</code>であるか<code display="inline">ブロック</code>であるかを示す<code display="inline">type</code>属性を持っています。
+	    </para>
+	    <example id="quote_example">
+	      <para id="quote_para_example">
+		<code id="id1171709050002" display="block">&lt;para id='steakquote'&gt;
+  Everyone has an opinion on how a steak should be cooked. &lt;quote
+  type='inline'&gt;"A good steak should be pink in the middle and black
+  on the outside."&lt;/quote&gt; Although this may sound reasonable many
+  remember the words of George Washington: &lt;quote type='block'&gt;"In any
+  free country a man should have the ability to purchase a nice rare
+  steak."&lt;/quote&gt;
+&lt;/para&gt;</code>
+		Everyone has an opinion on how a steak should be
+		cooked. <quote display="inline" class="no-marks">"A good steak should be
+		pink in the middle and black on the outside."</quote>
+		Although this may sound reasonable many remember the
+		words of George Washington: <quote id="id1171699381424" display="block">"In
+		any free country a man should have the ability to
+		purchase a nice rare steak."</quote>
+	      </para>
+	    </example>
+	  </section>
+	  
+	  <section id="foreign">
+	    <title>Foreign</title>
+	    <para id="foreign_para">　<code display="inline">foreign</code>タグは、使用されている外国の単語か熟語を示すために使用されます。
+	    </para>
+	    <example id="foreign_example">
+	      <para id="foreign_para_example">
+		<code id="id1171704163336" display="block">&lt;para id='steakquote2'&gt;
+  In many latin american countries steak is called &lt;foreign&gt;carne
+  asada&lt;/foreign&gt;.
+&lt;/para&gt;</code>
+		In many latin american countries steak is called
+		  <foreign>carne asada</foreign>.
+	      </para>
+	    </example>
+	  </section>
+	</section>
+      </section>
+    </section>
+  
+    <section id="pause4">
+      <title>ドキュメントの例</title>
+      <para id="pause4p1">　上記のタグを全て含んでいるドキュメントの例を以下に示します。</para>
+      <code id="id1171705065250" display="block">
+	
+      &lt;document id='meat'
+	xmlns='http://cnx.rice.edu/cnxml'
+	&gt;  
+      &lt;name&gt;Grilling a Good Steak&lt;/name&gt;
+
+      &lt;content&gt;    
+
+        &lt;section id='intro'&gt;
+          &lt;para id='intro'&gt;
+	    I have eaten many steaks in my life and none have been more
+	    satisfying than the backyard-grill cooked steak.  Maybe this is
+	    because of the relaxing nature of drinking a beer, being
+	    outside, and lounging that accompanies the grilling procedure.
+            &lt;note type='warning'&gt;Excessive drinking or fun may result in
+	    overcooked or burned steak.&lt;/note&gt; Maybe it is because of the
+	    aroma of the grill and the beef &lt;emphasis&gt;perfectly&lt;/emphasis&gt;
+	    seasoned to your taste.  Either way, this document shows how a
+	    good steak can be prepared.
+          &lt;/para&gt;
+        &lt;/section&gt;
+
+        &lt;section id='marinate_section'&gt;	      
+          &lt;para id='marinate'&gt;
+	    To ensure the best flavor possible, it is necessary to marinate
+	    the beef.  A steak &lt;term&gt;marinates&lt;/term&gt; when left to sit in
+            &lt;term&gt;marinade&lt;/term&gt;, or prepared sauce, where it will absorb
+	    the flavor of the ingredients.  Marinating may take as little as
+	    15 minutes or as long as 6 hours and should
+            &lt;emphasis&gt;always&lt;/emphasis&gt; be done in the refrigerator and
+            &lt;emphasis&gt;not&lt;/emphasis&gt; at room temperature.
+          &lt;/para&gt;
+        &lt;/section&gt;
+
+        &lt;section  id='tobecontinued_section'&gt;	      
+          &lt;para id='tobecontinued'&gt;
+	    I'll be adding to this document in &lt;cnxn document='m9006'
+	    &gt;The Intermediate CNXML&lt;/cnxn&gt; which focuses on more
+	    advanced CNXML tags.  For more marinades see the &lt;link
+	    src='http://www.2eatcab.com'&gt;Angus Beef website&lt;/link&gt;.
+	    Finally, a good resource is the &lt;cite&gt;Steak Lover's Cookbook --
+	    William Rice&lt;/cite&gt;.
+          &lt;/para&gt;
+        &lt;/section&gt;
+
+      &lt;/content&gt;
+      &lt;/document&gt;
+	
+      </code>
+      <para id="pause4p2">　<link url="http://cnx.rice.edu">Connexions</link>ではこう<link document="m10275">表示</link>されます。
+      </para>
+    </section>
+
+    <section id="required_stuff">
+      <title>他の要求事項</title>
+      <para id="doctype">　どんなXMLファイルも最初の行はXML宣言であるべきです（厳密に言うと任意ですが、守るべきです）。XML宣言は<code display="inline">
+		
+	</code>のようなもので、空白行やスペースが前にあってはいけません。この後、ドキュメントに使用するすべてのDocument Type Definition(DTD)を宣言します（厳密に言うとこれも任意ですが、有効なCNXMLドキュメントにしたいなら、この宣言を含むべきです）。柔軟性のため、ConnexionsはいくつかのDTDを、ドキュメント内で<link document="m10258">CNXMLと他のマークアップ言語を結合</link>できるようにしました。あなたが指定するDTDは、あなたがドキュメント内で使用したい言語によります。CNXMLだけを使用するドキュメントは、以下のようになります。
+
+      </para>
+      <example id="cnxmldoctypeexamp">
+	<code id="id1171710256815" display="block">
+	  
+&lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5//EN" 
+	  "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_plain.dtd"&gt;
+
+	</code> 
+      </example>
+      <para id="mathmldtp1">　CNXMLとMathMLの宣言は以下のようになります。 
+      </para>
+
+      <example id="mathmldoctypeexamp">
+	<code id="id1171711269846" display="block">
+	  
+&lt;!DOCTYPE document PUBLIC "-//CNX//DTD CNXML 0.5 plus MathML//EN" 
+	  "http://cnx.rice.edu/cnxml/0.5/DTD/cnxml_mathml.dtd"&gt;
+
+	</code> 
+      </example>
+    </section>
+    
+    <section id="fin">
+      <title>まとめ</title>
+      <para id="finp1">　ドキュメントを構成するとき、CNXMLタグに関する質問は、<link url="http://cnx.rice.edu/cnxml/0.5/spec/">the
+	CNXML Spec</link>に相談するといいでしょう。より高度な話題に関しては<link document="m9006">The Intermediate CNXML</link>や<link document="m9007">The Advanced CNXML</link>を見てください。
+      </para>
+    </section>
+  </content>
+</document>

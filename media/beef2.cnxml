@@ -1,0 +1,150 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE module PUBLIC "-//CNX//DTD CNXML 0.3.5//EN" 
+          "http://cnx.rice.edu/cnxml/0.3.5/DTD/cnxml_plain.dtd">
+<module 
+	xmlns='http://cnx.rice.edu/cnxml/0.3.5'
+	id='meat'
+	levelmask='0'
+	created='2001-02-22'
+	revised='2001-06-18'
+	version='$Revision: 1.1 $'>
+
+  <name>Grilling a Good Steak</name>
+  
+  <metadata>
+    <authorlist>
+      <author id='ricky'>
+	<firstname>Ricardo</firstname>
+	<othername>Anthony</othername>
+	<surname>Radaelli-Sanchez</surname>
+      </author>
+    </authorlist>
+    
+    <maintainerlist>
+      <maintainer id='ricky'>
+	<firstname>Ricardo</firstname>
+	<othername>Anthony</othername>
+	<surname>Radaelli-Sanchez</surname>
+      </maintainer>
+    </maintainerlist>
+    
+    <keywordlist>
+      <keyword>steak</keyword>
+      <keyword>grilling</keyword>
+    </keywordlist>
+    
+    <abstract>
+      This is part of a tutorial to teach CNXML.  It is also a module
+      on how I would ideally cook a steak.  The following recipe I've
+      never tried and devised at 12:30 in the morning following a
+      really long day of work and classes.  I image that it will taste
+      much better than my imagination.
+    </abstract>
+
+    <objectives>
+      This module is to teach the basics of grilling a steak.  It is
+      intended for the beginning cook with little grill experience.
+      The recipe included will be simple, easy to follow, and
+      delicious.
+    </objectives>
+  </metadata>
+    
+  <content>
+    <para id='intro'>
+      I have eaten many steaks in my life and none have been more
+      satisfying than the backyard-grill cooked steak.  Maybe this is
+      because of the relaxing nature of drinking a beer, being
+      outside, and lounging that accompanies the grilling procedure.
+      Maybe it is because of the aroma of the grill and the beef
+      perfectly seasoned to your taste.  Either way, this module shows
+      how a good steak can be prepared.
+    </para>
+  
+    <section id='ingredsec'>
+      <name>Ingredients</name>
+      <para id='ingredients'>
+	Before we begin to cook I have compiled a list of
+	ingredients.
+	<list id='ingredlist'>
+	  <name>Ingredients</name>
+	  <item>Salt</item>
+	  <item>Fresh ground pepper</item>
+	  <item>Lime</item>
+	  <item>Beer</item>
+	  <item>Chili powder</item>
+	  <item>T-Bone steak</item>
+	</list>
+      </para>
+    </section>
+    
+    <section id='marinadesec'>
+      <name>Marinade</name>
+      <para id='marinate'>
+	To ensure the best flavor possible, it is necessary to
+	marinate the beef.  A steak <term>marinates</term> when left
+	to sit in <term>marinade</term>, or prepared sauce, where it
+	will absorb the flavor of the ingredients.  Marinating may
+	take as little as 15 minutes or as long as 6 hours and should
+	<emphasis>always</emphasis> be done in the refrigerator and
+	<emphasis>not</emphasis> at room temperature.
+      </para>
+      
+      <list id='marinade' type='enumerated'>
+	<name>Marinade</name>
+	<item>pour beer into large bowl</item>
+	<item>add chili powder to tase</item>
+	<item>squeeze half lime into beer marinade</item>
+	<item>place steak in beer, let soak for 30 minutes</item>
+      </list>
+    </section>
+
+    <figure id='tbonefig'>
+      <name>T-Bone Steak</name>
+      <media type='image/jpg' src='tbone.jpg'/>
+      <caption>
+	Upon successful completion of these modules, you
+	should be able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+
+    <figure orient='horizontal' id='horfig'>
+      <name>Steaks</name>
+      <subfigure id='subfigtbone1'>
+	<name>T-Bone</name>
+	<media type='image/jpg' src='tbone.jpg'/>
+      </subfigure>
+      <subfigure id='subfingnystrip1'>
+	<name>New York Strip</name>
+	<media type='image/gif' src='ny_strip.gif'/>
+      </subfigure>
+      <caption>
+	Upon successful completion of these modules, you should be
+	able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+    
+    <figure orient='vertical' id='verfig'>
+      <name>Steaks</name>
+      <subfigure id='subfigtbone2'>
+	<name>T-Bone</name>
+	<media type='image/jpg' src='tbone.jpg'/>
+      </subfigure>
+      <subfigure id='subfig2'>
+	<name>New York Strip</name>
+	<media type='image/gif' src='ny_strip.gif'/>
+      </subfigure>
+      <caption>
+	Upon successful completion of these modules, you should be
+	able to grill a steak that looks just as good!
+      </caption>
+    </figure>
+  
+    <para id='tobecontinued'>
+      How to grill the steak will be covered in <cnxn module='m9007'
+      strength='8'>The Advanced CNXML</cnxn>.  For more marinades see
+      the <link src='http://www.2eatcab.com'>Angus Beef
+      website</link>.  Finally, a good resource is the <cite>Steak
+      Lover's Cookbook -- William Rice; Paperback</cite>.
+    </para>
+  </content>
+</module>
