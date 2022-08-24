@@ -1,15 +1,16 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="ja">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="ja" authors="Hironori Takaryo ,Yoji Yamada">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
     <md:content-id>col10298</md:content-id>
     <md:title>Connexions Tutorial and Reference (Japanese version)</md:title>
     <md:language>ja</md:language>
     <md:license url="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution License</md:license>
     <md:uuid>1ce1212c-f9a0-4c78-9444-7388ef30d93b</md:uuid>
-<md:slug>connexions-tutorial-and-reference-japanese-version</md:slug>
-</metadata>
+    <md:slug>connexions-tutorial-and-reference-japanese-version</md:slug>
+  </metadata>
   <col:content>
     <col:subcollection>
-      <md:title>Connexionsの概要</md:title>
+      <md:title>Connexions&#x306E;&#x6982;&#x8981;</md:title>
       <col:content>
         <col:module document="m12989"/>
         <col:module document="m12990"/>
@@ -18,13 +19,13 @@
       </col:content>
     </col:subcollection>
     <col:subcollection>
-      <md:title>ConnexionsのRoadmap機能</md:title>
+      <md:title>Connexions&#x306E;Roadmap&#x6A5F;&#x80FD;</md:title>
       <col:content>
         <col:module document="m12991"/>
       </col:content>
     </col:subcollection>
     <col:subcollection>
-      <md:title>コンテンツの作成作業</md:title>
+      <md:title>&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x306E;&#x4F5C;&#x6210;&#x4F5C;&#x696D;</md:title>
       <col:content>
         <col:module document="m12996"/>
         <col:module document="m12988"/>
@@ -35,7 +36,7 @@
       </col:content>
     </col:subcollection>
     <col:subcollection>
-      <md:title>XMLとCNXML</md:title>
+      <md:title>XML&#x3068;CNXML</md:title>
       <col:content>
         <col:module document="m13003"/>
         <col:module document="m13004"/>
@@ -46,17 +47,17 @@
       </col:content>
     </col:subcollection>
     <col:subcollection>
-      <md:title>コンテンツ作成に使うその他の言語</md:title>
+      <md:title>&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x4F5C;&#x6210;&#x306B;&#x4F7F;&#x3046;&#x305D;&#x306E;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;</md:title>
       <col:content>
         <col:module document="m13009"/>
       </col:content>
     </col:subcollection>
     <col:subcollection>
-      <md:title>XMLの編集</md:title>
+      <md:title>XML&#x306E;&#x7DE8;&#x96C6;</md:title>
       <col:content/>
     </col:subcollection>
     <col:subcollection>
-      <md:title>付録</md:title>
+      <md:title>&#x4ED8;&#x9332;</md:title>
       <col:content>
         <col:module document="m10275"/>
         <col:module document="m10278"/>
